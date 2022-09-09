@@ -14,17 +14,30 @@
 #pragma warning disable 1591
 
 namespace SKT.Glossary.Web.eHR {
+<<<<<<< HEAD
     using System;
     using System.Web.Services;
     using System.Diagnostics;
     using System.Web.Services.Protocols;
     using System.Xml.Serialization;
     using System.ComponentModel;
+=======
+    using System.Diagnostics;
+    using System;
+    using System.Xml.Serialization;
+    using System.ComponentModel;
+    using System.Web.Services.Protocols;
+    using System.Web.Services;
+>>>>>>> 58671c0c20e24bdacd11e4e4a4c54898af7ff265
     
     
     /// <remarks/>
     // CODEGEN: 네임스페이스 'http://schemas.xmlsoap.org/ws/2004/09/policy'에서 선택적 WSDL 확장 요소 'Policy'이(가) 처리되지 않았습니다.
+<<<<<<< HEAD
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1099.0")]
+=======
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+>>>>>>> 58671c0c20e24bdacd11e4e4a4c54898af7ff265
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Web.Services.WebServiceBindingAttribute(Name="ZEHR_DISP_CARRER_1", Namespace="urn:sap-com:document:sap:soap:functions:mc-style")]
@@ -124,7 +137,11 @@ namespace SKT.Glossary.Web.eHR {
     }
     
     /// <remarks/>
+<<<<<<< HEAD
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2634.0")]
+=======
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+>>>>>>> 58671c0c20e24bdacd11e4e4a4c54898af7ff265
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -200,7 +217,11 @@ namespace SKT.Glossary.Web.eHR {
     }
     
     /// <remarks/>
+<<<<<<< HEAD
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2634.0")]
+=======
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+>>>>>>> 58671c0c20e24bdacd11e4e4a4c54898af7ff265
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -391,7 +412,11 @@ namespace SKT.Glossary.Web.eHR {
     }
     
     /// <remarks/>
+<<<<<<< HEAD
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2634.0")]
+=======
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+>>>>>>> 58671c0c20e24bdacd11e4e4a4c54898af7ff265
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -530,7 +555,11 @@ namespace SKT.Glossary.Web.eHR {
     }
     
     /// <remarks/>
+<<<<<<< HEAD
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2634.0")]
+=======
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+>>>>>>> 58671c0c20e24bdacd11e4e4a4c54898af7ff265
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -643,7 +672,11 @@ namespace SKT.Glossary.Web.eHR {
     }
     
     /// <remarks/>
+<<<<<<< HEAD
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2634.0")]
+=======
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+>>>>>>> 58671c0c20e24bdacd11e4e4a4c54898af7ff265
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -693,11 +726,19 @@ namespace SKT.Glossary.Web.eHR {
     }
     
     /// <remarks/>
+<<<<<<< HEAD
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1099.0")]
     public delegate void ZehrDispCarrerCompletedEventHandler(object sender, ZehrDispCarrerCompletedEventArgs e);
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1099.0")]
+=======
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void ZehrDispCarrerCompletedEventHandler(object sender, ZehrDispCarrerCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+>>>>>>> 58671c0c20e24bdacd11e4e4a4c54898af7ff265
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ZehrDispCarrerCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {

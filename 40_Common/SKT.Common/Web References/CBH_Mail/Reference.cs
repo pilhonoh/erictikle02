@@ -14,6 +14,7 @@
 #pragma warning disable 1591
 
 namespace SKT.Common.CBH_Mail {
+<<<<<<< HEAD
     using System;
     using System.Web.Services;
     using System.Diagnostics;
@@ -24,6 +25,18 @@ namespace SKT.Common.CBH_Mail {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3190.0")]
+=======
+    using System.Diagnostics;
+    using System;
+    using System.Xml.Serialization;
+    using System.ComponentModel;
+    using System.Web.Services.Protocols;
+    using System.Web.Services;
+    
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+>>>>>>> 58671c0c20e24bdacd11e4e4a4c54898af7ff265
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Web.Services.WebServiceBindingAttribute(Name="MailSenderServiceSoapBinding", Namespace="http://skt/soa/notification/webservice")]
@@ -128,11 +141,19 @@ namespace SKT.Common.CBH_Mail {
     }
     
     /// <remarks/>
+<<<<<<< HEAD
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3190.0")]
     public delegate void sendCompletedEventHandler(object sender, sendCompletedEventArgs e);
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3190.0")]
+=======
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+    public delegate void sendCompletedEventHandler(object sender, sendCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.4084.0")]
+>>>>>>> 58671c0c20e24bdacd11e4e4a4c54898af7ff265
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class sendCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {

@@ -14,8 +14,13 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SKT.Glossary.Web</RootNamespace>
     <AssemblyName>SKT.Glossary.Web</AssemblyName>
+<<<<<<< HEAD
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
+=======
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+>>>>>>> 58671c0c20e24bdacd11e4e4a4c54898af7ff265
     <TrackFileAccess>false</TrackFileAccess>
     <SccProjectName>
     </SccProjectName>
@@ -131,7 +136,10 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Content Include="1.html" />
+=======
+>>>>>>> 58671c0c20e24bdacd11e4e4a4c54898af7ff265
     <Content Include="Common\calendar\calendar-ui.css" />
     <Content Include="Common\calendar\calendar.js" />
     <Content Include="Common\calendar\calendarAdmin.js" />
@@ -545,9 +553,12 @@
     <Content Include="Common\Js\tooltip.js" />
     <Content Include="Common\Js\monthly_email.js" />
     <Content Include="Common\Js\weekly_email.js" />
+<<<<<<< HEAD
     <Content Include="dbconn.aspx" />
     <Content Include="dbconn2.aspx" />
     <Content Include="dbconn3.aspx" />
+=======
+>>>>>>> 58671c0c20e24bdacd11e4e4a4c54898af7ff265
     <Content Include="Gathering\Main.aspx" />
     <Content Include="Glossary\DigitalTrans.aspx" />
     <Content Include="Directory\DirectoryManagerIframe.aspx" />
@@ -559,7 +570,10 @@
     <Content Include="Glossary\GlossaryPrint_View.aspx" />
     <Content Include="Glossary\GlossaryWriteNew.aspx" />
     <Content Include="Glossary\WhitePaper.aspx" />
+<<<<<<< HEAD
     <Content Include="HtmlPage1.html" />
+=======
+>>>>>>> 58671c0c20e24bdacd11e4e4a4c54898af7ff265
     <Content Include="Images\ICON\BLANK.GIF" />
     <Content Include="Images\ICON\DELETE.GIF" />
     <Content Include="Images\ICON\ICACCDB.GIF" />
@@ -1876,6 +1890,7 @@
     <Compile Include="Common\Controls\MailUserList.ascx.designer.cs">
       <DependentUpon>MailUserList.ascx</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="dbconn.aspx.cs">
       <DependentUpon>dbconn.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1890,6 +1905,8 @@
     <Compile Include="dbconn2.aspx.designer.cs">
       <DependentUpon>dbconn2.aspx</DependentUpon>
     </Compile>
+=======
+>>>>>>> 58671c0c20e24bdacd11e4e4a4c54898af7ff265
     <Compile Include="Gathering\Main.aspx.cs">
       <DependentUpon>Main.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2430,6 +2447,7 @@
     </Content>
     <Content Include="MasterPages\GlossaryMain.Master" />
     <Content Include="MasterPages\GlossarySearch.Master" />
+<<<<<<< HEAD
     <None Include="Properties\PublishProfiles\EricRG05-tikle-webapp01 - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\EricRG05-tikle-webapp01 - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\ericTikle02 - FTP.pubxml" />
@@ -2468,6 +2486,11 @@
     <None Include="Properties\PublishProfiles\tiklewebaperic01 - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\tiklewebaperic01 - ReadOnly - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\tiklewebaperic01 - Web Deploy.pubxml" />
+=======
+    <None Include="Properties\PublishProfiles\SKT.Glossary.Publish.pubxml" />
+    <None Include="Properties\PublishProfiles\ssyTikleDebug.pubxml" />
+    <None Include="Properties\PublishProfiles\ssyTikleRelease.pubxml" />
+>>>>>>> 58671c0c20e24bdacd11e4e4a4c54898af7ff265
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -2514,9 +2537,12 @@
     <!--<VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>-->
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildProgramFiles32)\MSBuild\Microsoft\VisualStudio\v14.0</VSToolsPath>
   </PropertyGroup>
+<<<<<<< HEAD
   <PropertyGroup>
     <StartupObject />
   </PropertyGroup>
+=======
+>>>>>>> 58671c0c20e24bdacd11e4e4a4c54898af7ff265
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
@@ -2528,15 +2554,22 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>61918</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
+<<<<<<< HEAD
           <IISUrl>http://localhost:61918/</IISUrl>
+=======
+          <IISUrl>http://localtikle.sktelecom.com</IISUrl>
+>>>>>>> 58671c0c20e24bdacd11e4e4a4c54898af7ff265
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
           </CustomServerUrl>
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+<<<<<<< HEAD
           <servers defaultServer="SelfHostServer">
             <server name="SelfHostServer" exePath="" cmdArgs="" url="http://localhost:61918/" workingDir="" />
           </servers>
+=======
+>>>>>>> 58671c0c20e24bdacd11e4e4a4c54898af7ff265
         </WebProjectProperties>
       </FlavorProperties>
     </VisualStudio>

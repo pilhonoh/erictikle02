@@ -329,7 +329,11 @@ namespace SKT.Common
             string IsTestServer = ConfigurationManager.AppSettings["IsTestServer"];
             if (IsTestServer == "Y")
             {
+<<<<<<< HEAD
                 UserID = "1901081";
+=======
+                //UserID = "1107160";
+>>>>>>> 58671c0c20e24bdacd11e4e4a4c54898af7ff265
             }
 
             //Alert("UserInfo.cs : GetUserID() : loginSabun => " + UserID, "alert_GetUserID()");
@@ -396,7 +400,11 @@ namespace SKT.Common
                 Log4NetHelper.Info("UserInfo.cs : SetUserInfo() : loginSabun => " + UserID);
                 Log4NetHelper.Info("UserInfo.cs : SetUserInfo() : Headers[SM_USER] => " + HttpContext.Current.Request.Headers["SM_USER"]);
                 //Log4NetHelper.Info("UserInfo.cs : SetUserInfo() : Headers[SMSESSION] => " + HttpContext.Current.Request["SMSESSION"]);
+<<<<<<< HEAD
                 //Log4NetHelper.Info("UserInfo.cs : SetUserInfo() : Cookies[SM_USER] => " + HttpContext.Current.Request.Cookies["SM_USER"].Value);
+=======
+                Log4NetHelper.Info("UserInfo.cs : SetUserInfo() : Cookies[SM_USER] => " + HttpContext.Current.Request.Cookies["SM_USER"].Value);
+>>>>>>> 58671c0c20e24bdacd11e4e4a4c54898af7ff265
                 //Log4NetHelper.Info("UserInfo.cs : SetUserInfo() : Cookies[SMSESSION ] => " + HttpContext.Current.Request.Cookies["SMSESSION"].Value);
                 Log4NetHelper.Info("UserInfo.cs : SetUserInfo() : Session.SessionID => " + Session.SessionID.ToString());
                 Log4NetHelper.Info("UserInfo.cs : SetUserInfo() : Session.IsNewSession => " + Session.IsNewSession.ToString());

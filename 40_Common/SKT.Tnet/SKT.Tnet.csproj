@@ -9,12 +9,20 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SKT.Tnet</RootNamespace>
     <AssemblyName>SKT.Tnet</AssemblyName>
+<<<<<<< HEAD
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+=======
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+>>>>>>> 58671c0c20e24bdacd11e4e4a4c54898af7ff265
     <FileAlignment>512</FileAlignment>
     <SccProjectName>SAK</SccProjectName>
     <SccLocalPath>SAK</SccLocalPath>
     <SccAuxPath>SAK</SccAuxPath>
     <SccProvider>SAK</SccProvider>
+<<<<<<< HEAD
+=======
+    <TargetFrameworkProfile />
+>>>>>>> 58671c0c20e24bdacd11e4e4a4c54898af7ff265
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -40,7 +48,10 @@
       <HintPath>..\..\00_Assemblies\NamoMIME.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+<<<<<<< HEAD
     <Reference Include="System.Configuration" />
+=======
+>>>>>>> 58671c0c20e24bdacd11e4e4a4c54898af7ff265
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />

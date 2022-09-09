@@ -18,7 +18,11 @@
       <Value Profile="(Default)">http://cspcbh.sktelecom.com:8080/ws/cbh/SKTSOAWeb/NoteService</Value>
     </Setting>
     <Setting Name="SKT_Common_CBH_SMS_SMSSenderService" Type="(Web Service URL)" Scope="Application">
+<<<<<<< HEAD
       <Value Profile="(Default)">http://cspcbh.sktelecom.com/ws/cbh/SMSService</Value>
+=======
+      <Value Profile="(Default)">http://cspcbh.sktelecom.com:8080/ws/cbh/SMSService</Value>
+>>>>>>> 58671c0c20e24bdacd11e4e4a4c54898af7ff265
     </Setting>
   </Settings>
 </SettingsFile>

@@ -1,7 +1,12 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+<<<<<<< HEAD
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.2092
+=======
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32319.34
+>>>>>>> 58671c0c20e24bdacd11e4e4a4c54898af7ff265
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00_Assembly", "00_Assembly", "{525137DE-80A8-493D-8F48-B58511554127}"
 	ProjectSection(SolutionItems) = preProject
@@ -64,7 +69,11 @@ EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Tikle_Search", "http://localhost:11814", "{D2B9D739-26AA-467C-8D94-95077A9878D6}"
 	ProjectSection(WebsiteProperties) = preProject
 		UseIISExpress = "true"
+<<<<<<< HEAD
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+=======
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+>>>>>>> 58671c0c20e24bdacd11e4e4a4c54898af7ff265
 		ProjectReferences = "{7cb245e4-c7fe-47d4-89be-af2f8e2ec961}|SKT.Common.dll;{b7e9e7d6-c10f-4dce-9019-b2c5a90bab48}|SKT.Tnet.Framework.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_11814"
 		Debug.AspNetCompiler.PhysicalPath = "10_UI\Tikle_Search\"
