@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AjaxControl.aspx.cs" Inherits="SKT.Glossary.Web.Common.Controls.AjaxPage" %>

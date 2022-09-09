@@ -1,0 +1,6 @@
+[Weekly 문서]
+기업솔루션 템플릿=http://localtikle.sktelecom.com:8080/NamoActive/Template/tem03.html
+기업솔루션 템플릿2=http://localtikle.sktelecom.com:8080/NamoActive/Template/tem01.html
+SCM실 템플릿=http://localtikle.sktelecom.com:8080/NamoActive/Template/tem02.html
+SCM실 공용 템플릿=http://localtikle.sktelecom.com:8080/NamoActive/Template/tem04.html
+

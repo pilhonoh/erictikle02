@@ -1,0 +1,189 @@
+﻿@charset "utf-8";
+
+body {background: url('../images/bg/body.png') repeat-x 0 52px;}
+
+#header {
+	height:52px;
+	z-index:10;
+}
+#header .userInfop {
+	top: 22px;
+}
+#header h1,
+#header fieldset,
+#header #gnb,
+#header .btn_guide{display:none;}
+
+#main {
+	position:relative;
+	min-height:100%;
+	width:730px;
+	margin:-52px auto -71px;
+}
+* html #main { height:100%; }
+#main .mainContents {
+	padding:52px 0 70px;
+	min-height:550px; /* 20181018 T생활백서 */
+}
+#main .mainInner {
+	position:absolute; 
+	top:45%; 
+	left:50%; 
+	width:660px; /* 20181018 T생활백서 */
+	height:550px; /* 20181018 T생활백서 */
+	margin-top:-255px; /* 20181018 T생활백서 */
+	margin-left:-330px; /* 20181018 T생활백서 */
+}
+#main:after {content:''; clear:both; display:block; }
+#main_header{
+	position:relative;
+	height:250px; /* 20181018 T생활백서 */
+    margin:0 auto;
+}
+#main_header h1{
+	height:147px;
+	background: url('../images/bi_main.png') no-repeat 50% 6px; 	
+}
+#main_header .searchWrap{
+	position:relative;
+	width:660px; /* 20181018 T생활백서 */
+	height:48px;
+	margin:0 auto;
+	border-radius:5px;
+	border:3px solid #222;
+	box-sizing:border-box;
+	/* box-shadow:1px 10px 11px rgba(0, 0, 0, .12);
+	-webkit-box-shadow:1px 10px 11px rgba(0, 0, 0, .12);
+	-moz-box-shadow:1px 10px 11px rgba(0, 0, 0, .12); 20181018 T생활백서 */
+} 
+#main_header .searchWrap *{box-sizing:border-box; vertical-align:top;}
+#main_header .searchWrap input {
+	width:604px; /* 20181018 T생활백서 */
+	height:40px;
+	line-height:38px;
+	border:none;
+	padding:0 15px;
+	vertical-align:top;
+	font-size:16px;
+	color:#333;
+}
+/* 검색 주석 20180201 Start */
+/*#main_header .searchWrap a,
+#main_header .searchWrap button,
+#main_header .searchWrap a:hover,
+#main_header .searchWrap button:hover,
+#main_header .searchWrap a:active,
+#main_header .searchWrap button:active{ 
+	position:absolute;
+	right:0;
+	top:0;
+	display:inline-block;
+	width:50px;
+	height:42px;
+	background: url('../images/ico_search.png') no-repeat 0 0;
+	border:0 none;
+	cursor:pointer;
+}*/
+/* 검색 주석 20180201 End */
+
+/* 20181018 T생활백서 여기부터 */
+.main_gnb {
+	overflow:hidden; 
+	width:100%; 
+	text-align:center; 
+	padding-bottom:40px;
+}
+#main_gnb {
+	display:inline-block; 
+	min-width:280px; 
+	margin:0 auto;
+}
+#main_gnb:after {content:''; clear:both; display:block;}
+#main_gnb li {float:left; margin:0 30px;}
+#main_gnb li a,
+#main_gnb li a span.icon {display:block;}
+#main_gnb li a {
+	width:83px;
+	height:88px;
+	text-align:center;
+	color:#222;
+	font-weight:bold;
+	font-size:14px;	
+	box-sizing:border-box;
+}
+#main_gnb li a span.icon {
+	position:relative;
+	width:83px; 
+	height:63px;
+	margin:0 auto 10px;	
+	border-radius:5px;
+	background: #e4e5e8;
+}
+#main_gnb li a span.icon:after {
+	content:'';
+	display:inline-block;
+	position:absolute;
+	left:0;
+	top:0;
+	width:83px; 
+	height:63px;
+	background:url('../images/ico_gnb.png') no-repeat;
+}
+#main_gnb li.tikleMenu01 a span.icon:after {background-position:50% 0;}
+#main_gnb li.tikleMenu02 a span.icon:after {background-position:50% -63px;}
+#main_gnb li.tikleMenu03 a span.icon:after {background-position:50% -126px;}
+/* 20181018 T생활백서 여기까지*/
+
+#contents{
+	width:100%;
+	min-height:230px;
+	position:relative;
+}
+#contents h3{
+	position:relative;
+	height:33px;
+	margin:0 0 10px 0; 
+	font-size:18px;
+	letter-spacing:-0.03em; /* 20181018 T생활백서 */
+}
+#contents h3 span,
+#contents h3 .more {
+	display:inline-block;
+}
+#contents h3 span {height:33px;}
+#contents h3 .more {
+	width:18px;
+	height:20px;
+	margin-left:7px;
+	background: url('../images/ico_more.png') no-repeat 0 0;
+	vertical-align:-4px;
+}
+#contents h3 span:after {
+	position:absolute;
+	left:0;
+	top:-5px;
+	width:30px;
+	border-top:3px solid #e51937;
+	display:block;
+	content:'';
+	
+}
+.main_conts {} /* 20181018 T생활백서 */
+
+.contsList{
+	float:left;
+	width:290px;
+	height:176px;
+	margin:10px 0 0 10px;	
+}
+.contsList:last-child {margin-left:50px;}
+.contsList a{
+	display:block;
+	width:290px;
+	overflow:hidden; 
+	white-space:nowrap; 
+	text-overflow: ellipsis;
+	font-size:13px; 
+	line-height:23px;
+}
+.contsList a:hover {text-decoration:underline;}

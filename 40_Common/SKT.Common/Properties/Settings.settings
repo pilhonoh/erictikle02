@@ -1,0 +1,24 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SKT.Common.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="SKT_Common_NotesEncryptService_wsEncryptedStringServie" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://apprd.skplanet.com:80/comn/webservices.nsf/wsEncryptedString?OpenWebService</Value>
+    </Setting>
+    <Setting Name="SKT_Common_com_sktelecom_erp_prod_ZEHR_PT_LIST_VIEW" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://erp_prod.sktelecom.com:8000/sap/bc/srt/rfc/sap/zehr_pt_list_view/501/zehr_pt_list_view/zehr_pt_list_view</Value>
+    </Setting>
+    <Setting Name="group" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">SK Telecom Common</Value>
+    </Setting>
+    <Setting Name="SKT_Common_CBH_Mail_MailSenderService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://cspcbh.sktelecom.com:8080/ws/cbh/MailService</Value>
+    </Setting>
+    <Setting Name="SKT_Common_CBH_Note_NoteServiceService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://cspcbh.sktelecom.com:8080/ws/cbh/SKTSOAWeb/NoteService</Value>
+    </Setting>
+    <Setting Name="SKT_Common_CBH_SMS_SMSSenderService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://cspcbh.sktelecom.com/ws/cbh/SMSService</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,18 @@
+﻿using System;
+using System.Configuration;
+using com.konantech.search.data.ParameterVO;
+using com.konantech.search.util;
+
+public partial class categoryNavigator : System.Web.UI.UserControl
+{
+    public ParameterVO srchParam = new ParameterVO();
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+    }
+
+    public string makeReturnValue(string target, string str, string returnVal)
+    {
+        return CommonUtil.makeReturnValue(target, str, returnVal);
+    }
+}

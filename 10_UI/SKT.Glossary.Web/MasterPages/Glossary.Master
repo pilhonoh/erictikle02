@@ -1,0 +1,209 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Glossary.master.cs" Inherits="SKT.Glossary.Web.MasterPages.Glossary" %>
+
+<%--<%@ Register Src="../Common/Controls/GNBControl.ascx" TagName="GNB" TagPrefix="Glossary" %>--%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/DTD/loose.dtd">
+<html lang="ko">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="shortcut icon" href="/favi.ico" />
+        <link rel="stylesheet" type="text/css"  href="/common/css/default.css" />
+        <link rel="stylesheet" type="text/css"  href="/common/css/sub.css" /> 
+        <!--<link rel="stylesheet" type="text/css"  href="/common/css/jquery-ui.css" />   -->
+
+
+        <!--[if lt IE 9]>
+        <script src="/common/js/html5shiv.js"></script>
+        <![endif]-->
+        <script src="/Common/js/jquery-1.11.1/jquery-1.11.1.min.js" type="text/javascript"></script>
+        <link href="/Common/js/jquery-1.11.1/jquery-ui.css" rel="stylesheet" type="text/css" />
+        <script src="/Common/js/jquery-1.11.1/jquery-ui.js" type="text/javascript"></script>
+        <!--<script src="/common/js/jquery-1.7.2.min.js" type="text/javascript"></script>-->
+        <script src="/common/js/design.js" type="text/javascript"></script>
+        <script src="/common/js/select.js" type="text/javascript"></script>
+        <script src="/common/js/jquery.filestyle.js" type="text/javascript"></script>
+        <!--<script src="/Common/js/jquery-ui.js" type="text/javascript"></script>-->
+        <script src="/Common/js/jquery.cookie.js" type="text/javascript"></script>
+        <script src="/common/js/lrscroll.js"></script>
+        <link href="/Common/css/Tuto.css" rel="stylesheet" type="text/css" />
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder_Common_Head" runat="server" />
+
+        <title>T.끌, 소통과 협업의 플랫폼</title>
+
+        <!--[if lt IE 9]>
+        <script src="/common/js/html5shiv.js"></script>
+        <![endif]-->
+
+
+    </head>
+    <asp:contentplaceholder id="ContentPlaceHolder_Common_Top" runat="server" />
+    <body>
+        <form id="form1" runat="server">
+            <div id="container">
+	            <div id="header">
+		            <h1><a href="/Main.aspx"><img alt="티:끌" src="/common/images/common/home.png"></a></h1>
+			        <ul id="gnb">
+				        <li><a href="/Glossary/Glossary.aspx"><img src="/common/images/common/gnb1.png" alt="끌.지식" /></a></li>
+				        <li><a href="/People/People.aspx"><img src="/common/images/common/gnb2.png" alt="끌.담당자" /></a></li>
+				        <li><a href="/Directory/DirectoryListNew.aspx"><img src="/common/images/common/gnb3.png" alt="끌.문서" /></a></li>
+				        <li><a href="/Survey/SurveyListNew.aspx"><img src="/common/images/common/gnb4.png" alt="끌.의견" /></a></li>
+				        <li><a href="/Schedule/ScheduleNew.aspx"><img src="/common/images/common/gnb5.png" alt="끌.일정" /></a></li>
+			        </ul>
+			        <p><a href="#myMenu"> <%= MyMenuUserName %></a></p>
+			        <ul id="myMenu">
+				        <li><a href="/GlossaryMyPages/MyProfile.aspx" class="my1">내 프로필</a></li>
+				        <li><a href="/GlossaryMyPages/MyDocumentsList.aspx" class="my2">내 티끌 모음</a></li>
+				        <li><a href="/GlossaryMyPages/MyScrapList.aspx" class="my3">스크랩한 지식</a></li>
+                        <li><a href="/GlossaryMyPages/MyPeopleScrapList.aspx" class="my3">스크랩한 담당자</a></li>
+                        <li><a href="/GlossaryMyPages/MyUseGroup.aspx" class="my4">자주 사용하는 그룹</a></li>
+				        <!--<li><a href="/GlossaryMyPages/MyShareList.aspx" class="my4">공유티끌 모음</a></li>
+				        <li><a href="/GlossaryMyPages/MyFollowList.aspx" class="my5">티끌 받아보기</a></li>
+				        <li><a href="/GlossaryAdmin/GlossaryAdminStatTotal.aspx" class="my6">관리자 전용 페이지</a></li>-->
+			        </ul>
+	            </div>
+
+	            <!--CONTENTS-->
+                <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder_Common_Footer" runat="server" />
+	            <!--/CONTENTS-->
+            </div>
+            <!--FOOTER-->
+            <div id="footer_wrap">
+	            <div id="footer">
+		            <h2><a href="/"><img src="/common/images/main/logo_gray.png" alt="SK telecom" /></a></h2>
+			            <address>SK Telecom 구성원을 위한 사내 시스템입니다. 불법으로 사용시에는 법적 제재를 받을 수 있습니다.  l   COPYRIGHT@2013 SK TELECOM. ALL RIGHTS RESERVED</address>
+	            </div>
+            </div>
+            <!--/FOOTER-->
+    <script type="text/javascript">
+        var setup = true;
+        var MainSearchTemp = false;
+        var AutoSearchTemp = false;
+        var SearchValue = '<%= SearchKeyword %>';
+
+        $(document).ready(function () {
+
+
+
+            //check in .out 업데이트
+            if ($.cookie('GlossaryModifyYN') != null && $.cookie('GlossaryModifyYN') != "null" && $.cookie('GlossaryModifyYN') != "") {
+                $.ajax({
+                    type: "POST",
+                    contentType: "application/json; charset=utf-8",
+                    url: "/Common/Controls/AjaxControl.aspx/GlossaryModifyYNUpdate",
+                    data: "{'GlossaryModifyYN':'" + $.cookie('GlossaryModifyYN') + "'}",
+                    dataType: "json",
+                    success: function (date) {
+                        $.cookie('GlossaryModifyYN', 'null', { path: '/' });
+                    }
+                });
+            }
+
+            var nowVisible = '';
+
+            $("#popup-setup").click(function () {
+                $("div[class='view-func-" + $(this).attr('target') + "-outer']").toggle();
+            });
+
+
+            $("#popup-setup").click(function () {
+                if (setup == true) {
+                    $(".view-func-setup-outer").show();
+                    setup = false;
+                } else {
+                    $(".view-func-setup-outer").hide();
+                    setup = true;
+                }
+            });
+        });
+
+        //티클 이미지 클릭
+        function fnMain() {
+            //location.href = "/MainPage.aspx";
+            //            location.href = "/Main.aspx"; // old
+            location.href = "/Main.aspx"; // new
+        }
+
+        function fnSearchClick() {
+            MainSearchTemp = true;
+        }
+
+        function RemoveManagerMenu() {
+            //alert('test');
+            //$(".mList").a2ppend("<li><a href='/GlossaryAdmin/GlossaryAdminStatTotal.aspx' class='mM05'>관리자</a></li>");
+            //$("#gnbAdmin").remove();
+            $(".mList li").last().remove();
+        }
+
+        // new
+        // 상단 전체메뉴 호출
+        $("a.menu").bind("click", function () {
+            if ($(this).hasClass("menu")) {
+                $(".totalMenu").show();
+                $(this).removeClass("menu");
+                $(this).addClass("menuOn");
+            } else {
+                $(this).removeClass("menuOn");
+                $(".totalMenu").hide();
+                $(this).addClass("menu");
+            }
+        });
+        // 상단 프로필 메뉴 호출
+        $(".myMenuWrap").bind("click", function () {
+            if ($(this).hasClass("myMenuWrap")) {
+                $(this).find(".user_intro").addClass("minus");
+                $(".user_img").find("span").addClass("on");
+                $(".myMenu").show();
+                $(this).removeClass("myMenuWrap");
+                $(this).addClass("myMenuWrapOn");
+            } else {
+                $(this).find(".user_intro").removeClass("minus");
+                $(".user_img").find("span").removeClass("on");
+                $(".myMenu").hide();
+                $(this).removeClass("myMenuWrapOn");
+                $(this).addClass("myMenuWrap");
+            }
+        });
+
+        // 티끌이란
+        $(function () {
+            $("div#div-download").dialog({
+                autoOpen: false
+			, minWidth: 480
+			, minHeight: 320
+			, modal: true
+            , dialogClass: "down_header"
+            });
+
+            if (document.cookie.indexOf("tk_down=1") < 0) {
+                $("div#div-download").dialog("open");
+            }
+            else {
+                $("#download-do-not-open").attr("checked");
+            }
+        });
+
+        // 다시 보지 않음 쿠키 값
+        function setCookie(name, value, expiredays) {
+            var todayDate = new Date();
+            todayDate.setDate(todayDate.getDate() + expiredays);
+            document.cookie = name + "=" + escape(value) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+        }
+        // 티끌이란 클릭
+        function downloadClick() {
+            $("div#div-download").dialog("open");
+        }
+        $("#download-do-not-open").click(function () {
+            $("div#div-download").dialog("close");
+            setCookie("tk_down", 1, 365);
+        });
+
+        // 오류 신고 및 개선 문의
+        function fnGoTestBug() {
+            location.href = "/TestBug/TestQnAList.aspx";
+        }
+    </script>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="LearningWorld.aspx.cs" Inherits="SKT.Glossary.Web.Interface.LearningWorld"%>

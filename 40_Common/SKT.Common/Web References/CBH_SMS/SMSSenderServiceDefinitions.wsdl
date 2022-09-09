@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s0:definitions xmlns:p="http://www.w3.org/2001/XMLSchema" xmlns:s1="http://skt/soa/notification/webservice" xmlns:s2="http://schemas.xmlsoap.org/wsdl/soap/" name="SMSSenderServiceDefinitions" targetNamespace="http://skt/soa/notification/webservice" xmlns:s0="http://schemas.xmlsoap.org/wsdl/">
+  <s0:types>
+    <p:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://skt/soa/notification/webservice">
+      <xs:element name="send">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="CONSUMER_ID" type="xs:string" />
+            <xs:element name="RPLY_PHON_NUM" type="xs:string" />
+            <xs:element name="TITLE" type="xs:string" />
+            <xs:element name="PHONE" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="URL" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="START_DT_HMS" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="END_DT_HMS" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="sendResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="uuid" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="cancel">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="UUID" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="cancelResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </p:schema>
+  </s0:types>
+  <s0:message name="cancelResponse">
+    <s0:part name="parameters" element="s1:cancelResponse" />
+  </s0:message>
+  <s0:message name="send">
+    <s0:part name="parameters" element="s1:send" />
+  </s0:message>
+  <s0:message name="sendResponse">
+    <s0:part name="parameters" element="s1:sendResponse" />
+  </s0:message>
+  <s0:message name="cancel">
+    <s0:part name="parameters" element="s1:cancel" />
+  </s0:message>
+  <s0:portType name="SMSSender">
+    <s0:operation name="send" parameterOrder="parameters">
+      <s0:input message="s1:send" />
+      <s0:output message="s1:sendResponse" />
+    </s0:operation>
+    <s0:operation name="cancel">
+      <s0:input message="s1:cancel" />
+      <s0:output message="s1:cancelResponse" />
+    </s0:operation>
+  </s0:portType>
+  <s0:binding name="SMSSenderServiceSoapBinding" type="s1:SMSSender">
+    <s2:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <s0:operation name="send">
+      <s2:operation soapAction="" style="document" />
+      <s0:input>
+        <s2:body use="literal" parts="parameters" />
+      </s0:input>
+      <s0:output>
+        <s2:body use="literal" parts="parameters" />
+      </s0:output>
+    </s0:operation>
+    <s0:operation name="cancel">
+      <s2:operation soapAction="" style="document" />
+      <s0:input>
+        <s2:body use="literal" parts="parameters" />
+      </s0:input>
+      <s0:output>
+        <s2:body use="literal" parts="parameters" />
+      </s0:output>
+    </s0:operation>
+  </s0:binding>
+  <s0:service name="SMSSenderService">
+    <s0:port name="SMSSenderSoapPort" binding="s1:SMSSenderServiceSoapBinding">
+      <s2:address location="http://cspcbh.sktelecom.com:8080/ws/cbh/SMSService" />
+    </s0:port>
+  </s0:service>
+</s0:definitions>

@@ -1,0 +1,342 @@
+<html>
+<head>
+	<title>나모 액티브스퀘어 8</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=5"/>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="author" content="Namo Interactive Inc.">
+	<meta name="author" content="Namo ActiveSquare 8">
+	<link rel="stylesheet" type="text/css" href="./As8.css" />
+	<link rel="shortcut icon" href="./images/AS8.ico" />
+</head>
+<body>
+<Form name="testFrom">
+<div class="header">
+	<div class="container">
+		<div class="logo">
+			<a href="./Sample.html"><span class="logo_bi" alt="Namo ActiveSquare 8" title="Namo ActiveSquare 8">Namo ActiveSquare 8</span></a>
+		</div>
+		<div class="menu">
+			<div class="menu_area">
+			</div>
+		</div>
+		<div style="clear:both;"></div>
+	</div>
+</div>
+
+<div class="content">
+	<div class="container">
+		<div class="document">
+			<div class="title"><img src="./images/t_01.png" alt="Example Document" title="Example Document" /></div>
+			<div class="box">
+				<table class="tbl">
+					<tbody>
+						<tr>
+							<th>설정</th>
+							<td valign="middle">
+								<div class="tb">
+									<div class="area_select">
+											<select name="menutype">
+											<option value="0" selected>툴바 모두 보이기</option>
+											<option value="1">툴바 일부 보이기</option>
+											<option value="2">툴바 모두 감추기</option>
+											<option value="3">툴바 사용자 정의</option>
+											</select> 
+											<select name="tabtype">
+											<option selected value="0">탭 보이기</option>
+											<option value="1">탭 감추기</option>
+											</select> 
+											<select name="rulertype">
+											<option selected value="0">눈금자 모두 감추기</option>
+											<option value="1">눈금자 가로 보이기</option>
+											<option value="2">눈금자 세로 보이기</option>
+											<option value="3">눈금자 모두 보이기</option>
+											</select> 
+											<select name="doctype">
+											<option selected value="0">☞ 빈문서</option>
+											<option value="1">☞ 표준검사신청서</option>
+											<option value="2">☞ 입사지원서</option>
+											<option value="3">☞ 업무일지</option>
+											<option value="4">☞ 세금계산서</option>
+											</select>
+									</div>
+									<div class="area_icon">
+										<!-- <a href="javascript:;;"><img src="./images/01.png" /></a> -->
+										<input type=button name="InsertImoticon" size=35 style="font-size:9pt; background-color:transparent; background-image:url('./images/01.png'); background-repeat:no-repeat; padding-top:3; padding-bottom:0; border-width:0; border-style:none; width:28; height:28; cursor:hand;" onfocus="this.blur();">
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>설명</th>
+							<td>API 및 초기화파일에 대한 자세한 내용은 <a href="http://comp.namo.co.kr/as7/help/devel_guide/index.html" target="blank">[개발자 가이드]</a>를 참고해주세요.</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="editor">
+					<!--editor-->
+					<script language="javascript" src="NamoWec8.js"></script>
+				</div>
+				<div class="viewResult">
+					<div class="viewValue html_value">
+						<div class="head">
+							<!-- <div class="subject"><img src="./images/btn_01.png" /></div> --> 
+							<div class="subject"><input type="button" style="background:url(./images/btn_01.png);width:125px;height:29px;border:none;" alt="Value" name="GetValue" value=""></div>
+							<div class="info">작성된 내용에 대한 값을 보여줍니다.</div>
+							<div style="clear:both;"></div>
+						</div>
+						<div class="body">
+							<textarea class="viewTxt" name="ValueContent"></textarea>
+						</div>
+						<div class="foot">
+							<div><input type="button" style="background:url(./images/btn_03.png); width:187px; height:29px;border:none;" value="" name="PutValue"></div>
+						</div>
+					</div>
+					<div class="viewValue mime_value">
+						<div class="head">
+						<div class="subject"><input type="button" style="background:url(./images/btn_02.png);width:125px;height:29px;border:none;" alt="Value" name="GetMimeValue" value=""></div>
+						<div class="info">작성된 내용을 MIME으로 인코딩하여 보여줍니다.</div>
+						<div style="clear:both;"></div>
+						</div>
+						<div class="body">
+							<textarea class="viewTxt" name="MimeValueContent"></textarea>
+						</div>
+						<div class="foot">
+							<div><input type="button" style="background:url(./images/btn_03.png); width:187px; height:29px;border:none;" value="" name="PutMimeValue"></div>
+						</div>
+					</div>
+					<div style="clear:both;"></div>
+				</div>
+			</div>
+		</div>
+		<div style="clear:both;"></div>
+	</div>
+</div>
+<div class="footer">
+	<div class="container">
+		<div>
+			<span class="copyright">Copyright 2015ⓒ Namo Interactive, Inc. All Rights Reserved</span>
+			<span class="logo_namo"></span>
+		</div>
+	</div>
+</div>
+</form>
+</body>
+<script language="VBScript">
+<!--
+
+	Function Window_Onbeforeunload
+		Dim fRef
+		Set fRef = document.testFrom
+		fRef.Wec.SaveState "Wec"
+	End Function
+
+	Function Wec_OnInitCompleted
+		Dim fRef
+		Set fRef = document.testFrom
+	'	fRef.Wec.DoCommand "marktable"
+	'	fRef.Wec.DoCommand "marktag"
+	'	fRef.Wec.OpenFile "pages/defdoc.htm"
+	'	fRef.Wec.SetBasicCSSFile "pages/format.css"
+	'	fRef.Wec.RestoreState "Wec"
+	'	fRef.Wec.OpenFile "http://127.0.0.1/txt"
+	End Function
+
+	Function Wec_OnTabChanged(tagid)
+	' 초기화파일에서 마우스 이벤트를 활성화 시켜줘야 합니다.
+		Dim fRef
+		Dim fSel
+		Set fRef = document.testFrom
+
+		if tagid = 0 then
+			fRef.rulertype.disabled=false
+			fRef.scrolltype.disabled=false
+			fRef.InsertImoticon.disabled=false
+		else
+			fRef.rulertype.disabled=true
+			fRef.scrolltype.disabled=true
+			fRef.InsertImoticon.disabled=true
+		end if
+	End Function 
+
+	Function StartPRN
+		Dim fRef
+		Set fRef = document.testFrom
+		fRef.Wec.SetPaperSize 1    ' 용지를 A4 용지로 하고 현재 편집중인 문서 인쇄
+		fRef.Wec.PrintFile ""      ' 편집창의 내용만 프린트 시작
+	End Function
+
+	Function doctype_OnChange
+
+		Dim fRef
+		Dim fSel
+		Set fRef = document.testFrom
+		fSel = fRef.doctype.value
+		
+		if fSel = 0 then
+			fRef.Wec.OpenFile "pages/defdoc.htm"
+		elseif fSel = 1 then
+			fRef.Wec.OpenFile "pages/sam1.htm"
+		elseif fSel = 2 then
+			fRef.Wec.OpenFile "pages/sam2.htm"
+		elseif fSel = 3 then
+			fRef.Wec.OpenFile "pages/sam3.htm"
+		elseif fSel = 4 then
+			fRef.Wec.OpenFile "pages/sam4.htm"
+		end if
+		
+		
+	End Function	
+
+	Function menutype_OnChange
+
+		'--- 형식: ShowToolbar 막대종류(0,1,2), 보이기여부(0,1)
+
+		Dim fRef
+		Dim fSel
+		Set fRef = document.testFrom
+		fSel = fRef.menutype.value
+		
+		if fSel = 0 then
+			fRef.Wec.CreateToolbar "CreateToolbar = filenew fileopen filesave | print printpreview | undo redo | find | hr hyperlink bookmark image layer | tableribbon  tableerase | marktable cellbgcolor cellsplit cellmarge | rowbelowinsert rowdelete | columnrightinsert columndelete | markpara marktag ; paralist fontlist fontsizelist lineheight | charbold charitalic charunderline charcolor charbgcolor charclear | listnumber listbullet | indentdecrease indentincrease | alignleft aligncenter alignright"
+			fRef.Wec.ShowToolbar 0,1
+			fRef.Wec.ShowToolbar 1,1
+			fRef.Wec.ShowToolbar 2,1
+		elseif fSel = 1 then
+			fRef.Wec.ShowToolbar 0,0
+			fRef.Wec.ShowToolbar 1,1
+			fRef.Wec.ShowToolbar 2,0
+		elseif fSel = 2 then
+			fRef.Wec.ShowToolbar 0,0
+			fRef.Wec.ShowToolbar 1,0
+			fRef.Wec.ShowToolbar 2,0
+		elseif fSel = 3 then
+			fRef.Wec.ShowToolbar 0,0
+			fRef.Wec.CreateToolbar "Menu | fontlist fontsizelist ; charbold charitalic charunderline charcolor charbgcolor | alignleft aligncenter alignright"	
+		end if	
+
+		fRef.Wec.Focus
+	End Function
+
+	Function rulertype_OnChange
+
+		'--- 형식: ShowRuler 가로 눈금자 보이기여부(0,1), 세로 눈금자 보이기여부(0,1)
+
+		Dim fRef
+		Dim fSel
+		Set fRef = document.testFrom
+		
+		fSel = fRef.rulertype.value
+		
+		if fSel = 0 then
+			fRef.Wec.ShowRuler 0,0
+		elseif fSel = 1 then
+			fRef.Wec.ShowRuler 1,0
+		elseif fSel = 2 then
+			fRef.Wec.ShowRuler 0,1
+		elseif fSel = 3 then
+			fRef.Wec.ShowRuler 1,1
+		end if
+		fRef.Wec.Focus
+	End Function
+
+	Function tabtype_OnChange
+
+		'--- 형식: ShowTab 보이기(TRUE) or 감추기(FALSE)
+
+		Dim fRef
+		Dim fSel
+		Set fRef = document.testFrom
+		
+		fSel = fRef.tabtype.value
+
+		if fSel = 0 then
+			fRef.Wec.ShowTab TRUE
+		elseif fSel = 1 then
+			fRef.Wec.ShowTab FALSE
+		end if
+
+		fRef.Wec.Focus
+	End Function
+
+	Function scrolltype_OnChange
+
+		'--- 형식: EnableHorzScrollbar 보이기(1) or 감추기(0)
+		'          EnableVerrtScrollbar 보이기(1) or 감추기(0)
+
+		Dim fRef
+		Dim fSel
+		Set fRef = document.testFrom
+		
+		fSel = fRef.scrolltype.value
+
+		if  fSel = 0 then
+			fRef.Wec.EnableHorzScrollbar 1
+			fRef.Wec.EnableVertScrollbar 1
+		elseif fSel = 1 then
+			fRef.Wec.EnableHorzScrollbar 1
+			fRef.Wec.EnableVertScrollbar 0
+		elseif fSel = 2 then
+			fRef.Wec.EnableHorzScrollbar 0
+			fRef.Wec.EnableVertScrollbar 1
+		elseif fSel = 3 then
+			fRef.Wec.EnableHorzScrollbar 0
+			fRef.Wec.EnableVertScrollbar 0
+		end if
+
+		fRef.Wec.Focus
+		
+	End Function
+
+	Function PutValue_OnClick
+		Dim fRef
+		Set fRef = document.testFrom
+		fRef.Wec.Value = fRef.ValueContent.value
+	End Function
+
+	Function PutMimeValue_OnClick
+		Dim fRef
+		Set fRef = document.testFrom
+		fRef.Wec.MimeValue = fRef.MimeValueContent.value
+	End Function
+
+	Function GetValue_OnClick
+		Dim fRef
+		Set fRef = document.testFrom
+		fRef.ValueContent.value = fRef.Wec.Value
+	End Function
+
+	Function GetMimeValue_OnClick
+		Dim fRef
+		Set fRef = document.testFrom
+		fRef.MimeValueContent.value = fRef.Wec.MimeValue
+	End Function
+
+	Function Wec_OnCustomMenu(menuid)
+		if menuid = 1 then call StartPRN
+	End Function
+
+	Function Wec_OnCommand(cmdstr, finished)	
+	End Function
+
+	Function InsertImoticon_OnClick
+	  InsertImoticon_Internal(Document.testFrom.Wec)
+	End Function
+
+	Function Imoticon
+		Dim fRef
+		Dim x
+		Set fRef = Document.testForm
+		Set x = Window.Open("../pages/imoticon.htm","","left=300,top=250,Width=300,Height=180,status=no")
+		x.focus
+	End Function
+
+--></script>
+<script language="javascript">
+function InsertImoticon_Internal(Wec)
+{
+	var strRetVal;
+	strRetVal = window.showModalDialog("pages/imoticon.htm", self, "dialogWidth:200px; dialogHeight:159px; status=no");
+	Wec.InsertImage(strRetVal, "");
+}
+</script>
+</html>

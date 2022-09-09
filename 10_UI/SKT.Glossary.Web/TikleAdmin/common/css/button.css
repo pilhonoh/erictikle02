@@ -1,0 +1,57 @@
+/* [button style] */
+/* button - 기본설정 */
+.button,
+.button * {display:inline-block; position:relative; overflow:hidden; margin:0; padding:0; text-decoration:none !important; white-space:nowrap; vertical-align:top; letter-spacing:-1px; font:bold 12px/12px "돋움", gulim; color:white; border:0; background:url('/TikleAdmin/common/images/button.gif') no-repeat; cursor:pointer;}
+.button .icon {position:relative; display:inline-block; height:100%; vertical-align:top; background:url('/TikleAdmin/common/images/button.gif') no-repeat; z-index:1;}
+
+/* 버튼타입1 */
+.button {height:23px; padding-left:2px; background-position:0 0;}
+.button a {padding:6px 13px 5px 11px; vertical-align:top; background-position:right top;}
+.button button, .button input {overflow:visible; height:23px; padding:0 13px 0 11px; vertical-align:top; font:bold 12px/23px "돋움", gulim; background-position:right top;}
+.button button, .button input {line-height:24px\9;}
+* html .button button {height:auto; padding:6px 13px 5px 11px; line-height:12px;}
+* html .button input {height:auto; padding:7px 13px 4px 11px; line-height:12px;}
+.button * {color:#797B80 !important;}
+/* 버튼타입1>color */
+.button.button-blue {background-position:0 -24px;}
+.button.button-blue * {color:white !important; background-position:100% -24px !important;}
+.button.button-brown {background-position:0 -48px;}
+.button.button-brown * {color:white !important; background-position:right -48px !important;}
+.button.button-green {background-position:0 -72px;}
+.button.button-green * {color:white !important; background-position:right -72px !important;}
+/* 버튼타입1>icon */
+.button .icon-arr {width:14px; margin-right:-6px; background-position:10px 8px !important;}
+
+.buttonS,
+.buttonS * {display:inline-block; position:relative; overflow:hidden; margin:0; padding:0; text-decoration:none !important; white-space:nowrap; vertical-align:middle; letter-spacing:-1px; font:normal 11px/11px "돋움", gulim; color:white; border:0; background:url('/TikleAdmin/common/images/buttonS.gif') no-repeat; cursor:pointer;}
+.buttonS .icon {position:relative; display:inline-block; height:100%; vertical-align:top; background:url('/TikleAdmin/common/images/buttonS.gif') no-repeat; z-index:1;}
+
+/* 버튼타입1 */
+.buttonS {height:18px; padding-left:2px; background-position:0 0;}
+.buttonS a {padding:4px 13px 1px 11px; vertical-align:top; background-position:right top;}
+.buttonS button, .buttonS input {overflow:visible; height:18px; padding:0 13px 0 11px; vertical-align:top; font:normal 11px/18px "돋움", gulim; background-position:right top;}
+.buttonS button, .buttonS input {line-height:19px\9;}
+* html .buttonS buttonS {height:auto; padding:4px 13px 1px 11px; line-height:11px;}
+* html .buttonS input {height:auto; padding:4px 13px 2px 11px; line-height:11px;}
+.button2 * {color:#797B80 !important;}
+/* 버튼타입1>color */
+.buttonS.button-blue {background-position:0 -19px;}
+.button-blue * {color:white !important; background-position:100% -19px !important;}
+.buttonS.button-brown {background-position:0 -38px;}
+.buttonS.button-brown * {color:white !important; background-position:right -38px !important;}
+.buttonS.button-green {background-position:0 -57px;}
+.buttonS.button-green * {color:white !important; background-position:right -57px !important;}
+/* 버튼타입1>icon */
+.button2 .icon-arr {width:14px; margin-right:-6px; background-position:10px 8px !important;}
+
+.btnExcel{
+   margin-left:10px;
+   width:25px;
+   height:25px;
+   line-height:22px;
+   padding:0px;   
+   position:relative;
+   top:0px;
+   
+
+}

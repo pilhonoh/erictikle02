@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F2C939A0-A187-4E5C-B0A1-7CD3EEC1C06E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SKT.Glossary.Dac</RootNamespace>
+    <AssemblyName>SKT.Glossary.Dac</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=8f425ad02afbe845, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\00_Assemblies\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception">
+      <HintPath>..\..\00_Assemblies\Microsoft.Practices.Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EmailBookMarkDac.cs" />
+    <Compile Include="FloatingDac.cs" />
+    <Compile Include="FloatingMenuUserSettingDac.cs" />
+    <Compile Include="GlossaryCategoryDac.cs" />
+    <Compile Include="GlossaryControlDac.cs" />
+    <Compile Include="GlossaryDac.cs" />
+    <Compile Include="GlossaryDirectoryAuthDac.cs" />
+    <Compile Include="GlossaryDirectoryDac.cs" />
+    <Compile Include="GlossaryFollowDac.cs" />
+    <Compile Include="GlossaryGatheringDac.cs" />
+    <Compile Include="GlossaryHistoryDac.cs" />
+    <Compile Include="GlossaryInterfaceDac.cs" />
+    <Compile Include="GlossaryMainDac.cs" />
+    <Compile Include="GlossaryMyGroupDac.cs" />
+    <Compile Include="GlossaryMyPeopleScrapDac.cs" />
+    <Compile Include="GlossaryPeopleDac.cs" />
+    <Compile Include="GlossaryProfileDac.cs" />
+    <Compile Include="GlossaryQnACommentDac.cs" />
+    <Compile Include="GlossaryQnADac.cs" />
+    <Compile Include="GlossaryScheduleDac.cs" />
+    <Compile Include="GlossaryScrapDac.cs" />
+    <Compile Include="GlossarySearchDac.cs" />
+    <Compile Include="GlossaryShareDac.cs" />
+    <Compile Include="GlossarySurveyCommentDac.cs" />
+    <Compile Include="GlossarySurveyDac.cs" />
+    <Compile Include="GlossaryTagDac.cs" />
+    <Compile Include="GlossaryTempDac.cs" />
+    <Compile Include="GlossaryPermissionsDac.cs" />
+    <Compile Include="GlossaryPermissionsTempDac.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="GlossaryTestQnADac.cs" />
+    <Compile Include="GlossaryTestQnACommentDac.cs" />
+    <Compile Include="GlossaryAdminDac.cs" />
+    <Compile Include="GlossaryCommentDac.cs" />
+    <Compile Include="ScoreRankingDac.cs" />
+    <Compile Include="TikleAdminDac.cs" />
+    <Compile Include="TikleMobileWebServiceDac.cs" />
+    <Compile Include="MonthlyAuthDeptDac.cs" />
+    <Compile Include="WeeklyAuthDeptDac.cs" />
+    <Compile Include="MonthlyCommentDac.cs" />
+    <Compile Include="WeeklyCommentDac.cs" />
+    <Compile Include="MonthlyCommentLikeDac.cs" />
+    <Compile Include="WeeklyCommentLikeDac.cs" />
+    <Compile Include="MonthlyDac.cs" />
+    <Compile Include="WeeklyDac.cs" />
+    <Compile Include="MonthlyPermissionsDac.cs" />
+    <Compile Include="WeeklyPermissionsDac.cs" />
+    <Compile Include="MonthlyRequestDac.cs" />
+    <Compile Include="WeeklyRequestDac.cs" />
+    <Compile Include="MonthlyTeamLeaderNotiCheckDac.cs" />
+    <Compile Include="WeeklyTeamLeaderNotiCheckDac.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\40_Common\SKT.Common\SKT.Common.csproj">
+      <Project>{7cb245e4-c7fe-47d4-89be-af2f8e2ec961}</Project>
+      <Name>SKT.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SKT.Glossary.Type\SKT.Glossary.Type.csproj">
+      <Project>{6BBA7CA8-11C5-4C0A-AFF6-5CFFEE01185D}</Project>
+      <Name>SKT.Glossary.Type</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

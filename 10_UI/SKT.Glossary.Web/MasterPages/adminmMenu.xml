@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<adminMenu>
+    <statistics 
+        Value="01_Static" 
+        Text="통계"
+        NavigateUrl="">
+        <total 
+            Value="02_Static_Total" 
+            Text="종합" 
+            NavigateUrl="../GlossaryAdmin/GlossaryAdminStatTotal.aspx">            
+        </total>
+        <dept 
+            Value="02_Static_Dept" 
+            Text="부서" 
+            NavigateUrl="../GlossaryAdmin/GlossaryAdminStatDept.aspx">
+        </dept>
+    </statistics>
+    <halloffame
+        Value="01_HallOfFame"
+        Text="명예의 전당"
+        NavigateUrl="../GlossaryAdmin/GlossaryAdminHallOfFame.aspx">
+    </halloffame>
+    <adminUser 
+        Value="01_AdminUser" 
+        Text="관리자"
+        NavigateUrl="">
+        <insertSpecialUser 
+            Value="02_AdminUser_InsertSU" 
+            Text="사용자 등록" 
+            NavigateUrl="../GlossaryAdmin/GlossaryAdminRegistUserList.aspx">            
+        </insertSpecialUser>            
+    </adminUser>
+  <Category
+    Value="01_Category"
+    Text="카테고리"
+    NavigateUrl="../GlossaryAdmin/GlossaryAdminCategory_List.aspx"
+    >
+    <CategoryManagement
+      Value="02_CategoryManagement"
+      Text="카테고리 관리"
+      NavigateUrl="../GlossaryAdmin/GlossaryAdminCategory_List.aspx"
+      >      
+    </CategoryManagement>
+    <CategoryItemManagement
+      Value="02_CategoryItemManagement"
+      Text="카테고리 항목 변경"
+      NavigateUrl="../GlossaryAdmin/GlossaryAdminCategory_Item.aspx"
+      >
+    </CategoryItemManagement>
+  </Category>
+
+  <Ranking
+    Value="01_Ranking"
+    Text="랭킹"
+    NavigateUrl="../GlossaryAdmin/GlossaryAdminRanking_List.aspx"
+    >
+    
+    <RankingList
+      Value="02_RankingList"
+      Text="랭킹 리스트"
+      NavigateUrl="../GlossaryAdmin/GlossaryAdminRanking_List.aspx"
+      >
+    </RankingList>
+  </Ranking>
+  
+</adminMenu>

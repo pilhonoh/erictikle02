@@ -1,0 +1,164 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="GlossaryMain.master.cs" Inherits="SKT.Glossary.Web.MasterPages.GlossaryMain" %>
+
+<%--<%@ Register Src="../Common/Controls/GNBControl.ascx" TagName="GNB" TagPrefix="Glossary" %>--%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/DTD/loose.dtd">
+<html lang="ko">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="shortcut icon" href="/favi.ico" />
+        <link rel="stylesheet" href="/common/css/default.css" />
+        <link rel="stylesheet" href="/common/css/sub_v20181115.css" />
+        <link rel="stylesheet" href="/common/css/view.css" />
+        <link rel="stylesheet" href="/common/css/tran_pop.css" />
+        <link rel="stylesheet" href="/common/css/main_new_v20181115.css">
+        <%--<link rel="stylesheet" href="/common/css/main.css" />--%>        
+
+        <script src="/Common/js/jquery-1.11.1/jquery-1.11.1.min.js" type="text/javascript"></script>
+        <link href="/Common/js/jquery-1.11.1/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+        <script src="/Common/js/jquery-1.11.1/jquery-ui.min.js" type="text/javascript"></script>
+
+        <script src="/common/js/jquery.cycle.all.js" type="text/javascript"></script>
+        <script src="/common/js/design.js" type="text/javascript"></script>
+        <script src="/common/js/select.js" type="text/javascript"></script>
+        <script src="/common/js/jquery.filestyle.js" type="text/javascript"></script>
+        <script src="/Common/js/jquery.cookie.js" type="text/javascript"></script>
+        <script src="/common/js/lrscroll.js" type="text/javascript"></script>
+        <%--<script src="/Common/Js/BrowserVersion_cookie_v1.js"></script>--%>
+	    <script type="text/javascript" src="/common/js/jcarousellite_1.0.1.min.js"></script>
+
+        <script type="text/javascript" src="/Search/js/akc.js"></script> 
+        <script type="text/javascript" src="/Search/js/search.js"></script> 
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder_Common_Head" runat="server" />
+
+        <%--2016-01-27 P033028 텍스트 컨트롤용 JS 추가--%>
+        <script src="../Common/Js/checktext.js"></script>
+        <title>T.끌, 소통과 협업의 플랫폼</title>
+
+        <!--[if lt IE 9]>
+        <script src="/common/js/html5shiv.js"></script>
+        <![endif]-->
+
+        <script type="text/javascript">
+            var agent = navigator.userAgent.toLowerCase();
+
+            function CloseWindow() {
+                //window.open('about:blank', '_self').close();
+                window.close();
+                self.close();
+                window.opener = window.location.href;
+                self.close();
+                window.open('about:blank', '_self').close();
+            }
+
+            function fnGoTestBugError() {
+                $(".popAdmin").show();
+                $(".layer_popFooter").show();
+                //wrapWindowByMask();
+            }
+
+            function fnGoTestBugErrorClose() {
+                $(".popAdmin").hide();
+                $(".layer_popFooter").hide();
+                $("#testBugTextArea").val("");
+                //wrapWindowByMask();
+            }
+
+            function fnGoTestBugAjax() {
+                var senErrMsg = $("#testBugTextArea").val();
+                if (senErrMsg == "") {
+                    alert("메시지를 입력해 주세요.");
+                } else {
+                    $.ajax({
+                        type: "POST",
+                        contentType: "application/json; charset=utf-8",
+                        url: "/Common/Controls/AjaxControl.aspx/CommNateOnBizSend",
+                        data: "{contentText :'" + senErrMsg + "', SendIds :'1107054/1109271/P067593/', SendNMs :'관리자&관리자&관리자&', SendTYs :'U/U/U/', SendLinkNm :'', SendLinkLink :'', SendLinkType :'', SendDirId :'', SendFileName :''}",
+                        dataType: "json",
+                        success: function (data) {
+
+                            alert("티끌 기능개선/오류신고가 접수되었습니다.\n빠르게 반영하도록 하겠습니다\n소중한 의견 감사합니다");
+                            fnGoTestBugErrorClose();
+
+                        },
+                        error: function (response, textStatus, errorThrown) {
+                            alert('쪽지발송 오류:' + response + ':' + textStatus + ':' + errorThrown);
+                            fnGoTestBugErrorClose();
+
+
+                            return;
+                        }
+                    });
+                }
+            }
+
+            /*
+            Author : 개발자-김성환D, 리뷰자-진현빈D
+            Create Date : 2016.05.11 
+            Desc : 팝업 중앙 위치 고정
+            */
+            function goErrorReport() {
+                var w = "400";
+                var h = "430";
+
+                //중앙위치 구해오기
+                var LeftPosition = (screen.width - w) / 2;
+                var TopPosition = (screen.height - h) / 2;
+                var options = "top=" + TopPosition + ",left=" + LeftPosition + ",width=" + w + ", height=" + h + ", toolbar=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no";
+                window.open("../ErrorReport.aspx", "_blank", options);
+            }
+
+        </script>
+       
+    </head>
+    <asp:contentplaceholder id="ContentPlaceHolder_Common_Top" runat="server" />
+    <body>
+        <%--<form id="form1" runat="server">--%>
+            <div id="header">
+                <div class="userInfo">
+	            <p><a href="#myMenu"><%= MyMenuUserName %></a></p>
+	            <ul id="myMenu">
+			        <li><a href="/GlossaryMyPages/MyProfile.aspx" class="my1">My 프로필</a></li>
+			            <li><a href="/GlossaryMyPages/MyDocumentsList.aspx" class="my2">작성 중인 지식</a></li>
+			            <li><a href="/GlossaryMyPages/MyScrapList.aspx" class="my3">지식스크랩</a></li>
+			            <%--<li><a href="/GlossaryMyPages/MyPeopleScrapList.aspx" class="my4">담당자스크랩</a></li>--%>
+			            <%--<li><a href="/GlossaryMyPages/MyUseGroup.aspx" class="my5">My 그룹</a></li>--%>
+						<% if(isAdminMenu) { %>
+						<li><a href="/TikleAdmin/Stats/tikleTotal.aspx" class="my6">관리자모드</a></li>
+						<% } %>
+	            </ul>
+                </div>
+                <%--<span class="btn_guide"><a href="javascript:"><img src="/common/images/btn/guide.png" alt="길라잡이" /></a></span>
+	            <fieldset>
+		            <input type="text" value="용어, 업무 프로세스, 인물정보를 검색해 보세요." onfocus="this.value=''" />
+		            <a href=""><img src="/common/images/btn/search.png" alt="검색" /></a>
+	            </fieldset>--%>
+            </div>
+          
+	        <!--CONTENTS-->
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder_Common_Footer" runat="server" />
+	        <!--/CONTENTS-->
+            <!--FOOTER-->
+          <%--  <div id="footer_wrap">
+	            <div id="footer" style="">
+		            <h2><img src="/common/images/etc/logo_gray.png" alt="SK telecom" /><span id="serverip" runat="server" style="color:white;"></span></h2>
+                    <div class="footerErrBug"><u><a href="javascript:" onclick="goErrorReport()">[기능개선/오류신고]</a></u></div>
+	            </div>
+            </div>--%>
+
+            <div id="footer_wrap">
+		        <div id="footer">
+			        <h2><img src="common/images/footer_ci.png" alt="SK telecom"  style="vertical-align:middle;"/>
+                        <span style="padding-left:20px; color:#666;font-weight:normal;font-size:12px;vertical-align:middle;">COPYRIGHT ⓒ SK TELECOM ALL RIGHTS RESERVED. <%--<span style="padding-left:20px;">담당 : 역량개발 Cell 김진규 매니저 / DT추진담당 박성현 매니저</span>--%></span>
+                        <span id="serverip" runat="server" style="color:white;"></span>    
+                    </h2>
+			        <div class="footerErrBug"><a href="javascript:" onclick="goErrorReport()">문의/오류신고</a></div>
+               </div>
+	        </div>
+       
+            <!--/FOOTER-->
+       <%-- </form>--%>
+    </body>
+</html>

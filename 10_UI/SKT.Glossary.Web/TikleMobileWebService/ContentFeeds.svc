@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Tikle_ContentFeeds.ContentFeeds" CodeBehind="ContentFeeds.svc.cs" %>

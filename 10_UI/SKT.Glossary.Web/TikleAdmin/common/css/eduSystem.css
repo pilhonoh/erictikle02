@@ -1,0 +1,40 @@
+*{margin:0; padding:0}
+html{width:100%; height:100%;}
+body{height:100%; font-size:12px; font-family:"돋움",dotum,arial,sans-serif; color:#666}
+body,div,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,p,form,fieldset,input,table,tr,th,td{margin:0; padding:0}
+ul,ol,li{list-style:none}
+img, fieldset{border:none; vertical-align:top}
+legend, caption{display:none;}
+textarea, button{vertical-align:middle;}
+input{padding:3px; height:14px; vertical-align:top; background:none; border:1px solid #dbdbdb; color:#666; font-family:"돋움",dotum,arial,sans-serif;}
+.input{background:#fff;}
+select{color:#333; vertical-align:top; background:#fff; border:1px solid #dbdbdb;  padding:2px; height:22px}
+textarea{padding:3px; vertical-align:middle; background:#fff; border:1px solid #dbdbdb; color:#666; font-family:"돋움",dotum,arial,sans-serif; font-size:12px;}
+.checkbox{padding:0; border:0 !important;}
+.disNone{display:none;}
+a{text-decoration:none; color:#666;}
+a:hover, a:focus, a:active{text-decoration:none; color:#666;}
+table{border-collapse:collapse}
+
+/*layout*/
+#wrap{width:760px; margin:60px auto 0;}
+.courseBox{border-top:2px solid #e31837;border-bottom:1px solid  #bbb; width:100%; overflow:hidden;}
+.courseBox table{width:100%;}
+.courseBox thead th{color:#555; background:#ececec; padding:14px 0 10px; border-top:0 solid #e31837;}
+.courseBox td{color:#666; border-top:1px solid #dbdbdb; border-left:1px solid #dbdbdb; padding:12px 0 10px; text-align:center; line-height:18px; vertical-align:middle;}
+.courseBox td.title{text-align:left;  padding:12px 10px 10px;}
+.courseBox td.code{border-left:0; }
+.btn{margin-top:20px; text-align:center;}
+
+/* 버튼타입1 */
+.button,
+.button * {display:inline-block; position:relative; overflow:hidden; margin:0; padding:0; text-decoration:none !important; white-space:nowrap; vertical-align:middle; letter-spacing:-1px; font:bold 12px/12px "돋움", gulim; color:white; border:0; background:url('/TikleAdmin/common/images/btn/btn_input.gif') no-repeat; cursor:pointer;}
+
+.button {height:30px; padding-left:2px; background-position:0 -30px;}
+.button a {padding:9px 19px 0 18px; height:21px; vertical-align:top; background-position:right -30px;}
+.button.btn2 a {padding:9px 14px 0 13px; height:21px; vertical-align:top; background-position:right -30px;}
+.button button, .button input {overflow:visible; height:30px; padding:0 19px 0 18px; vertical-align:top; font:bold 12px/23px "돋움", gulim; background-position:right -30px;}
+.button button, .button input {line-height:24px \9; padding-top:3px \9;}
+* html .button button {height:auto; padding:6px 13px 5px 11px; line-height:12px;}
+* html .button input {height:auto; padding:7px 13px 4px 11px; line-height:12px;}
+.button * {color:#666 !important;}

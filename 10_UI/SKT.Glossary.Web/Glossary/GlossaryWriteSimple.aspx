@@ -1,0 +1,1 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPages/GlossarySearch.master" AutoEventWireup="true" CodeBehind="GlossaryWriteSimple.aspx.cs" Inherits="SKT.Glossary.Web.Glossary.GlossaryWriteSimple" ValidateRequest="false" %>

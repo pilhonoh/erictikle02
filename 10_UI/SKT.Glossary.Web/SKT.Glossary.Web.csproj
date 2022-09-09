@@ -1,0 +1,2551 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\packages\MSBuild.Microsoft.VisualStudio.Web.targets.14.0.0.3\build\MSBuild.Microsoft.VisualStudio.Web.targets.props" Condition="Exists('..\..\packages\MSBuild.Microsoft.VisualStudio.Web.targets.14.0.0.3\build\MSBuild.Microsoft.VisualStudio.Web.targets.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{70AE7582-3E87-445C-BD2A-DF76A04DF8A1}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SKT.Glossary.Web</RootNamespace>
+    <AssemblyName>SKT.Glossary.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <TrackFileAccess>false</TrackFileAccess>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkProfile />
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <FilesToIncludeForPublish>OnlyFilesToRunTheApp</FilesToIncludeForPublish>
+    <Prefer32Bit>false</Prefer32Bit>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=3.0.30930.28736, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <HintPath>..\..\00_Assemblies\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus, Version=4.5.3.1, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\00_Assemblies\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.4.6.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\00_Assemblies\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.DSAPILib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\..\00_Assemblies\Interop.DSAPILib.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ionic.Zip.Reduced">
+      <HintPath>..\..\00_Assemblies\Ionic.Zip.Reduced.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Exchange.WebServices">
+      <HintPath>..\..\00_Assemblies\Microsoft.Exchange.WebServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\00_Assemblies\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\00_Assemblies\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="NamoMIME, Version=7.0.0.4, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\00_Assemblies\NamoMIME.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json.Net20, Version=4.0.2.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\00_Assemblies\Newtonsoft.Json.Net20.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="sapnco">
+      <HintPath>..\..\packages\SAPNCo.x64.3.0.13.1\lib\net40\sapnco.dll</HintPath>
+    </Reference>
+    <Reference Include="sapnco_utils">
+      <HintPath>..\..\packages\SAPNCo.x64.3.0.13.1\lib\net40\sapnco_utils.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="1.html" />
+    <Content Include="Common\calendar\calendar-ui.css" />
+    <Content Include="Common\calendar\calendar.js" />
+    <Content Include="Common\calendar\calendarAdmin.js" />
+    <Content Include="Common\calendar\images\arrow-left-01-16.png" />
+    <Content Include="Common\calendar\images\arrow-right-01-16.png" />
+    <Content Include="Common\calendar\images\down_arrow.PNG" />
+    <Content Include="Common\calendar\images\down_arrow_icon.png" />
+    <Content Include="Common\calendar\images\ico_date.png" />
+    <Content Include="Common\Controls\AbsenceUserAndDepartmentList.ascx" />
+    <Content Include="Common\Controls\FileDownload.aspx" />
+    <Content Include="Common\Controls\GatheringInfomation.ascx" />
+    <Content Include="Common\Controls\GatheringMenuTab.ascx" />
+    <Content Include="Common\Controls\GatheringPermission.ascx" />
+    <Content Include="Common\Controls\MailUserList.ascx" />
+    <Content Include="Common\Css\board_G.css" />
+    <Content Include="Common\Css\board.css" />
+    <Content Include="Common\Css\import.css" />
+    <Content Include="Common\Css\main_new_v20181115.css" />
+    <Content Include="Common\Css\main_new.css" />
+    <Content Include="Common\Css\sub_v20181115.css" />
+    <Content Include="Common\Css\weekly.css" />
+    <Content Include="Common\images\addin_cont.png" />
+    <Content Include="Common\images\addin_download.png" />
+    <Content Include="Common\images\addin_head.png" />
+    <Content Include="Common\images\archive_bg.png" />
+    <Content Include="Common\images\arra.png" />
+    <Content Include="Common\images\arra_close.png" />
+    <Content Include="Common\images\auto_off.gif" />
+    <Content Include="Common\images\auto_on.gif" />
+    <Content Include="Common\images\banner_valueworkshop.gif" />
+    <Content Include="Common\images\bg\digitaltrans.jpg" />
+    <Content Include="Common\images\bg\Gathering_bg.png" />
+    <Content Include="Common\images\bg\Gathering_bg2.png" />
+    <Content Include="Common\images\bg\Gathering_bg3.png" />
+    <Content Include="Common\images\bg\weekly_bg.png" />
+    <Content Include="Common\images\bg\whitepaperTop.png" />
+    <Content Include="Common\images\bg_fullbody.png" />
+    <Content Include="Common\images\bi_main.png" />
+    <Content Include="Common\images\blur_fill.png" />
+    <Content Include="Common\images\bookmark_off.png" />
+    <Content Include="Common\images\bookmark_on.png" />
+    <Content Include="Common\images\bottom.png" />
+    <Content Include="Common\images\bottomDesc.png" />
+    <Content Include="Common\images\btn.png" />
+    <Content Include="Common\images\btn\add_Gathering.png" />
+    <Content Include="Common\images\btn\add_GatheringDir.png" />
+    <Content Include="Common\images\btn\add_Gathering_Dir.png" />
+    <Content Include="Common\images\btn\add_normal.png" />
+    <Content Include="Common\images\btn\add_over.png" />
+    <Content Include="Common\images\btn\alarm_normal.png" />
+    <Content Include="Common\images\btn\alarm_over.png" />
+    <Content Include="Common\images\btn\alarm_sort.png" />
+    <Content Include="Common\images\btn\arra_tab1.jpg" />
+    <Content Include="Common\images\btn\btn_close.png" />
+    <Content Include="Common\images\btn\btn_like.png" />
+    <Content Include="Common\images\btn\btn_tag_close.png" />
+    <Content Include="Common\images\btn\btn_tag_open.png" />
+    <Content Include="Common\images\btn\btn_thanksLetter.png" />
+    <Content Include="Common\images\btn\calendar_print.png" />
+    <Content Include="Common\images\btn\DigitalComm_tab1.png" />
+    <Content Include="Common\images\btn\Directory_tab1_temp.png" />
+    <Content Include="Common\images\btn\Directory_tab2_temp.png" />
+    <Content Include="Common\images\btn\DtComm_tab1.jpg" />
+    <Content Include="Common\images\btn\Gathering_tab1.png" />
+    <Content Include="Common\images\btn\Gathering_tab1_1_1.png" />
+    <Content Include="Common\images\btn\Gathering_tab1_1_2.png" />
+    <Content Include="Common\images\btn\Gathering_tab1_2.png" />
+    <Content Include="Common\images\btn\Gathering_tab1_3.png" />
+    <Content Include="Common\images\btn\Gathering_tab2.png" />
+    <Content Include="Common\images\btn\Gathering_tab3.png" />
+    <Content Include="Common\images\btn\ico_pop_close.png" />
+    <Content Include="Common\images\btn\Ideaboard_tab1.jpg" />
+    <Content Include="Common\images\btn\Ideaboard_tab1.png" />
+    <Content Include="Common\images\btn\main_Gathering_btn.png" />
+    <Content Include="Common\images\btn\Marketing_tab1.png" />
+    <Content Include="Common\images\btn\Marketing_tab2.png" />
+    <Content Include="Common\images\btn\monthly_writing_btn.png" />
+    <Content Include="Common\images\btn\newstrend_tab1.jpg" />
+    <Content Include="Common\images\btn\newstrend_tab1.png" />
+    <Content Include="Common\images\btn\paging2_disable.png" />
+    <Content Include="Common\images\btn\paging3_disable.png" />
+    <Content Include="Common\images\btn\Platform_tab1.png" />
+    <Content Include="Common\images\btn\Platform_tab2.png" />
+    <Content Include="Common\images\btn\Platform_tab3.png" />
+    <Content Include="Common\images\btn\Platform_tab4.png" />
+    <Content Include="Common\images\btn\select3.png" />
+    <Content Include="Common\images\btn\select4.png" />
+    <Content Include="Common\images\btn\setting_btn.png" />
+    <Content Include="Common\images\btn\setting_btn2.png" />
+    <Content Include="Common\images\btn\sort_normal.png" />
+    <Content Include="Common\images\btn\sort_over.png" />
+    <Content Include="Common\images\btn\temp_tabbg.png" />
+    <Content Include="Common\images\btn\trend_tab1.png" />
+    <Content Include="Common\images\btn\trend_tab2.png" />
+    <Content Include="Common\images\btn\weekly_writing_btn.png" />
+    <Content Include="Common\images\btn\write_gathering.png" />
+    <Content Include="Common\images\btn_more1.png" />
+    <Content Include="Common\images\btn_search.png" />
+    <Content Include="Common\images\btn_tag_close.png" />
+    <Content Include="Common\images\btn_toast_close.gif" />
+    <Content Include="Common\images\btn_toast_success.png" />
+    <Content Include="Common\images\btn_tuto_close.png" />
+    <Content Include="Common\images\btn_view.png" />
+    <Content Include="Common\images\btn_view_yellow.png" />
+    <Content Include="Common\images\disable.png" />
+    <Content Include="Common\images\down_off.gif" />
+    <Content Include="Common\images\down_on.gif" />
+    <Content Include="Common\images\editor_func.png" />
+    <Content Include="Common\images\etc\coachy_img.png" />
+    <Content Include="Common\images\etc\gnb7.png" />
+    <Content Include="Common\images\etc\gnb8.png" />
+    <Content Include="Common\images\etc\gnb9.png" />
+    <Content Include="Common\images\event1_1.png" />
+    <Content Include="Common\images\event1_2.png" />
+    <Content Include="Common\images\event1_3.png" />
+    <Content Include="Common\images\event1_4.png" />
+    <Content Include="Common\images\event1_5.png" />
+    <Content Include="Common\images\event1_6.png" />
+    <Content Include="Common\images\event1_bg.png" />
+    <Content Include="Common\images\event1_box_bg.png" />
+    <Content Include="Common\images\event1_mark.png" />
+    <Content Include="Common\images\event1_num.png" />
+    <Content Include="Common\images\false.png" />
+    <Content Include="Common\images\follow_list_bg.jpg" />
+    <Content Include="Common\images\footer_ci.png" />
+    <Content Include="Common\images\gnb_btn_setup.jpg" />
+    <Content Include="Common\images\gnb_btn_setup_over.png" />
+    <Content Include="Common\images\gnb_btn_user.jpg" />
+    <Content Include="Common\images\gnb_btn_write.jpg" />
+    <Content Include="Common\images\gnb_btn_write_over.png" />
+    <Content Include="Common\images\gnb_search.jpg" />
+    <Content Include="Common\images\gnb_search.png" />
+    <Content Include="Common\images\gnb_search_btn.jpg" />
+    <Content Include="Common\images\gnb_search_btn.png" />
+    <Content Include="Common\images\gnb_title.jpg" />
+    <Content Include="Common\images\gnb_title.png" />
+    <Content Include="Common\images\gnb_title_original.png" />
+    <Content Include="Common\images\icon\alarm_title.png" />
+    <Content Include="Common\images\icon\allam_icon.png" />
+    <Content Include="Common\images\icon\btn_absence.png" />
+    <Content Include="Common\images\icon\btn_absence_rev.png" />
+    <Content Include="Common\images\icon\bullet_icon.png" />
+    <Content Include="Common\images\icon\bullet_icon2.png" />
+    <Content Include="Common\images\icon\close_icon.png" />
+    <Content Include="Common\images\icon\comings_icon.png" />
+    <Content Include="Common\images\icon\down_arrow.png" />
+    <Content Include="Common\images\icon\down_icon.png" />
+    <Content Include="Common\images\icon\gathering_icon.png" />
+    <Content Include="Common\images\icon\goods_icon.png" />
+    <Content Include="Common\images\icon\icon-collapse.gif" />
+    <Content Include="Common\images\icon\icon-expand.gif" />
+    <Content Include="Common\images\icon\left_arrow.png" />
+    <Content Include="Common\images\icon\left_arrow2.png" />
+    <Content Include="Common\images\icon\left_arrow2_on.png" />
+    <Content Include="Common\images\icon\left_arrow_on.png" />
+    <Content Include="Common\images\icon\left_arrow_on2.png" />
+    <Content Include="Common\images\icon\memolist.png" />
+    <Content Include="Common\images\icon\memo_icon.png" />
+    <Content Include="Common\images\icon\memo_icon_on.png" />
+    <Content Include="Common\images\icon\memo_title.png" />
+    <Content Include="Common\images\icon\minus_icon.png" />
+    <Content Include="Common\images\icon\minus_icons.png" />
+    <Content Include="Common\images\icon\monthly.jpg" />
+    <Content Include="Common\images\icon\ms_pdf.png" />
+    <Content Include="Common\images\icon\new_icon.png" />
+    <Content Include="Common\images\icon\no-text.png" />
+    <Content Include="Common\images\icon\plus_icon.png" />
+    <Content Include="Common\images\icon\plus_icons.png" />
+    <Content Include="Common\images\icon\prin_icon.png" />
+    <Content Include="Common\images\icon\prin_icon_rev.png" />
+    <Content Include="Common\images\icon\reple_icon.png" />
+    <Content Include="Common\images\icon\right_arrow.png" />
+    <Content Include="Common\images\icon\right_arrow2.png" />
+    <Content Include="Common\images\icon\right_arrow2_on.png" />
+    <Content Include="Common\images\icon\right_arrow_on.png" />
+    <Content Include="Common\images\icon\right_arrow_on2.png" />
+    <Content Include="Common\images\icon\temp_left.png" />
+    <Content Include="Common\images\icon\temp_new.png" />
+    <Content Include="Common\images\icon\temp_right.png" />
+    <Content Include="Common\images\icon\temp_user.png" />
+    <Content Include="Common\images\icon\temp_week.png" />
+    <Content Include="Common\images\icon\text_no.png" />
+    <Content Include="Common\images\icon\tree_bulet.png" />
+    <Content Include="Common\images\icon\up_arrow.png" />
+    <Content Include="Common\images\icon\user-cell-icon.png" />
+    <Content Include="Common\images\icon\user_icon.png" />
+    <Content Include="Common\images\icon\user_icons.png" />
+    <Content Include="Common\images\icon\week_icon.png" />
+    <Content Include="Common\images\icon\w_icon.png" />
+    <Content Include="Common\images\icon_title.png" />
+    <Content Include="Common\images\icon_write_warn.png" />
+    <Content Include="Common\images\ico_gnb.png" />
+    <Content Include="Common\images\ico_info.png" />
+    <Content Include="Common\images\ico_more.png" />
+    <Content Include="Common\images\ico_search.png" />
+    <Content Include="Common\images\img_shortcut_bg.jpg" />
+    <Content Include="Common\images\img_shortcut_cont_1.jpg" />
+    <Content Include="Common\images\img_shortcut_cont_2.jpg" />
+    <Content Include="Common\images\img_shortcut_cont_3.jpg" />
+    <Content Include="Common\images\img_shortcut_cont_4.jpg" />
+    <Content Include="Common\images\img_shortcut_cont_5.jpg" />
+    <Content Include="Common\images\img_shortcut_cont_title.jpg" />
+    <Content Include="Common\images\img_statics.jpg" />
+    <Content Include="Common\images\lnb_desc.png" />
+    <Content Include="Common\images\lnb_navi.png" />
+    <Content Include="Common\images\lnb_navi_archive.jpg" />
+    <Content Include="Common\images\lnb_navi_archive_over.jpg" />
+    <Content Include="Common\images\lnb_navi_bg.png" />
+    <Content Include="Common\images\lnb_navi_follow.jpg" />
+    <Content Include="Common\images\lnb_navi_follow_over.jpg" />
+    <Content Include="Common\images\lnb_navi_over.jpg" />
+    <Content Include="Common\images\lnb_navi_qna.jpg" />
+    <Content Include="Common\images\lnb_navi_qna_over.jpg" />
+    <Content Include="Common\images\lnb_navi_scrap.jpg" />
+    <Content Include="Common\images\lnb_navi_scrap_over.jpg" />
+    <Content Include="Common\images\lnb_navi_share.jpg" />
+    <Content Include="Common\images\lnb_navi_share_over.jpg" />
+    <Content Include="Common\images\lnb_navi_statics.jpg" />
+    <Content Include="Common\images\lnb_navi_statics_over.jpg" />
+    <Content Include="Common\images\lnb_navi_temp.jpg" />
+    <Content Include="Common\images\lnb_navi_temp_over.jpg" />
+    <Content Include="Common\images\lnb_navi_user.jpg" />
+    <Content Include="Common\images\lnb_navi_user_over.jpg" />
+    <Content Include="Common\images\MainTuto-Nateon.png" />
+    <Content Include="Common\images\MainTuto-NateonWrite.png" />
+    <Content Include="Common\images\MainTuto-OutLook.png" />
+    <Content Include="Common\images\MainTuto-Search.png" />
+    <Content Include="Common\images\MainTuto-Tikle.png" />
+    <Content Include="Common\images\MainTuto-Write.png" />
+    <Content Include="Common\images\main\banner_mymonthly.gif" />
+    <Content Include="Common\images\main\banner_myweekly.gif" />
+    <Content Include="Common\images\main\bg.gif" />
+    <Content Include="Common\images\main\bg.jpg" />
+    <Content Include="Common\images\main\bg_20141118.png" />
+    <Content Include="Common\images\main\bg_20141120.png" />
+    <Content Include="Common\images\main\bg_20141120_1.png" />
+    <Content Include="Common\images\main\bg_20150112.png" />
+    <Content Include="Common\images\main\bg_20150304.png" />
+    <Content Include="Common\images\main\ceoweekly_banner.png" />
+    <Content Include="Common\images\main\CEO_login.png" />
+    <Content Include="Common\images\main\digitaltrans_banner.jpg" />
+    <Content Include="Common\images\main\Editor_popup.jpg" />
+    <Content Include="Common\images\main\gnb7.png" />
+    <Content Include="Common\images\main\main_marketing_banner.jpg" />
+    <Content Include="Common\images\main\mobile_popup.png" />
+    <Content Include="Common\images\main\monthly_brief_popup.png" />
+    <Content Include="Common\images\main\myweekly_banner.png" />
+    <Content Include="Common\images\main\Platform_banner.jpg" />
+    <Content Include="Common\images\main\Platform_layer_popup.jpg" />
+    <Content Include="Common\images\main\single_popup.png" />
+    <Content Include="Common\images\main\title_today_.png" />
+    <Content Include="Common\images\main\trend_banner.jpg" />
+    <Content Include="Common\images\main_arrow.png" />
+    <Content Include="Common\images\main_banner.png" />
+    <Content Include="Common\images\main_banner1.png" />
+    <Content Include="Common\images\main_banner2.png" />
+    <Content Include="Common\images\main_banner3.png" />
+    <Content Include="Common\images\main_banner4.png" />
+    <Content Include="Common\images\main_banner5.png" />
+    <Content Include="Common\images\main_banner6.jpg" />
+    <Content Include="Common\images\main_banner7.gif" />
+    <Content Include="Common\images\main_download.png" />
+    <Content Include="Common\images\main_right.png" />
+    <Content Include="Common\images\main_title.png" />
+    <Content Include="Common\images\manager_off.gif" />
+    <Content Include="Common\images\manager_on.gif" />
+    <Content Include="Common\images\menuAdmin.jpg" />
+    <Content Include="Common\images\off.gif" />
+    <Content Include="Common\images\on.gif" />
+    <Content Include="Common\images\pop2\1030_popup.jpg" />
+    <Content Include="Common\images\pop2\img_layer_title_noneie_guide.png" />
+    <Content Include="Common\images\pop2\installguide.jpg" />
+    <Content Include="Common\images\pop2\pop_gathering.png" />
+    <Content Include="Common\images\pop2\pop_tikle_noneIE9.png" />
+    <Content Include="Common\images\pop2\pop_weekly.jpg" />
+    <Content Include="Common\images\popBoxBottom.png" />
+    <Content Include="Common\images\popBoxHeightLeft.png" />
+    <Content Include="Common\images\popBoxHeightRight.png" />
+    <Content Include="Common\images\popBoxTop.png" />
+    <Content Include="Common\images\qna_category.png" />
+    <Content Include="Common\images\qna_label.png" />
+    <Content Include="Common\images\qna_selected.png" />
+    <Content Include="Common\images\search_result_none.png" />
+    <Content Include="Common\images\search_result_none_mark.png" />
+    <Content Include="Common\images\setup_cont1.png" />
+    <Content Include="Common\images\setup_cont2.png" />
+    <Content Include="Common\images\table_alarm_off.jpg" />
+    <Content Include="Common\images\table_alarm_on.jpg" />
+    <Content Include="Common\images\table_history.png" />
+    <Content Include="Common\images\table_history_over.png" />
+    <Content Include="Common\images\table_top_bg.jpg" />
+    <Content Include="Common\images\table_top_bg_left.jpg" />
+    <Content Include="Common\images\table_top_bg_right.jpg" />
+    <Content Include="Common\images\table_top_icon.png" />
+    <Content Include="Common\images\test_pic.jpg" />
+    <Content Include="Common\images\text\Directory4.png" />
+    <Content Include="Common\images\text\Gathering.png" />
+    <Content Include="Common\images\text\Gathering1.png" />
+    <Content Include="Common\images\text\Gathering2.png" />
+    <Content Include="Common\images\text\Gathering3.png" />
+    <Content Include="Common\images\text\Gathering_text.png" />
+    <Content Include="Common\images\text\Gathering_text_1.png" />
+    <Content Include="Common\images\text\Gathering_text_2.png" />
+    <Content Include="Common\images\text\Gathering_text_3.png" />
+    <Content Include="Common\images\text\Gathering_text_4.png" />
+    <Content Include="Common\images\text\Gathering_text_5.png" />
+    <Content Include="Common\images\text\ideaboard.png" />
+    <Content Include="Common\images\text\MarketingGlossary1.png" />
+    <Content Include="Common\images\text\MarketingGlossary2.png" />
+    <Content Include="Common\images\text\mymonthly_text.png" />
+    <Content Include="Common\images\text\myweekly_text.png" />
+    <Content Include="Common\images\text\newstrend.png" />
+    <Content Include="Common\images\text\platformbiz1.png" />
+    <Content Include="Common\images\text\platformbiz2.png" />
+    <Content Include="Common\images\text\PlatformGlossary1.png" />
+    <Content Include="Common\images\text\PlatformGlossary2.png" />
+    <Content Include="Common\images\text\techtrend1.png" />
+    <Content Include="Common\images\text\techtrend2.png" />
+    <Content Include="Common\images\text\warrior_weekly_text.png" />
+    <Content Include="Common\images\tikleIcon.png" />
+    <Content Include="Common\images\tikletag_blue.png" />
+    <Content Include="Common\images\tikletag_green.png" />
+    <Content Include="Common\images\tikletag_red.png" />
+    <Content Include="Common\images\tikletag_yellow.png" />
+    <Content Include="Common\images\tikle_category.png" />
+    <Content Include="Common\images\top_off.gif" />
+    <Content Include="Common\images\top_on.gif" />
+    <Content Include="Common\images\true.png" />
+    <Content Include="Common\images\Tuto_profile.jpg" />
+    <Content Include="Common\images\Tuto_profile.png" />
+    <Content Include="Common\images\Tuto_Qna.jpg" />
+    <Content Include="Common\images\Tuto_Qna.png" />
+    <Content Include="Common\images\Tuto_Result.jpg" />
+    <Content Include="Common\images\Tuto_Result.png" />
+    <Content Include="Common\images\Tuto_Write.jpg" />
+    <Content Include="Common\images\Tuto_Write.png" />
+    <Content Include="Common\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Common\images\up.png" />
+    <Content Include="Common\images\up_off.gif" />
+    <Content Include="Common\images\up_on.gif" />
+    <Content Include="Common\images\view_diagram.jpg" />
+    <Content Include="Common\images\view_diagram.png" />
+    <Content Include="Common\images\view_dropdown.png" />
+    <Content Include="Common\images\view_subtitle.png" />
+    <Content Include="Common\images\_btn_color_b_left.jpg" />
+    <Content Include="Common\images\_btn_color_b_right.jpg" />
+    <Content Include="Common\images\_btn_color_g_left.jpg" />
+    <Content Include="Common\images\_btn_color_g_right.jpg" />
+    <Content Include="Common\images\_btn_color_s_left.jpg" />
+    <Content Include="Common\images\_btn_color_s_right.jpg" />
+    <Content Include="Common\images\_btn_color_s_right.png" />
+    <Content Include="Common\images\_btn_delete.png" />
+    <Content Include="Common\images\_btn_list.png" />
+    <Content Include="Common\images\_btn_paging_long.jpg" />
+    <Content Include="Common\images\_btn_paging_long_over.jpg" />
+    <Content Include="Common\images\_btn_paging_short.jpg" />
+    <Content Include="Common\images\_btn_paging_short_over.jpg" />
+    <Content Include="Common\images\_btn_write.png" />
+    <Content Include="Common\images\_dropbox_m_bottom.png" />
+    <Content Include="Common\images\_dropbox_m_top.png" />
+    <Content Include="Common\images\_icon_activity_modify.jpg" />
+    <Content Include="Common\images\_icon_activity_new.jpg" />
+    <Content Include="Common\images\_icon_activity_rating.jpg" />
+    <Content Include="Common\images\_icon_idea.jpg" />
+    <Content Include="Common\images\_main_latest_best.png" />
+    <Content Include="Common\images\_main_latest_hot.jpg" />
+    <Content Include="Common\images\_main_latest_hot.png" />
+    <Content Include="Common\images\_main_latest_newbe.jpg" />
+    <Content Include="Common\images\_main_latest_newbe.png" />
+    <Content Include="Common\images\_main_latest_newbe_arrow.png" />
+    <Content Include="Common\images\_main_latest_newbe_li_bg.png" />
+    <Content Include="Common\images\_main_latest_statics.jpg" />
+    <Content Include="Common\images\_main_latest_tag.jpg" />
+    <Content Include="Common\images\_main_latest_team.jpg" />
+    <Content Include="Common\images\_main_latest_team.png" />
+    <Content Include="Common\images\_main_shorcut_subject_bg.png" />
+    <Content Include="Common\images\_main_shortcut_btn_left.png" />
+    <Content Include="Common\images\_main_shortcut_btn_right.png" />
+    <Content Include="Common\images\_main_shortcut_con01.png" />
+    <Content Include="Common\images\_write_btn_b.jpg" />
+    <Content Include="Common\images\_write_btn_c.jpg" />
+    <Content Include="Common\images\_write_btn_diagram.jpg" />
+    <Content Include="Common\images\_write_btn_i.jpg" />
+    <Content Include="Common\images\_write_btn_img.jpg" />
+    <Content Include="Common\images\_write_btn_link.jpg" />
+    <Content Include="Common\images\_write_btn_ol.jpg" />
+    <Content Include="Common\images\_write_btn_u.jpg" />
+    <Content Include="Common\images\_write_btn_ul.jpg" />
+    <Content Include="Common\images\_write_btn_user.jpg" />
+    <Content Include="Common\Js\aes.js" />
+    <Content Include="Common\Js\aes_encrypt.js" />
+    <Content Include="Common\Js\aes_new.js" />
+    <Content Include="Common\Js\BrowserVersion_cookie_v1.js" />
+    <Content Include="Common\Js\css.browser.detect.js" />
+    <Content Include="Common\Js\design_weekly.js" />
+    <Content Include="Common\Js\checktext.js" />
+    <Content Include="Common\Js\jquery-1.11.2.js" />
+    <Content Include="Common\Js\jquery-1.7.2.min.js" />
+    <Content Include="Common\Js\jquery-1.9.1.js" />
+    <Content Include="Common\Js\jquery-1.9.1.min.js" />
+    <Content Include="Common\Js\jquery-latest.pack.js" />
+    <Content Include="Common\Js\jquery.ntm.js" />
+    <Content Include="Common\Js\jquery.rwdImageMaps.js" />
+    <Content Include="Common\Js\jquery.word-break-keep-all.min.js" />
+    <Content Include="Common\Js\jwplayer.js" />
+    <Content Include="Common\Js\PagingController.js" />
+    <Content Include="Common\Js\player.swf" />
+    <Content Include="Common\Js\shortcut.js" />
+    <Content Include="Common\Js\TnetBoard_Control_dir.js" />
+    <Content Include="Common\Js\TnetBoard_Control.js" />
+    <Content Include="Common\Js\tooltip.js" />
+    <Content Include="Common\Js\monthly_email.js" />
+    <Content Include="Common\Js\weekly_email.js" />
+    <Content Include="dbconn.aspx" />
+    <Content Include="dbconn2.aspx" />
+    <Content Include="dbconn3.aspx" />
+    <Content Include="Gathering\Main.aspx" />
+    <Content Include="Glossary\DigitalTrans.aspx" />
+    <Content Include="Directory\DirectoryManagerIframe.aspx" />
+    <Content Include="ErrorReport.aspx" />
+    <Content Include="Gathering\GatheringMain.aspx" />
+    <Content Include="Glossary2.aspx" />
+    <Content Include="GlossaryMyPages\MyProfileIframe_View.aspx" />
+    <Content Include="Glossary\GlossaryIframe_View.aspx" />
+    <Content Include="Glossary\GlossaryPrint_View.aspx" />
+    <Content Include="Glossary\GlossaryWriteNew.aspx" />
+    <Content Include="Glossary\WhitePaper.aspx" />
+    <Content Include="HtmlPage1.html" />
+    <Content Include="Images\ICON\BLANK.GIF" />
+    <Content Include="Images\ICON\DELETE.GIF" />
+    <Content Include="Images\ICON\ICACCDB.GIF" />
+    <Content Include="Images\ICON\icaccdb.png" />
+    <Content Include="Images\ICON\ICACCDC.GIF" />
+    <Content Include="Images\ICON\ICACCDE.GIF" />
+    <Content Include="Images\ICON\icaccde.png" />
+    <Content Include="Images\ICON\ICASAX.GIF" />
+    <Content Include="Images\ICON\icasax.png" />
+    <Content Include="Images\ICON\ICASCX.GIF" />
+    <Content Include="Images\ICON\ICASMX.GIF" />
+    <Content Include="Images\ICON\ICASP.GIF" />
+    <Content Include="Images\ICON\ICASPX.GIF" />
+    <Content Include="Images\ICON\ICBMP.GIF" />
+    <Content Include="Images\ICON\ICC16.GIF" />
+    <Content Include="Images\ICON\ICCAT.GIF" />
+    <Content Include="Images\ICON\ICCHANGE.GIF" />
+    <Content Include="Images\ICON\ICCHM.GIF" />
+    <Content Include="Images\ICON\ICCONFIG.GIF" />
+    <Content Include="Images\ICON\ICCSS.GIF" />
+    <Content Include="Images\ICON\ICDB.GIF" />
+    <Content Include="Images\ICON\ICDIB.GIF" />
+    <Content Include="Images\ICON\ICDISC.GIF" />
+    <Content Include="Images\ICON\ICDOC.GIF" />
+    <Content Include="Images\ICON\ICDOC.PNG" />
+    <Content Include="Images\ICON\ICDOCM.GIF" />
+    <Content Include="Images\ICON\ICDOCM.PNG" />
+    <Content Include="Images\ICON\ICDOCP.GIF" />
+    <Content Include="Images\ICON\ICDOCSET.GIF" />
+    <Content Include="Images\ICON\ICDOCX.GIF" />
+    <Content Include="Images\ICON\ICDOCX.PNG" />
+    <Content Include="Images\ICON\ICDOT.GIF" />
+    <Content Include="Images\ICON\ICDOT.PNG" />
+    <Content Include="Images\ICON\ICDOTM.GIF" />
+    <Content Include="Images\ICON\ICDOTM.PNG" />
+    <Content Include="Images\ICON\ICDOTX.GIF" />
+    <Content Include="Images\ICON\ICDOTX.PNG" />
+    <Content Include="Images\ICON\ICDVD.GIF" />
+    <Content Include="Images\ICON\ICDWP.GIF" />
+    <Content Include="Images\ICON\icdwt.gif" />
+    <Content Include="Images\ICON\ICEML.GIF" />
+    <Content Include="Images\ICON\iceml.png" />
+    <Content Include="Images\ICON\ICEST.GIF" />
+    <Content Include="Images\ICON\ICFWP.GIF" />
+    <Content Include="Images\ICON\ICGEN.GIF" />
+    <Content Include="Images\ICON\ICGIF.GIF" />
+    <Content Include="Images\ICON\ICHDP.GIF" />
+    <Content Include="Images\ICON\ICHLP.GIF" />
+    <Content Include="Images\ICON\ichlp.png" />
+    <Content Include="Images\ICON\ICHTA.GIF" />
+    <Content Include="Images\ICON\ICHTM.GIF" />
+    <Content Include="Images\ICON\ICHTMDOC.GIF" />
+    <Content Include="Images\ICON\ICHTMFP.GIF" />
+    <Content Include="Images\ICON\ICHTMPPT.GIF" />
+    <Content Include="Images\ICON\ICHTMPUB.GIF" />
+    <Content Include="Images\ICON\ICHTMXLS.GIF" />
+    <Content Include="Images\ICON\ICHTT.GIF" />
+    <Content Include="Images\ICON\ICINF.GIF" />
+    <Content Include="Images\ICON\icinfopathgeneric.gif" />
+    <Content Include="Images\ICON\icinfopathgeneric.png" />
+    <Content Include="Images\ICON\ICINI.GIF" />
+    <Content Include="Images\ICON\ICJFIF.GIF" />
+    <Content Include="Images\ICON\ICJPE.GIF" />
+    <Content Include="Images\ICON\ICJPEG.GIF" />
+    <Content Include="Images\ICON\ICJPG.GIF" />
+    <Content Include="Images\ICON\ICJS.GIF" />
+    <Content Include="Images\ICON\ICJSE.GIF" />
+    <Content Include="Images\ICON\ICLOG.GIF" />
+    <Content Include="Images\ICON\ICM16.GIF" />
+    <Content Include="Images\ICON\ICMANAGE.GIF" />
+    <Content Include="Images\ICON\ICMASTER.GIF" />
+    <Content Include="Images\ICON\ICMHT.GIF" />
+    <Content Include="Images\ICON\ICMHTML.GIF" />
+    <Content Include="Images\ICON\ICMHTPUB.GIF" />
+    <Content Include="Images\ICON\ICMPD.GIF" />
+    <Content Include="Images\ICON\ICMPD.PNG" />
+    <Content Include="Images\ICON\ICMPP.GIF" />
+    <Content Include="Images\ICON\ICMPP.PNG" />
+    <Content Include="Images\ICON\ICMPS.GIF" />
+    <Content Include="Images\ICON\ICMPT.GIF" />
+    <Content Include="Images\ICON\ICMPT.PNG" />
+    <Content Include="Images\ICON\ICMPW.GIF" />
+    <Content Include="Images\ICON\ICMPX.GIF" />
+    <Content Include="Images\ICON\ICMSG.GIF" />
+    <Content Include="Images\ICON\ICMSG.PNG" />
+    <Content Include="Images\ICON\ICMSI.GIF" />
+    <Content Include="Images\ICON\ICMSP.GIF" />
+    <Content Include="Images\ICON\ICNOTEBK.PNG" />
+    <Content Include="Images\ICON\ICNPIE.GIF" />
+    <Content Include="Images\ICON\ICO16.GIF" />
+    <Content Include="Images\ICON\ICOCX.GIF" />
+    <Content Include="Images\ICON\ICODC.GIF" />
+    <Content Include="Images\ICON\ICODCC.GIF" />
+    <Content Include="Images\ICON\ICODCD.GIF" />
+    <Content Include="Images\ICON\ICODCT.GIF" />
+    <Content Include="Images\ICON\ICODP.GIF" />
+    <Content Include="Images\ICON\ICODP.PNG" />
+    <Content Include="Images\ICON\ICODS.GIF" />
+    <Content Include="Images\ICON\ICODS.PNG" />
+    <Content Include="Images\ICON\ICODT.GIF" />
+    <Content Include="Images\ICON\ICODT.PNG" />
+    <Content Include="Images\ICON\ICONE.GIF" />
+    <Content Include="Images\ICON\ICONE.PNG" />
+    <Content Include="Images\ICON\ICONP.GIF" />
+    <Content Include="Images\ICON\ICONP.PNG" />
+    <Content Include="Images\ICON\ICONT.GIF" />
+    <Content Include="Images\ICON\ICONT.PNG" />
+    <Content Include="Images\ICON\ico_attach.gif" />
+    <Content Include="Images\ICON\ICPDF.GIF" />
+    <Content Include="Images\ICON\ICPDF.PNG" />
+    <Content Include="Images\ICON\ICPINNED.GIF" />
+    <Content Include="Images\ICON\ICPNG.GIF" />
+    <Content Include="Images\ICON\ICPOT.GIF" />
+    <Content Include="Images\ICON\ICPOT.PNG" />
+    <Content Include="Images\ICON\ICPOTM.GIF" />
+    <Content Include="Images\ICON\ICPOTM.PNG" />
+    <Content Include="Images\ICON\ICPOTX.GIF" />
+    <Content Include="Images\ICON\ICPOTX.PNG" />
+    <Content Include="Images\ICON\ICPPA.PNG" />
+    <Content Include="Images\ICON\ICPPAM.PNG" />
+    <Content Include="Images\ICON\ICPPS.GIF" />
+    <Content Include="Images\ICON\ICPPS.PNG" />
+    <Content Include="Images\ICON\ICPPSDC.GIF" />
+    <Content Include="Images\ICON\ICPPSDC.PNG" />
+    <Content Include="Images\ICON\ICPPSM.GIF" />
+    <Content Include="Images\ICON\ICPPSM.PNG" />
+    <Content Include="Images\ICON\ICPPSX.GIF" />
+    <Content Include="Images\ICON\ICPPSX.PNG" />
+    <Content Include="Images\ICON\ICPPT.GIF" />
+    <Content Include="Images\ICON\ICPPT.PNG" />
+    <Content Include="Images\ICON\ICPPTM.GIF" />
+    <Content Include="Images\ICON\ICPPTM.PNG" />
+    <Content Include="Images\ICON\ICPPTP.GIF" />
+    <Content Include="Images\ICON\ICPPTX.GIF" />
+    <Content Include="Images\ICON\ICPPTX.PNG" />
+    <Content Include="Images\ICON\ICPROP.GIF" />
+    <Content Include="Images\ICON\ICPSP.GIF" />
+    <Content Include="Images\ICON\ICPTM.GIF" />
+    <Content Include="Images\ICON\ICPTT.GIF" />
+    <Content Include="Images\ICON\ICPUB.GIF" />
+    <Content Include="Images\ICON\icpub.png" />
+    <Content Include="Images\ICON\ICREVIEW.GIF" />
+    <Content Include="Images\ICON\ICRTF.GIF" />
+    <Content Include="Images\ICON\ICSADREP.GIF" />
+    <Content Include="Images\ICON\ICSMRTPG.GIF" />
+    <Content Include="Images\ICON\icspdgeneric.gif" />
+    <Content Include="Images\ICON\icspdgeneric.png" />
+    <Content Include="Images\ICON\ICSPGEN.GIF" />
+    <Content Include="Images\ICON\ICSPWEB.GIF" />
+    <Content Include="Images\ICON\icstorage.gif" />
+    <Content Include="Images\ICON\ICSTP.GIF" />
+    <Content Include="Images\ICON\ICSTT.GIF" />
+    <Content Include="Images\ICON\ICTHMX.GIF" />
+    <Content Include="Images\ICON\ICTIF.GIF" />
+    <Content Include="Images\ICON\ICTIFF.GIF" />
+    <Content Include="Images\ICON\ICTXT.GIF" />
+    <Content Include="Images\ICON\icunpinned.gif" />
+    <Content Include="Images\ICON\ICVBE.GIF" />
+    <Content Include="Images\ICON\ICVBS.GIF" />
+    <Content Include="Images\ICON\ICVDW.GIF" />
+    <Content Include="Images\ICON\ICVDX.GIF" />
+    <Content Include="Images\ICON\ICVDX.PNG" />
+    <Content Include="Images\ICON\ICVIDSET.GIF" />
+    <Content Include="Images\ICON\icvisiogeneric.gif" />
+    <Content Include="Images\ICON\icvisiogeneric.png" />
+    <Content Include="Images\ICON\ICVSD.GIF" />
+    <Content Include="Images\ICON\ICVSDM.GIF" />
+    <Content Include="Images\ICON\ICVSDX.GIF" />
+    <Content Include="Images\ICON\ICVSL.GIF" />
+    <Content Include="Images\ICON\ICVSS.GIF" />
+    <Content Include="Images\ICON\ICVSSM.GIF" />
+    <Content Include="Images\ICON\ICVSSX.GIF" />
+    <Content Include="Images\ICON\ICVST.GIF" />
+    <Content Include="Images\ICON\ICVSTM.GIF" />
+    <Content Include="Images\ICON\ICVSTX.GIF" />
+    <Content Include="Images\ICON\ICVSU.GIF" />
+    <Content Include="Images\ICON\ICVSW.GIF" />
+    <Content Include="Images\ICON\ICVSX.GIF" />
+    <Content Include="Images\ICON\ICVSX.PNG" />
+    <Content Include="Images\ICON\ICVTX.GIF" />
+    <Content Include="Images\ICON\ICVTX.PNG" />
+    <Content Include="Images\ICON\ICWM.GIF" />
+    <Content Include="Images\ICON\ICWMA.GIF" />
+    <Content Include="Images\ICON\ICWMD.GIF" />
+    <Content Include="Images\ICON\ICWMP.GIF" />
+    <Content Include="Images\ICON\ICWMS.GIF" />
+    <Content Include="Images\ICON\ICWMV.GIF" />
+    <Content Include="Images\ICON\ICWMX.GIF" />
+    <Content Include="Images\ICON\ICWMZ.GIF" />
+    <Content Include="Images\ICON\ICWSF.GIF" />
+    <Content Include="Images\ICON\ICXDDOC.GIF" />
+    <Content Include="Images\ICON\ICXLA.PNG" />
+    <Content Include="Images\ICON\ICXLAM.PNG" />
+    <Content Include="Images\ICON\ICXLS.GIF" />
+    <Content Include="Images\ICON\ICXLS.PNG" />
+    <Content Include="Images\ICON\ICXLSB.GIF" />
+    <Content Include="Images\ICON\ICXLSB.PNG" />
+    <Content Include="Images\ICON\ICXLSM.GIF" />
+    <Content Include="Images\ICON\ICXLSM.PNG" />
+    <Content Include="Images\ICON\ICXLSP.GIF" />
+    <Content Include="Images\ICON\ICXLSX.GIF" />
+    <Content Include="Images\ICON\ICXLSX.PNG" />
+    <Content Include="Images\ICON\ICXLT.GIF" />
+    <Content Include="Images\ICON\ICXLT.PNG" />
+    <Content Include="Images\ICON\ICXLTM.GIF" />
+    <Content Include="Images\ICON\ICXLTM.PNG" />
+    <Content Include="Images\ICON\ICXLTX.GIF" />
+    <Content Include="Images\ICON\ICXLTX.PNG" />
+    <Content Include="Images\ICON\ICXML.GIF" />
+    <Content Include="Images\ICON\ICXPS.GIF" />
+    <Content Include="Images\ICON\icxps.png" />
+    <Content Include="Images\ICON\ICXSD.GIF" />
+    <Content Include="Images\ICON\ICXSL.GIF" />
+    <Content Include="Images\ICON\ICXSLT.GIF" />
+    <Content Include="Images\ICON\ICXSN.GIF" />
+    <Content Include="Images\ICON\ICXSN.PNG" />
+    <Content Include="Images\ICON\ICZIP.GIF" />
+    <Content Include="Images\ICON\New.gif" />
+    <Content Include="Images\ICON\reply_icon.gif" />
+    <Content Include="Interface\ApprovalActing.asmx" />
+    <Content Include="Interface\CheckWebServer_Web_DB.aspx" />
+    <Content Include="Common\Controls\CommCommentControl.ascx" />
+    <Content Include="Common\Controls\CommUserAndDepartmentIframe.aspx" />
+    <Content Include="Common\Controls\GNBControl.ascx" />
+    <Content Include="Common\Controls\AjaxControl.aspx" />
+    <Content Include="Common\Controls\MessageTransfer.aspx" />
+    <Content Include="Common\Controls\CommCommentAjax.aspx" />
+    <Content Include="Common\Controls\UserAndDepartmentList.ascx" />
+    <Content Include="Common\Controls\CommNateOnBizControl.ascx" />
+    <Content Include="Common\Css\default.css" />
+    <Content Include="Common\Css\font.css" />
+    <Content Include="Common\Css\jquery-ui.css" />
+    <Content Include="Common\Css\main.css" />
+    <Content Include="Common\Css\sub.css" />
+    <Content Include="Common\Css\tran_pop.css" />
+    <Content Include="Common\Css\view.css" />
+    <Content Include="Common\images\bg\arrow.png" />
+    <Content Include="Common\images\bg\arrow2.png" />
+    <Content Include="Common\images\bg\body.png" />
+    <Content Include="Common\images\bg\comment.png" />
+    <Content Include="Common\images\bg\Directory.png" />
+    <Content Include="Common\images\bg\Etc.png" />
+    <Content Include="Common\images\bg\file_td.png" />
+    <Content Include="Common\images\bg\file_th.png" />
+    <Content Include="Common\images\bg\Glossary.png" />
+    <Content Include="Common\images\bg\help.png" />
+    <Content Include="Common\images\bg\knowhow_main.png" />
+    <Content Include="Common\images\bg\line.png" />
+    <Content Include="Common\images\bg\listTable_th.png" />
+    <Content Include="Common\images\bg\Mypage.png" />
+    <Content Include="Common\images\bg\paging.png" />
+    <Content Include="Common\images\bg\People.png" />
+    <Content Include="Common\images\bg\people1.png" />
+    <Content Include="Common\images\bg\people1_on.png" />
+    <Content Include="Common\images\bg\people2.png" />
+    <Content Include="Common\images\bg\people2_on.png" />
+    <Content Include="Common\images\bg\people3.png" />
+    <Content Include="Common\images\bg\people3_on.png" />
+    <Content Include="Common\images\bg\people4.png" />
+    <Content Include="Common\images\bg\people4_on.png" />
+    <Content Include="Common\images\bg\Qna.png" />
+    <Content Include="Common\images\bg\Schedule.png" />
+    <Content Include="Common\images\bg\Search.png" />
+    <Content Include="Common\images\bg\search_no_data.png" />
+    <Content Include="Common\images\bg\Survey.png" />
+    <Content Include="Common\images\btn\add_Directory.png" />
+    <Content Include="Common\images\btn\add_Directory2.png" />
+    <Content Include="Common\images\btn\add_Survey.png" />
+    <Content Include="Common\images\btn\add_Survey2.png" />
+    <Content Include="Common\images\btn\arrow.png" />
+    <Content Include="Common\images\btn\back.png" />
+    <Content Include="Common\images\btn\bg.png" />
+    <Content Include="Common\images\btn\btn.png" />
+    <Content Include="Common\images\btn\btn_box.png" />
+    <Content Include="Common\images\btn\btn_new.png" />
+    <Content Include="Common\images\btn\btn_view.png" />
+    <Content Include="Common\images\btn\btn_view_yellow.png" />
+    <Content Include="Common\images\btn\calendar_next.png" />
+    <Content Include="Common\images\btn\calendar_prev.png" />
+    <Content Include="Common\images\btn\calendar_view1.png" />
+    <Content Include="Common\images\btn\calendar_view2.png" />
+    <Content Include="Common\images\btn\close.png" />
+    <Content Include="Common\images\btn\del.png" />
+    <Content Include="Common\images\btn\delete.png" />
+    <Content Include="Common\images\btn\delete02.png" />
+    <Content Include="Common\images\btn\directory_add.png" />
+    <Content Include="Common\images\btn\directory_bg.png" />
+    <Content Include="Common\images\btn\Directory_tab1.png" />
+    <Content Include="Common\images\btn\Directory_tab2.png" />
+    <Content Include="Common\images\btn\Directory_tab3.png" />
+    <Content Include="Common\images\btn\excel.png" />
+    <Content Include="Common\images\btn\file.png" />
+    <Content Include="Common\images\btn\file_area.png" />
+    <Content Include="Common\images\btn\guide.png" />
+    <Content Include="Common\images\btn\list.png" />
+    <Content Include="Common\images\btn\more.png" />
+    <Content Include="Common\images\btn\more1.png" />
+    <Content Include="Common\images\btn\more2.png" />
+    <Content Include="Common\images\btn\more_directory.png" />
+    <Content Include="Common\images\btn\more_knowhow.png" />
+    <Content Include="Common\images\btn\more_off.png" />
+    <Content Include="Common\images\btn\more_on.png" />
+    <Content Include="Common\images\btn\more_survey.png" />
+    <Content Include="Common\images\btn\more_tag.png" />
+    <Content Include="Common\images\btn\Mypage_tab1.png" />
+    <Content Include="Common\images\btn\Mypage_tab1_.png" />
+    <Content Include="Common\images\btn\Mypage_tab2.png" />
+    <Content Include="Common\images\btn\Mypage_tab2_.png" />
+    <Content Include="Common\images\btn\Mypage_tab3.png" />
+    <Content Include="Common\images\btn\Mypage_tab4.png" />
+    <Content Include="Common\images\btn\Mypage_tab5.png" />
+    <Content Include="Common\images\btn\next.png" />
+    <Content Include="Common\images\btn\open.png" />
+    <Content Include="Common\images\btn\paging1.png" />
+    <Content Include="Common\images\btn\paging2.png" />
+    <Content Include="Common\images\btn\paging3.png" />
+    <Content Include="Common\images\btn\paging4.png" />
+    <Content Include="Common\images\btn\people_effect1.png" />
+    <Content Include="Common\images\btn\people_effect2.png" />
+    <Content Include="Common\images\btn\people_effect3.png" />
+    <Content Include="Common\images\btn\people_effect4.png" />
+    <Content Include="Common\images\btn\people_effect5.png" />
+    <Content Include="Common\images\btn\pop_close.png" />
+    <Content Include="Common\images\btn\prev.png" />
+    <Content Include="Common\images\btn\save.png" />
+    <Content Include="Common\images\btn\search.png" />
+    <Content Include="Common\images\btn\select.png" />
+    <Content Include="Common\images\btn\select1.png" />
+    <Content Include="Common\images\btn\select2.png" />
+    <Content Include="Common\images\btn\setting.png" />
+    <Content Include="Common\images\btn\share.png" />
+    <Content Include="Common\images\btn\survey_add.png" />
+    <Content Include="Common\images\btn\survey_bg.png" />
+    <Content Include="Common\images\btn\Survey_tab1.png" />
+    <Content Include="Common\images\btn\Survey_tab2.png" />
+    <Content Include="Common\images\btn\Survey_tab3.png" />
+    <Content Include="Common\images\btn\tikletag_blue.png" />
+    <Content Include="Common\images\btn\tikletag_green.png" />
+    <Content Include="Common\images\btn\tikletag_red.png" />
+    <Content Include="Common\images\btn\tikletag_yellow.png" />
+    <Content Include="Common\images\btn\upload.png" />
+    <Content Include="Common\images\btn\wirte2.png" />
+    <Content Include="Common\images\btn\write.png" />
+    <Content Include="Common\images\common\address.png" />
+    <Content Include="Common\images\common\ajax-loader.gif" />
+    <Content Include="Common\images\common\bg.png" />
+    <Content Include="Common\images\common\bg_gnb.png" />
+    <Content Include="Common\images\common\bg_header.png" />
+    <Content Include="Common\images\common\btn_login.png" />
+    <Content Include="Common\images\common\gnb1.png" />
+    <Content Include="Common\images\common\gnb2.png" />
+    <Content Include="Common\images\common\gnb3.png" />
+    <Content Include="Common\images\common\gnb4.png" />
+    <Content Include="Common\images\common\gnb5.png" />
+    <Content Include="Common\images\common\home.png" />
+    <Content Include="Common\images\common\icon_header1.png" />
+    <Content Include="Common\images\common\icon_header2.png" />
+    <Content Include="Common\images\common\label1.png" />
+    <Content Include="Common\images\common\label2.png" />
+    <Content Include="Common\images\common\logo.png" />
+    <Content Include="Common\images\common\logo_sk.png" />
+    <Content Include="Common\images\common\search_bg.png" />
+    <Content Include="Common\images\common\search_btn.png" />
+    <Content Include="Common\images\common\util.png" />
+    <Content Include="Common\images\common\util_on.png" />
+    <Content Include="Common\images\etc\1.png" />
+    <Content Include="Common\images\etc\2_1.png" />
+    <Content Include="Common\images\etc\2_2.png" />
+    <Content Include="Common\images\etc\3_1.png" />
+    <Content Include="Common\images\etc\3_2.png" />
+    <Content Include="Common\images\etc\3_3.png" />
+    <Content Include="Common\images\etc\3_4.png" />
+    <Content Include="Common\images\etc\4.png" />
+    <Content Include="Common\images\etc\error_page.png" />
+    <Content Include="Common\images\etc\gnb1.png" />
+    <Content Include="Common\images\etc\gnb2.png" />
+    <Content Include="Common\images\etc\gnb3.png" />
+    <Content Include="Common\images\etc\gnb4.png" />
+    <Content Include="Common\images\etc\gnb5.png" />
+    <Content Include="Common\images\etc\gnb6.png" />
+    <Content Include="Common\images\etc\logo.png" />
+    <Content Include="Common\images\etc\logo_gray.png" />
+    <Content Include="Common\images\etc\search_bg.png" />
+    <Content Include="Common\images\etc\search_btn.png" />
+    <Content Include="Common\images\gnb5.png" />
+    <Content Include="Common\images\icon\alarm_off.png" />
+    <Content Include="Common\images\icon\alarm_on.png" />
+    <Content Include="Common\images\icon\best.png" />
+    <Content Include="Common\images\icon\blue1.png" />
+    <Content Include="Common\images\icon\blue2.png" />
+    <Content Include="Common\images\icon\blue3.png" />
+    <Content Include="Common\images\icon\blue4.png" />
+    <Content Include="Common\images\icon\blue5.png" />
+    <Content Include="Common\images\icon\blue6.png" />
+    <Content Include="Common\images\icon\blue7.png" />
+    <Content Include="Common\images\icon\caution.png" />
+    <Content Include="Common\images\icon\choose.png" />
+    <Content Include="Common\images\icon\directory.png" />
+    <Content Include="Common\images\icon\directory1.png" />
+    <Content Include="Common\images\icon\directory2.png" />
+    <Content Include="Common\images\icon\file.png" />
+    <Content Include="Common\images\icon\file_down.png" />
+    <Content Include="Common\images\icon\file_ppt.png" />
+    <Content Include="Common\images\icon\file_word.png" />
+    <Content Include="Common\images\icon\file_xl.png" />
+    <Content Include="Common\images\icon\gray1.png" />
+    <Content Include="Common\images\icon\gray2.png" />
+    <Content Include="Common\images\icon\gray3.png" />
+    <Content Include="Common\images\icon\gray4.png" />
+    <Content Include="Common\images\icon\gray5.png" />
+    <Content Include="Common\images\icon\gray6.png" />
+    <Content Include="Common\images\icon\i1.png" />
+    <Content Include="Common\images\icon\i2.png" />
+    <Content Include="Common\images\icon\i3.png" />
+    <Content Include="Common\images\icon\icn_closed.png" />
+    <Content Include="Common\images\icon\knowhow_main.png" />
+    <Content Include="Common\images\icon\more.png" />
+    <Content Include="Common\images\icon\more_tag.png" />
+    <Content Include="Common\images\icon\MS Access.png" />
+    <Content Include="Common\images\icon\MS Excel.png" />
+    <Content Include="Common\images\icon\MS Frontpage.png" />
+    <Content Include="Common\images\icon\MS Groove.png" />
+    <Content Include="Common\images\icon\MS InfoPath.png" />
+    <Content Include="Common\images\icon\MS OneNote.png" />
+    <Content Include="Common\images\icon\MS Outlook.png" />
+    <Content Include="Common\images\icon\MS PowerPoint.png" />
+    <Content Include="Common\images\icon\MS Project.png" />
+    <Content Include="Common\images\icon\MS Publisher.png" />
+    <Content Include="Common\images\icon\MS Visio.png" />
+    <Content Include="Common\images\icon\MS Word.png" />
+    <Content Include="Common\images\icon\ms_excel.png" />
+    <Content Include="Common\images\icon\ms_pc.png" />
+    <Content Include="Common\images\icon\ms_ppt.png" />
+    <Content Include="Common\images\icon\ms_word.png" />
+    <Content Include="Common\images\icon\num_blue.png" />
+    <Content Include="Common\images\icon\num_yellow.png" />
+    <Content Include="Common\images\icon\people_effect1.png" />
+    <Content Include="Common\images\icon\people_effect2.png" />
+    <Content Include="Common\images\icon\people_effect3.png" />
+    <Content Include="Common\images\icon\people_effect4.png" />
+    <Content Include="Common\images\icon\people_effect5.png" />
+    <Content Include="Common\images\icon\pm.png" />
+    <Content Include="Common\images\icon\power.png" />
+    <Content Include="Common\images\icon\q1.png" />
+    <Content Include="Common\images\icon\q2.png" />
+    <Content Include="Common\images\icon\raking1.png" />
+    <Content Include="Common\images\icon\raking2.png" />
+    <Content Include="Common\images\icon\raking3.png" />
+    <Content Include="Common\images\icon\raking4.png" />
+    <Content Include="Common\images\icon\rating_set.png" />
+    <Content Include="Common\images\icon\scrap.png" />
+    <Content Include="Common\images\icon\scrap_off.png" />
+    <Content Include="Common\images\icon\scrap_on.png" />
+    <Content Include="Common\images\icon\scrap_s_off.png" />
+    <Content Include="Common\images\icon\scrap_s_on.png" />
+    <Content Include="Common\images\icon\search_result_none.png" />
+    <Content Include="Common\images\icon\setting.png" />
+    <Content Include="Common\images\icon\skyblue1.png" />
+    <Content Include="Common\images\icon\skyblue2.png" />
+    <Content Include="Common\images\icon\skyblue3.png" />
+    <Content Include="Common\images\icon\skyblue4.png" />
+    <Content Include="Common\images\icon\survey1.png" />
+    <Content Include="Common\images\icon\survey2.png" />
+    <Content Include="Common\images\icon\survey3.png" />
+    <Content Include="Common\images\icon\survey4.png" />
+    <Content Include="Common\images\icon\title.png" />
+    <Content Include="Common\images\icon\user_icon01.png" />
+    <Content Include="Common\images\icon\user_icon01_on.png" />
+    <Content Include="Common\images\icon\user_icon02.png" />
+    <Content Include="Common\images\icon\user_icon02_on.png" />
+    <Content Include="Common\images\icon\user_icon03.png" />
+    <Content Include="Common\images\icon\user_icon03_on.png" />
+    <Content Include="Common\images\icon\user_icon04.png" />
+    <Content Include="Common\images\icon\user_icon04_on.png" />
+    <Content Include="Common\images\icon\user_icon05.png" />
+    <Content Include="Common\images\icon\user_icon05_on.png" />
+    <Content Include="Common\images\icon\write.png" />
+    <Content Include="Common\images\icon\yellow1.png" />
+    <Content Include="Common\images\icon\yellow2.png" />
+    <Content Include="Common\images\icon\yellow3.png" />
+    <Content Include="Common\images\icon\yellow4.png" />
+    <Content Include="Common\images\icon\yellow5.png" />
+    <Content Include="Common\images\icon\yellow6.png" />
+    <Content Include="Common\images\icon\yellow7.png" />
+    <Content Include="Common\images\main\banner.jpg" />
+    <Content Include="Common\images\main\banner.png" />
+    <Content Include="Common\images\main\bannerBottomLeft.png" />
+    <Content Include="Common\images\main\bannerBottomRight_20141114.jpg" />
+    <Content Include="Common\images\main\bg.png" />
+    <Content Include="Common\images\main\bg_calendar.png" />
+    <Content Include="Common\images\main\bg_people.png" />
+    <Content Include="Common\images\main\bn1.jpg" />
+    <Content Include="Common\images\main\bn1.png" />
+    <Content Include="Common\images\main\bn1_20141114.jpg" />
+    <Content Include="Common\images\main\bn2.jpg" />
+    <Content Include="Common\images\main\bn2.png" />
+    <Content Include="Common\images\main\bn3.jpg" />
+    <Content Include="Common\images\main\bn4.jpg" />
+    <Content Include="Common\images\main\bn5.jpg" />
+    <Content Include="Common\images\main\bn6.jpg" />
+    <Content Include="Common\images\main\bn7.jpg" />
+    <Content Include="Common\images\main\bn_220_135.png" />
+    <Content Include="Common\images\main\bn_220_280.png" />
+    <Content Include="Common\images\main\bn_450_280.png" />
+    <Content Include="Common\images\main\btn_more.png" />
+    <Content Include="Common\images\main\btn_search.png" />
+    <Content Include="Common\images\main\cafedeSKT.png" />
+    <Content Include="Common\images\main\event1409.jpg" />
+    <Content Include="Common\images\main\gnb1.png" />
+    <Content Include="Common\images\main\gnb2.png" />
+    <Content Include="Common\images\main\gnb3.png" />
+    <Content Include="Common\images\main\gnb4.png" />
+    <Content Include="Common\images\main\gnb5.png" />
+    <Content Include="Common\images\main\gnb6.png" />
+    <Content Include="Common\images\main\icon_more.png" />
+    <Content Include="Common\images\main\icon_search.png" />
+    <Content Include="Common\images\main\logo.png" />
+    <Content Include="Common\images\main\logo_gray.png" />
+    <Content Include="Common\images\main\main_right_bottom1.png" />
+    <Content Include="Common\images\main\main_right_bottom2.png" />
+    <Content Include="Common\images\main\main_right_bottom3.png" />
+    <Content Include="Common\images\main\main_right_bottom4.png" />
+    <Content Include="Common\images\main\main_right_bottom5.png" />
+    <Content Include="Common\images\main\main_right_bottom6.png" />
+    <Content Include="Common\images\main\main_right_title.gif" />
+    <Content Include="Common\images\main\movie1.jpg" />
+    <Content Include="Common\images\main\next.png" />
+    <Content Include="Common\images\main\pic1.png" />
+    <Content Include="Common\images\main\pic2.png" />
+    <Content Include="Common\images\main\pic3.png" />
+    <Content Include="Common\images\main\pic4.png" />
+    <Content Include="Common\images\main\pic5.png" />
+    <Content Include="Common\images\main\pic6.png" />
+    <Content Include="Common\images\main\prev.png" />
+    <Content Include="Common\images\main\search_bg.png" />
+    <Content Include="Common\images\main\search_btn.png" />
+    <Content Include="Common\images\main\title.png" />
+    <Content Include="Common\images\main\title_cafe.png" />
+    <Content Include="Common\images\main\title_family.png" />
+    <Content Include="Common\images\main\title_newFm.png" />
+    <Content Include="Common\images\main\title_notice.png" />
+    <Content Include="Common\images\main\title_today.png" />
+    <Content Include="Common\images\main\event.jpg" />
+    <Content Include="Common\images\pop2\0.jpg" />
+    <Content Include="Common\images\pop2\1.jpg" />
+    <Content Include="Common\images\pop2\2.jpg" />
+    <Content Include="Common\images\pop2\3.jpg" />
+    <Content Include="Common\images\pop2\4.jpg" />
+    <Content Include="Common\images\pop2\5.jpg" />
+    <Content Include="Common\images\pop2\arrow_left.png" />
+    <Content Include="Common\images\pop2\arrow_right.png" />
+    <Content Include="Common\images\pop2\bg_tran.png" />
+    <Content Include="Common\images\pop2\movie.png" />
+    <Content Include="Common\images\pop2\pop_close.png" />
+    <Content Include="Common\images\pop2\pop_img_fortune.jpg" />
+    <Content Include="Common\images\pop\addin_cont.png" />
+    <Content Include="Common\images\pop\addin_download.png" />
+    <Content Include="Common\images\pop\addin_head.png" />
+    <Content Include="Common\images\pop\bg_bottom.png" />
+    <Content Include="Common\images\pop\bg_schedule.png" />
+    <Content Include="Common\images\pop\btn.png" />
+    <Content Include="Common\images\pop\btn_close.png" />
+    <Content Include="Common\images\pop\btn_close2.png" />
+    <Content Include="Common\images\pop\calender_bottom.png" />
+    <Content Include="Common\images\pop\calender_top.png" />
+    <Content Include="Common\images\pop\doc_notice.jpg" />
+    <Content Include="Common\images\pop\event_1409.png" />
+    <Content Include="Common\images\pop\event_1409_close.png" />
+    <Content Include="Common\images\pop\event_1409_stemp.png" />
+    <Content Include="Common\images\pop\event_1409_stemp2.png" />
+    <Content Include="Common\images\pop\MainTuto-Nateon.png" />
+    <Content Include="Common\images\pop\MainTuto-NateonWrite.png" />
+    <Content Include="Common\images\pop\MainTuto-OutLook.png" />
+    <Content Include="Common\images\pop\MainTuto-Search.png" />
+    <Content Include="Common\images\pop\MainTuto-Tikle.png" />
+    <Content Include="Common\images\pop\MainTuto-Write.png" />
+    <Content Include="Common\images\pop\pop.jpg" />
+    <Content Include="Common\images\pop\qna_notice.jpg" />
+    <Content Include="Common\images\pop\sns_bottom.png" />
+    <Content Include="Common\images\pop\sns_top.png" />
+    <Content Include="Common\images\pop\title_schedule.png" />
+    <Content Include="Common\images\tab\schedule1.png" />
+    <Content Include="Common\images\tab\schedule2.png" />
+    <Content Include="Common\images\test_pic.png" />
+    <Content Include="Common\images\text\Directory.png" />
+    <Content Include="Common\images\text\Directory1.png" />
+    <Content Include="Common\images\text\Directory2.png" />
+    <Content Include="Common\images\text\Directory3.png" />
+    <Content Include="Common\images\text\Etc.png" />
+    <Content Include="Common\images\text\Glossary.png" />
+    <Content Include="Common\images\text\Glossary1.png" />
+    <Content Include="Common\images\text\Glossary2.png" />
+    <Content Include="Common\images\text\Mypage.png" />
+    <Content Include="Common\images\text\Mypage_.png" />
+    <Content Include="Common\images\text\People.png" />
+    <Content Include="Common\images\text\People1.png" />
+    <Content Include="Common\images\text\People2.png" />
+    <Content Include="Common\images\text\People3.png" />
+    <Content Include="Common\images\text\People4.png" />
+    <Content Include="Common\images\text\People5.png" />
+    <Content Include="Common\images\text\People6.png" />
+    <Content Include="Common\images\text\Qna.png" />
+    <Content Include="Common\images\text\Schedule.png" />
+    <Content Include="Common\images\text\Search.png" />
+    <Content Include="Common\images\text\Survey.png" />
+    <Content Include="Common\images\title\Directory.png" />
+    <Content Include="Common\images\title\document.png" />
+    <Content Include="Common\images\title\Glossary.png" />
+    <Content Include="Common\images\title\idea.png" />
+    <Content Include="Common\images\title\knowhow.png" />
+    <Content Include="Common\images\title\people.png" />
+    <Content Include="Common\images\title\person.png" />
+    <Content Include="Common\images\title\ranking1.png" />
+    <Content Include="Common\images\title\ranking2.png" />
+    <Content Include="Common\images\title\schedule.png" />
+    <Content Include="Common\images\title\Survey.png" />
+    <Content Include="Common\images\user_none.png" />
+    <Content Include="Common\Js\design.js" />
+    <Content Include="Common\Js\dhtmlHistory.js" />
+    <Content Include="Common\Js\html5.js" />
+    <Content Include="Common\Js\html5shiv.js" />
+    <Content Include="Common\Js\jcarousellite_1.0.1.min.js" />
+    <Content Include="Common\Js\jit-excanvas.js" />
+    <Content Include="Common\Js\jit.js" />
+    <Content Include="Common\Js\jquery-1.11.1\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Common\Js\jquery-1.11.1\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Common\Js\jquery-1.11.1\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Common\Js\jquery-1.11.1\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Common\Js\jquery-1.11.1\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Common\Js\jquery-1.11.1\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Common\Js\jquery-1.11.1\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Common\Js\jquery-1.11.1\images\ui-icons_454545_256x240.png" />
+    <Content Include="Common\Js\jquery-1.11.1\images\ui-icons_888888_256x240.png" />
+    <Content Include="Common\Js\jquery-1.11.1\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Common\Js\jquery-toastmessage-plugin.js" />
+    <Content Include="Common\Js\jquery-1.11.1\external\jquery\jquery.js" />
+    <Content Include="Common\Js\jquery-1.11.1\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="Common\Js\jquery-1.11.1\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="Common\Js\jquery-1.11.1\images\ui-bg_diagonals-thick_75_f3d8d8_40x40.png" />
+    <Content Include="Common\Js\jquery-1.11.1\images\ui-bg_dots-small_65_a6a6a6_2x2.png" />
+    <Content Include="Common\Js\jquery-1.11.1\images\ui-bg_flat_0_333333_40x100.png" />
+    <Content Include="Common\Js\jquery-1.11.1\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="Common\Js\jquery-1.11.1\images\ui-bg_flat_65_ffffff_40x100.png" />
+    <Content Include="Common\Js\jquery-1.11.1\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Common\Js\jquery-1.11.1\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="Common\Js\jquery-1.11.1\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="Common\Js\jquery-1.11.1\images\ui-bg_glass_55_fbf8ee_1x400.png" />
+    <Content Include="Common\Js\jquery-1.11.1\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Common\Js\jquery-1.11.1\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="Common\Js\jquery-1.11.1\images\ui-bg_highlight-hard_100_eeeeee_1x100.png" />
+    <Content Include="Common\Js\jquery-1.11.1\images\ui-bg_highlight-hard_100_f6f6f6_1x100.png" />
+    <Content Include="Common\Js\jquery-1.11.1\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="Common\Js\jquery-1.11.1\images\ui-bg_highlight-soft_15_cc0000_1x100.png" />
+    <Content Include="Common\Js\jquery-1.11.1\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="Common\Js\jquery-1.11.1\images\ui-icons_004276_256x240.png" />
+    <Content Include="Common\Js\jquery-1.11.1\images\ui-icons_222222_256x240.png" />
+    <Content Include="Common\Js\jquery-1.11.1\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="Common\Js\jquery-1.11.1\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="Common\Js\jquery-1.11.1\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="Common\Js\jquery-1.11.1\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="Common\Js\jquery-1.11.1\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Common\Js\jquery-1.11.1\index.html" />
+    <Content Include="Common\Js\jquery-1.11.1\jquery-1.11.1.min.js" />
+    <Content Include="Common\Js\jquery-1.11.1\jquery-ui.css" />
+    <Content Include="Common\Js\jquery-1.11.1\jquery-ui.js" />
+    <Content Include="Common\Js\jquery-1.11.1\jquery-ui.min.css" />
+    <Content Include="Common\Js\jquery-1.11.1\jquery-ui.min.js" />
+    <Content Include="Common\Js\jquery-1.11.1\jquery-ui.structure.css" />
+    <Content Include="Common\Js\jquery-1.11.1\jquery-ui.structure.min.css" />
+    <Content Include="Common\Js\jquery-1.11.1\jquery-ui.theme.css" />
+    <Content Include="Common\Js\jquery-1.11.1\jquery-ui.theme.min.css" />
+    <Content Include="Common\Js\jquery-ui.js" />
+    <Content Include="Common\Js\jquery-ui.min.js" />
+    <Content Include="Common\Js\jquery.bxslider.min.js" />
+    <Content Include="Common\Js\jquery.cookie.js" />
+    <Content Include="Common\Js\jquery.cycle.all.js" />
+    <Content Include="Common\Js\jquery.filestyle.js" />
+    <Content Include="Common\Js\json2.js" />
+    <Content Include="Common\Js\lrscroll.js" />
+    <Content Include="Common\Js\paging_comment.js" />
+    <Content Include="Common\Js\select.js" />
+    <Content Include="Common\Js\TagCloud\d3.js" />
+    <Content Include="Common\Js\TagCloud\d3.layout.cloud.js" />
+    <Content Include="Common\plugins\jquery.easing.1.3.js" />
+    <Content Include="Common\plugins\jquery.fitvids.js" />
+    <Content Include="Directory\DirectoryViewIframe.aspx" />
+    <Content Include="Directory\DirectoryFileHistoryList.aspx" />
+    <Content Include="Directory\DirectoryListNew.aspx" />
+    <Content Include="Directory\DirectorySearchResult.aspx" />
+    <Content Include="Directory\DirectoryView.aspx" />
+    <Content Include="Directory\DirectoryWrite.aspx" />
+    <Content Include="Directory\FileOpenTransfer.aspx" />
+    <Content Include="favi.ico" />
+    <Content Include="GlossaryHistory\HistoryList.aspx" />
+    <Content Include="Error.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="GlossaryHistory\HistoryView.aspx" />
+    <Content Include="GlossaryMyPages\MyDocumentsList.aspx" />
+    <Content Include="GlossaryMyPages\MyFollowList.aspx" />
+    <Content Include="GlossaryMyPages\MyPeopleScrapList.aspx" />
+    <Content Include="GlossaryMyPages\MyProfile.aspx" />
+    <Content Include="GlossaryMyPages\MyScrapList.aspx" />
+    <Content Include="GlossaryMyPages\MyShareList.aspx" />
+    <Content Include="GlossaryMyPages\MyTempList.aspx" />
+    <Content Include="GlossaryMyPages\MyUseGroup.aspx" />
+    <Content Include="Glossary\Glossary.aspx" />
+    <Content Include="Glossary\GlossaryViewCommentControl.ascx" />
+    <Content Include="Glossary\GlossaryList.aspx" />
+    <Content Include="Glossary\GlossaryView.aspx" />
+    <Content Include="Glossary\GlossaryNewsList.aspx" />
+    <Content Include="Glossary\GlossaryEvent.aspx" />
+    <Content Include="Interface\LearningWorld.aspx" />
+    <Content Include="Interface\TnetWebService.asmx" />
+    <Content Include="log4netconf.xml" />
+    <Content Include="NamoActive\As8.css" />
+    <Content Include="NamoActive\As8Init.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="NamoActive\css\AS8basic.css" />
+    <Content Include="NamoActive\AS8download.html" />
+    <Content Include="NamoActive\css\namose_otherEditor.css" />
+    <Content Include="NamoActive\images\01.png" />
+    <Content Include="NamoActive\images\AS8.ico" />
+    <Content Include="NamoActive\images\bi.png" />
+    <Content Include="NamoActive\images\btn_01.png" />
+    <Content Include="NamoActive\images\btn_02.png" />
+    <Content Include="NamoActive\images\btn_03.png" />
+    <Content Include="NamoActive\images\ci.png" />
+    <Content Include="NamoActive\images\emoticon.gif" />
+    <Content Include="NamoActive\images\icon_01.png" />
+    <Content Include="NamoActive\images\menu_00.png" />
+    <Content Include="NamoActive\images\menu_01.png" />
+    <Content Include="NamoActive\images\menu_02.png" />
+    <Content Include="NamoActive\images\menu_03.png" />
+    <Content Include="NamoActive\images\menu_04.png" />
+    <Content Include="NamoActive\images\menu_05.png" />
+    <Content Include="NamoActive\images\menu_bg.png" />
+    <Content Include="NamoActive\images\menu_line.png" />
+    <Content Include="NamoActive\images\t_01.png" />
+    <Content Include="NamoActive\NamoWec8.cab" />
+    <Content Include="NamoActive\NamoWec8.js" />
+    <Content Include="NamoActive\pages\banner.htm" />
+    <Content Include="NamoActive\pages\defdoc.htm" />
+    <Content Include="NamoActive\pages\emoticon.gif" />
+    <Content Include="NamoActive\pages\format.css" />
+    <Content Include="NamoActive\pages\imoticon.htm" />
+    <Content Include="NamoActive\pages\promotion.htm" />
+    <Content Include="NamoActive\pages\sam1.htm" />
+    <Content Include="NamoActive\pages\sam2.htm" />
+    <Content Include="NamoActive\pages\sam3.htm" />
+    <Content Include="NamoActive\pages\sam4.htm" />
+    <Content Include="NamoActive\pages\util.js" />
+    <Content Include="NamoActive\Sample.html" />
+    <Content Include="NamoActive\Template\tem01.html" />
+    <Content Include="NamoActive\Template\tem02.html" />
+    <Content Include="NamoActive\Template\tem03.html" />
+    <Content Include="NamoActive\Template\tem04.html" />
+    <Content Include="NamoActive\Template\template.txt" />
+    <Content Include="TikleAdmin\DigitalTrans\ArraRegist.aspx" />
+    <Content Include="TikleAdmin\MainMng\mainbackimg.aspx" />
+    <Content Include="TikleAdmin\MainMng\tikleAuth.aspx" />
+    <Content Include="TikleAdmin\Platform\PlatGlossaryList.aspx" />
+    <Content Include="TikleAdmin\Platform\PlatQnaList.aspx" />
+    <Content Include="TikleAdmin\Platform\PlatStat.aspx" />
+    <Content Include="TikleAdmin\Stats\TikleAccess.aspx" />
+    <Content Include="TikleAdmin\Stats\tikleDTBlog.aspx" />
+    <Content Include="TikleAdmin\Stats\tikleMenu.aspx" />
+    <Content Include="TikleAdmin\common\css\admin.css" />
+    <Content Include="TikleAdmin\common\css\button.css" />
+    <Content Include="TikleAdmin\common\css\common.css" />
+    <Content Include="TikleAdmin\common\css\demos.css" />
+    <Content Include="TikleAdmin\common\css\eduSystem.css" />
+    <Content Include="TikleAdmin\common\css\neos_m_style.css" />
+    <Content Include="TikleAdmin\common\css\neos_style.css" />
+    <Content Include="TikleAdmin\common\css\paging.css" />
+    <Content Include="TikleAdmin\common\css\quest.css" />
+    <Content Include="TikleAdmin\common\images\badge.jpg" />
+    <Content Include="TikleAdmin\common\images\BtnLogIn.gif" />
+    <Content Include="TikleAdmin\common\images\BtnLogOut.gif" />
+    <Content Include="TikleAdmin\common\images\BtnSearch.gif" />
+    <Content Include="TikleAdmin\common\images\BtnSearchs.gif" />
+    <Content Include="TikleAdmin\common\images\btn\bnr_quick05.gif" />
+    <Content Include="TikleAdmin\common\images\btn\btns.gif" />
+    <Content Include="TikleAdmin\common\images\btn\btn_input.gif" />
+    <Content Include="TikleAdmin\common\images\btn\btn_login.gif" />
+    <Content Include="TikleAdmin\common\images\btn\btn_mainNoticeClose.png" />
+    <Content Include="TikleAdmin\common\images\btn\btn_more.gif" />
+    <Content Include="TikleAdmin\common\images\btn\btn_more02.gif" />
+    <Content Include="TikleAdmin\common\images\btn\Btn_Mplus2.gif" />
+    <Content Include="TikleAdmin\common\images\btn\btn_pagingFirst.gif" />
+    <Content Include="TikleAdmin\common\images\btn\btn_pagingLast.gif" />
+    <Content Include="TikleAdmin\common\images\btn\btn_pagingNxt.gif" />
+    <Content Include="TikleAdmin\common\images\btn\btn_pagingPrv.gif" />
+    <Content Include="TikleAdmin\common\images\btn\calendarBt.gif" />
+    <Content Include="TikleAdmin\common\images\btn\fileSearchBt.gif" />
+    <Content Include="TikleAdmin\common\images\btn\gnb01.png" />
+    <Content Include="TikleAdmin\common\images\btn\gnb01_sub01.png" />
+    <Content Include="TikleAdmin\common\images\btn\gnb01_sub02.png" />
+    <Content Include="TikleAdmin\common\images\btn\gnb01_sub03.png" />
+    <Content Include="TikleAdmin\common\images\btn\gnb01_sub04.png" />
+    <Content Include="TikleAdmin\common\images\btn\gnb01_sub05.png" />
+    <Content Include="TikleAdmin\common\images\btn\gnb01_sub06.png" />
+    <Content Include="TikleAdmin\common\images\btn\gnb01_sub07.png" />
+    <Content Include="TikleAdmin\common\images\btn\gnb01_sub08.png" />
+    <Content Include="TikleAdmin\common\images\btn\gnb01_sub09.png" />
+    <Content Include="TikleAdmin\common\images\btn\gnb01_sub10.png" />
+    <Content Include="TikleAdmin\common\images\btn\gnb02.png" />
+    <Content Include="TikleAdmin\common\images\btn\gnb02_sub01.png" />
+    <Content Include="TikleAdmin\common\images\btn\gnb02_sub02.png" />
+    <Content Include="TikleAdmin\common\images\btn\gnb02_sub03.png" />
+    <Content Include="TikleAdmin\common\images\btn\gnb03.png" />
+    <Content Include="TikleAdmin\common\images\btn\gnb03_sub01.png" />
+    <Content Include="TikleAdmin\common\images\btn\gnb03_sub02.png" />
+    <Content Include="TikleAdmin\common\images\btn\gnb03_sub03.png" />
+    <Content Include="TikleAdmin\common\images\btn\gnb04.png" />
+    <Content Include="TikleAdmin\common\images\btn\gnb04_sub01.png" />
+    <Content Include="TikleAdmin\common\images\btn\gnb04_sub02.png" />
+    <Content Include="TikleAdmin\common\images\btn\gnb04_sub03.png" />
+    <Content Include="TikleAdmin\common\images\btn\gnb04_sub04.png" />
+    <Content Include="TikleAdmin\common\images\btn\gnb05.png" />
+    <Content Include="TikleAdmin\common\images\btn\gnb05_sub01.png" />
+    <Content Include="TikleAdmin\common\images\btn\gnb05_sub02.png" />
+    <Content Include="TikleAdmin\common\images\btn\gnb05_sub03.png" />
+    <Content Include="TikleAdmin\common\images\btn\gnb05_sub04.png" />
+    <Content Include="TikleAdmin\common\images\btn\gnb06.png" />
+    <Content Include="TikleAdmin\common\images\btn\gnb06_sub01.png" />
+    <Content Include="TikleAdmin\common\images\btn\gnb06_sub02.png" />
+    <Content Include="TikleAdmin\common\images\btn\gnb06_sub03.png" />
+    <Content Include="TikleAdmin\common\images\btn\ir_cal_tab.gif" />
+    <Content Include="TikleAdmin\common\images\btn\laypopXbt03.gif" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_aca01.png" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_aca01_on.png" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_aca02.png" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_aca02_on.png" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_aca03.png" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_aca03_on.png" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_comm01.png" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_comm01_on.png" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_comm02.png" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_comm02_on.png" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_comm03.png" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_comm03_on.png" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_comm04.png" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_comm04_on.png" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_help01.png" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_help01_on.png" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_help02.png" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_help02_on.png" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_help03.png" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_help03_on.png" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_life01.png" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_life01_on.png" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_life02.png" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_life02_on.png" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_life02_sub01.png" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_life02_sub01_on.png" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_life02_sub02.png" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_life02_sub02_on.png" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_life02_sub03.png" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_life02_sub03_on.png" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_life02_sub04.png" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_life02_sub04_on.png" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_life02_sub05.png" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_life02_sub05_on.png" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_life02_sub06.png" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_life02_sub06_on.png" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_life03.png" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_life03_on.png" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_neos01.png" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_neos01_on.png" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_neos02.png" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_neos02_on.png" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_neos03.png" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_neos03_on.png" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_neos04.png" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_neos04_on.png" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_neos04_sub01.png" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_neos04_sub01_on.png" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_neos04_sub02.png" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_neos04_sub02_on.png" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_plan01.png" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_plan01_on.png" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_plan02.png" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_plan02_on.png" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_plan03.png" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_plan03_on.png" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_plan04.png" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_plan04_on.png" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_plan05.png" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_plan05_on.png" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_plan06.png" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_plan06_on.png" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_plan07.png" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_plan07_on.png" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_plan08.png" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_plan08_on.png" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_plan09.png" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_plan09_on.png" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_plan10.png" />
+    <Content Include="TikleAdmin\common\images\btn\lnb_plan10_on.png" />
+    <Content Include="TikleAdmin\common\images\btn\main_bt_calendar.png" />
+    <Content Include="TikleAdmin\common\images\Btn_apply.gif" />
+    <Content Include="TikleAdmin\common\images\Btn_dele.gif" />
+    <Content Include="TikleAdmin\common\images\Btn_deleNo.gif" />
+    <Content Include="TikleAdmin\common\images\Btn_down.gif" />
+    <Content Include="TikleAdmin\common\images\Btn_down2.gif" />
+    <Content Include="TikleAdmin\common\images\Btn_excel.gif" />
+    <Content Include="TikleAdmin\common\images\Btn_excel2.gif" />
+    <Content Include="TikleAdmin\common\images\Btn_Excels.gif" />
+    <Content Include="TikleAdmin\common\images\btn_left.gif" />
+    <Content Include="TikleAdmin\common\images\btn_left2.gif" />
+    <Content Include="TikleAdmin\common\images\Btn_Manswer.gif" />
+    <Content Include="TikleAdmin\common\images\Btn_modi.gif" />
+    <Content Include="TikleAdmin\common\images\Btn_modiNo.gif" />
+    <Content Include="TikleAdmin\common\images\Btn_mody.gif" />
+    <Content Include="TikleAdmin\common\images\Btn_Mplus.gif" />
+    <Content Include="TikleAdmin\common\images\Btn_Mplus2.gif" />
+    <Content Include="TikleAdmin\common\images\Btn_mun.gif" />
+    <Content Include="TikleAdmin\common\images\Btn_print.gif" />
+    <Content Include="TikleAdmin\common\images\Btn_restoration.gif" />
+    <Content Include="TikleAdmin\common\images\btn_right.gif" />
+    <Content Include="TikleAdmin\common\images\btn_right2.gif" />
+    <Content Include="TikleAdmin\common\images\Btn_save.gif" />
+    <Content Include="TikleAdmin\common\images\Btn_sel.gif" />
+    <Content Include="TikleAdmin\common\images\Btn_view.gif" />
+    <Content Include="TikleAdmin\common\images\Bul11x11B.gif" />
+    <Content Include="TikleAdmin\common\images\Bul11x11O.gif" />
+    <Content Include="TikleAdmin\common\images\Bul11x11W.gif" />
+    <Content Include="TikleAdmin\common\images\Bul3x3.gif" />
+    <Content Include="TikleAdmin\common\images\Bul3x5.gif" />
+    <Content Include="TikleAdmin\common\images\Bul4x6.gif" />
+    <Content Include="TikleAdmin\common\images\button.gif" />
+    <Content Include="TikleAdmin\common\images\buttonS.gif" />
+    <Content Include="TikleAdmin\common\images\icons_nofolder.gif" />
+    <Content Include="TikleAdmin\common\images\icons_plus.gif" />
+    <Content Include="TikleAdmin\common\images\icon\bg_allMenuBox.png" />
+    <Content Include="TikleAdmin\common\images\icon\bg_bar.gif" />
+    <Content Include="TikleAdmin\common\images\icon\bg_bar_In01.gif" />
+    <Content Include="TikleAdmin\common\images\icon\bg_bar_In02.gif" />
+    <Content Include="TikleAdmin\common\images\icon\bg_btm.png" />
+    <Content Include="TikleAdmin\common\images\icon\bg_date.gif" />
+    <Content Include="TikleAdmin\common\images\icon\bg_gnb.png" />
+    <Content Include="TikleAdmin\common\images\icon\bg_gnbLeft.png" />
+    <Content Include="TikleAdmin\common\images\icon\bg_gnbList.png" />
+    <Content Include="TikleAdmin\common\images\icon\bg_gnbRight.png" />
+    <Content Include="TikleAdmin\common\images\icon\bg_lnb.gif" />
+    <Content Include="TikleAdmin\common\images\icon\bg_lnbBtm.gif" />
+    <Content Include="TikleAdmin\common\images\icon\bg_lnbTop.gif" />
+    <Content Include="TikleAdmin\common\images\icon\bg_mainCon.png" />
+    <Content Include="TikleAdmin\common\images\icon\bg_mainNotice.jpg" />
+    <Content Include="TikleAdmin\common\images\icon\bg_mainNotice_body.jpg" />
+    <Content Include="TikleAdmin\common\images\icon\bg_mainNotice_btm.jpg" />
+    <Content Include="TikleAdmin\common\images\icon\bg_mainNotice_top.jpg" />
+    <Content Include="TikleAdmin\common\images\icon\bg_middle.png" />
+    <Content Include="TikleAdmin\common\images\icon\bg_sub.gif" />
+    <Content Include="TikleAdmin\common\images\icon\bg_top.png" />
+    <Content Include="TikleAdmin\common\images\icon\bl_list01.gif" />
+    <Content Include="TikleAdmin\common\images\icon\bl_login.gif" />
+    <Content Include="TikleAdmin\common\images\icon\bl_menu.gif" />
+    <Content Include="TikleAdmin\common\images\icon\bl_util.gif" />
+    <Content Include="TikleAdmin\common\images\icon\ico_a.gif" />
+    <Content Include="TikleAdmin\common\images\icon\ico_arrow.gif" />
+    <Content Include="TikleAdmin\common\images\icon\ico_check.gif" />
+    <Content Include="TikleAdmin\common\images\icon\ico_file.gif" />
+    <Content Include="TikleAdmin\common\images\icon\ico_file02.gif" />
+    <Content Include="TikleAdmin\common\images\icon\ico_gnbArrow.png" />
+    <Content Include="TikleAdmin\common\images\icon\ico_home.png" />
+    <Content Include="TikleAdmin\common\images\icon\ico_name.gif" />
+    <Content Include="TikleAdmin\common\images\icon\ico_q.gif" />
+    <Content Include="TikleAdmin\common\images\icon\ico_reply.gif" />
+    <Content Include="TikleAdmin\common\images\icon\img_main01.jpg" />
+    <Content Include="TikleAdmin\common\images\icon\img_media.jpg" />
+    <Content Include="TikleAdmin\common\images\icon\logo_footer_neos.png" />
+    <Content Include="TikleAdmin\common\images\icon\logo_neos.png" />
+    <Content Include="TikleAdmin\common\images\icon\sub_visual01.jpg" />
+    <Content Include="TikleAdmin\common\images\icon\sub_visual02.jpg" />
+    <Content Include="TikleAdmin\common\images\icon\sub_visual03.jpg" />
+    <Content Include="TikleAdmin\common\images\icon\sub_visual04.jpg" />
+    <Content Include="TikleAdmin\common\images\icon\sub_visual05.jpg" />
+    <Content Include="TikleAdmin\common\images\icon\sub_visual06.jpg" />
+    <Content Include="TikleAdmin\common\images\LeftMenuBtm.gif" />
+    <Content Include="TikleAdmin\common\images\loadingbar.gif" />
+    <Content Include="TikleAdmin\common\images\popup\bg_top.gif" />
+    <Content Include="TikleAdmin\common\images\popup\btn_allMenu_close.png" />
+    <Content Include="TikleAdmin\common\images\popup\btn_cal_close.gif" />
+    <Content Include="TikleAdmin\common\images\popup\btn_popCal_close.gif" />
+    <Content Include="TikleAdmin\common\images\popup\btn_print.gif" />
+    <Content Include="TikleAdmin\common\images\popup\ico_orgDot.gif" />
+    <Content Include="TikleAdmin\common\images\popup\ico_redDot.gif" />
+    <Content Include="TikleAdmin\common\images\popup\manu01_sub09.png" />
+    <Content Include="TikleAdmin\common\images\popup\menu01_sub01.png" />
+    <Content Include="TikleAdmin\common\images\popup\menu01_sub02.png" />
+    <Content Include="TikleAdmin\common\images\popup\menu01_sub03.png" />
+    <Content Include="TikleAdmin\common\images\popup\menu01_sub04.png" />
+    <Content Include="TikleAdmin\common\images\popup\menu01_sub05.png" />
+    <Content Include="TikleAdmin\common\images\popup\menu01_sub06.png" />
+    <Content Include="TikleAdmin\common\images\popup\menu01_sub07.png" />
+    <Content Include="TikleAdmin\common\images\popup\menu01_sub08.png" />
+    <Content Include="TikleAdmin\common\images\popup\menu01_sub09.png" />
+    <Content Include="TikleAdmin\common\images\popup\menu01_sub10.png" />
+    <Content Include="TikleAdmin\common\images\popup\menu02_sub01.png" />
+    <Content Include="TikleAdmin\common\images\popup\menu02_sub02.png" />
+    <Content Include="TikleAdmin\common\images\popup\menu02_sub02_thr01.png" />
+    <Content Include="TikleAdmin\common\images\popup\menu02_sub02_thr02.png" />
+    <Content Include="TikleAdmin\common\images\popup\menu02_sub02_thr03.png" />
+    <Content Include="TikleAdmin\common\images\popup\menu02_sub02_thr04.png" />
+    <Content Include="TikleAdmin\common\images\popup\menu02_sub02_thr05.png" />
+    <Content Include="TikleAdmin\common\images\popup\menu02_sub02_thr06.png" />
+    <Content Include="TikleAdmin\common\images\popup\menu02_sub03.png" />
+    <Content Include="TikleAdmin\common\images\popup\menu03_sub01.png" />
+    <Content Include="TikleAdmin\common\images\popup\menu03_sub02.png" />
+    <Content Include="TikleAdmin\common\images\popup\menu03_sub03.png" />
+    <Content Include="TikleAdmin\common\images\popup\menu04_sub01.png" />
+    <Content Include="TikleAdmin\common\images\popup\menu04_sub01_01.png" />
+    <Content Include="TikleAdmin\common\images\popup\menu04_sub01_02.png" />
+    <Content Include="TikleAdmin\common\images\popup\menu04_sub02.png" />
+    <Content Include="TikleAdmin\common\images\popup\menu04_sub03.png" />
+    <Content Include="TikleAdmin\common\images\popup\menu04_sub04.png" />
+    <Content Include="TikleAdmin\common\images\popup\menu04_sub04_thr01.png" />
+    <Content Include="TikleAdmin\common\images\popup\menu04_sub04_thr02.png" />
+    <Content Include="TikleAdmin\common\images\popup\menu05_sub01.png" />
+    <Content Include="TikleAdmin\common\images\popup\menu05_sub02.png" />
+    <Content Include="TikleAdmin\common\images\popup\menu05_sub03.png" />
+    <Content Include="TikleAdmin\common\images\popup\menu05_sub04.png" />
+    <Content Include="TikleAdmin\common\images\popup\menu06_sub01.png" />
+    <Content Include="TikleAdmin\common\images\popup\menu06_sub02.png" />
+    <Content Include="TikleAdmin\common\images\popup\menu06_sub03.png" />
+    <Content Include="TikleAdmin\common\images\popup\title_exam02_complete.gif" />
+    <Content Include="TikleAdmin\common\images\popup\title_popAck01.gif" />
+    <Content Include="TikleAdmin\common\images\popup\title_popAck02.gif" />
+    <Content Include="TikleAdmin\common\images\popup\title_popApp.gif" />
+    <Content Include="TikleAdmin\common\images\popup\title_popEdu02.gif" />
+    <Content Include="TikleAdmin\common\images\popup\title_popEdu_srch.gif" />
+    <Content Include="TikleAdmin\common\images\popup\title_popNews_srch.gif" />
+    <Content Include="TikleAdmin\common\images\popup\title_popNotice.gif" />
+    <Content Include="TikleAdmin\common\images\popup\title_popNotice02.gif" />
+    <Content Include="TikleAdmin\common\images\popup\title_popNotice_srch.gif" />
+    <Content Include="TikleAdmin\common\images\popup\title_popQna.gif" />
+    <Content Include="TikleAdmin\common\images\popup\title_popSiteMain_srch.gif" />
+    <Content Include="TikleAdmin\common\images\popup\tit_allMenu.png" />
+    <Content Include="TikleAdmin\common\images\popup\tit_menu01.png" />
+    <Content Include="TikleAdmin\common\images\popup\tit_menu02.png" />
+    <Content Include="TikleAdmin\common\images\popup\tit_menu03.png" />
+    <Content Include="TikleAdmin\common\images\popup\tit_menu04.png" />
+    <Content Include="TikleAdmin\common\images\popup\tit_menu05.png" />
+    <Content Include="TikleAdmin\common\images\popup\tit_menu06.png" />
+    <Content Include="TikleAdmin\common\images\popup\txt_fri.gif" />
+    <Content Include="TikleAdmin\common\images\popup\txt_mon.gif" />
+    <Content Include="TikleAdmin\common\images\popup\txt_popAck01.gif" />
+    <Content Include="TikleAdmin\common\images\popup\txt_popAck02.gif" />
+    <Content Include="TikleAdmin\common\images\popup\txt_popAppGuide.gif" />
+    <Content Include="TikleAdmin\common\images\popup\txt_popDateSrch.gif" />
+    <Content Include="TikleAdmin\common\images\popup\txt_popEdu01.gif" />
+    <Content Include="TikleAdmin\common\images\popup\txt_popExam01_s.gif" />
+    <Content Include="TikleAdmin\common\images\popup\txt_popSrch.gif" />
+    <Content Include="TikleAdmin\common\images\popup\txt_pop_complete.gif" />
+    <Content Include="TikleAdmin\common\images\popup\txt_sat.gif" />
+    <Content Include="TikleAdmin\common\images\popup\txt_sun.gif" />
+    <Content Include="TikleAdmin\common\images\popup\txt_thu.gif" />
+    <Content Include="TikleAdmin\common\images\popup\txt_tue.gif" />
+    <Content Include="TikleAdmin\common\images\popup\txt_wed.gif" />
+    <Content Include="TikleAdmin\common\images\sTopU01.gif" />
+    <Content Include="TikleAdmin\common\images\sTopU02.gif" />
+    <Content Include="TikleAdmin\common\images\sTopU03.gif" />
+    <Content Include="TikleAdmin\common\images\sTopU04.gif" />
+    <Content Include="TikleAdmin\common\images\title\commenttitle_a.gif" />
+    <Content Include="TikleAdmin\common\images\title\isu.gif" />
+    <Content Include="TikleAdmin\common\images\title\result_txt_ttt.gif" />
+    <Content Include="TikleAdmin\common\images\title\title_app.png" />
+    <Content Include="TikleAdmin\common\images\title\title_app02.png" />
+    <Content Include="TikleAdmin\common\images\title\title_career.png" />
+    <Content Include="TikleAdmin\common\images\title\title_compe.png" />
+    <Content Include="TikleAdmin\common\images\title\title_current.png" />
+    <Content Include="TikleAdmin\common\images\title\title_current02.png" />
+    <Content Include="TikleAdmin\common\images\title\title_data.png" />
+    <Content Include="TikleAdmin\common\images\title\title_eduApp.png" />
+    <Content Include="TikleAdmin\common\images\title\title_eduPlan.png" />
+    <Content Include="TikleAdmin\common\images\title\title_exam01.png" />
+    <Content Include="TikleAdmin\common\images\title\title_exam02.png" />
+    <Content Include="TikleAdmin\common\images\title\title_examResult.png" />
+    <Content Include="TikleAdmin\common\images\title\title_examResult01.png" />
+    <Content Include="TikleAdmin\common\images\title\title_examResult02.png" />
+    <Content Include="TikleAdmin\common\images\title\title_faq.png" />
+    <Content Include="TikleAdmin\common\images\title\title_imgData.png" />
+    <Content Include="TikleAdmin\common\images\title\title_inquire.png" />
+    <Content Include="TikleAdmin\common\images\title\title_level.png" />
+    <Content Include="TikleAdmin\common\images\title\title_lnb.png" />
+    <Content Include="TikleAdmin\common\images\title\title_lnb_academy.png" />
+    <Content Include="TikleAdmin\common\images\title\title_lnb_comm.png" />
+    <Content Include="TikleAdmin\common\images\title\title_lnb_help.png" />
+    <Content Include="TikleAdmin\common\images\title\title_lnb_life.png" />
+    <Content Include="TikleAdmin\common\images\title\title_lnb_neos.png" />
+    <Content Include="TikleAdmin\common\images\title\title_lnb_plan.png" />
+    <Content Include="TikleAdmin\common\images\title\title_login.png" />
+    <Content Include="TikleAdmin\common\images\title\title_media.png" />
+    <Content Include="TikleAdmin\common\images\title\title_mediaData.png" />
+    <Content Include="TikleAdmin\common\images\title\title_myQ.png" />
+    <Content Include="TikleAdmin\common\images\title\title_neos.png" />
+    <Content Include="TikleAdmin\common\images\title\title_planAppro.png" />
+    <Content Include="TikleAdmin\common\images\title\title_planIntro.png" />
+    <Content Include="TikleAdmin\common\images\title\title_popNews_srch.gif" />
+    <Content Include="TikleAdmin\common\images\title\title_popNotice_srch.gif" />
+    <Content Include="TikleAdmin\common\images\title\title_process.png" />
+    <Content Include="TikleAdmin\common\images\title\title_process01.png" />
+    <Content Include="TikleAdmin\common\images\title\title_process02.png" />
+    <Content Include="TikleAdmin\common\images\title\title_process03.png" />
+    <Content Include="TikleAdmin\common\images\title\title_process04.png" />
+    <Content Include="TikleAdmin\common\images\title\title_process05.png" />
+    <Content Include="TikleAdmin\common\images\title\title_process06.png" />
+    <Content Include="TikleAdmin\common\images\title\title_qna.png" />
+    <Content Include="TikleAdmin\common\images\title\title_request.png" />
+    <Content Include="TikleAdmin\common\images\title\title_survey.png" />
+    <Content Include="TikleAdmin\common\images\title\title_sw.png" />
+    <Content Include="TikleAdmin\common\images\title\tit_admin.gif" />
+    <Content Include="TikleAdmin\common\images\title\tit_mainNotice.png" />
+    <Content Include="TikleAdmin\common\images\title\tit_techAcademy.gif" />
+    <Content Include="TikleAdmin\common\images\txt\bnr_quick01.gif" />
+    <Content Include="TikleAdmin\common\images\txt\bnr_quick01_bak.gif" />
+    <Content Include="TikleAdmin\common\images\txt\bnr_quick02.gif" />
+    <Content Include="TikleAdmin\common\images\txt\bnr_quick02_bak.gif" />
+    <Content Include="TikleAdmin\common\images\txt\bnr_quick03.gif" />
+    <Content Include="TikleAdmin\common\images\txt\bnr_quick03_bak.gif" />
+    <Content Include="TikleAdmin\common\images\txt\bnr_quick04.gif" />
+    <Content Include="TikleAdmin\common\images\txt\bnr_quick04_bak.gif" />
+    <Content Include="TikleAdmin\common\images\txt\bnr_quick05.gif" />
+    <Content Include="TikleAdmin\common\images\txt\bnr_quick05_bak.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_address.png" />
+    <Content Include="TikleAdmin\common\images\txt\txt_app01.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_app02.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_app_label01.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_app_label02.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_app_label03.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_app_label04.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_app_label05.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_app_label06.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_cancel01.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_compe01.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_compe_label01.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_copy.png" />
+    <Content Include="TikleAdmin\common\images\txt\txt_eduApp_label01.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_eduApp_label02.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_faq_label01.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_faq_label02.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_faq_pro.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_footer.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_job_label01.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_job_label010.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_job_label02.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_job_label03.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_job_label04.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_job_label05.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_job_label06.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_job_label07.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_job_label11.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_job_label12.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_job_label13.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_job_label14.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_job_licence.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_mainCnt01.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_mainCnt02.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_mainProcess01.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_mainProcess02.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_plan01_step.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_plan02_01.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_plan02_02.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_plan03_01.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_plan03_02.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_planBox.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_planBox22.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_srch.png" />
+    <Content Include="TikleAdmin\common\images\txt\txt_tabNews.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_tabNews_on.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_tabNotice.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_tabNotice_on.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_tApp01.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_tApp02.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_tApp03.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_tApp04.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_tApp05.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_tApp06.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_tApp07.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_tApp08.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_task01.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_task02.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_tCancel01.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_tCancel02.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_tCancel03.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_tCourse01.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_tCourse02.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_tCourse03.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_tCurrent01.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_tCurrent02.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_tCurrent03.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_tCurrent04.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_tCurrent04_01.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_tEduApp01.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_tEval01.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_tEval02.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_tExam01.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_tLevel01.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_tLevel02.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_tPlan01.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_tPlan02.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_tPlan03.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_tProcess01.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_tProcess02.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_tProcess03.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_tProcess04.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_tProcess05.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_tProcess06.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_tSur01.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_tSur02.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_tSur03.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_yearPlan01.gif" />
+    <Content Include="TikleAdmin\common\images\txt\txt_yearPlan02.gif" />
+    <Content Include="TikleAdmin\common\images\whitebg411220.gif" />
+    <Content Include="TikleAdmin\common\js\jquery-1.11.1\external\jquery\jquery.js" />
+    <Content Include="TikleAdmin\common\js\jquery-1.11.1\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="TikleAdmin\common\js\jquery-1.11.1\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="TikleAdmin\common\js\jquery-1.11.1\images\ui-bg_diagonals-thick_75_f3d8d8_40x40.png" />
+    <Content Include="TikleAdmin\common\js\jquery-1.11.1\images\ui-bg_dots-small_65_a6a6a6_2x2.png" />
+    <Content Include="TikleAdmin\common\js\jquery-1.11.1\images\ui-bg_flat_0_333333_40x100.png" />
+    <Content Include="TikleAdmin\common\js\jquery-1.11.1\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="TikleAdmin\common\js\jquery-1.11.1\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="TikleAdmin\common\js\jquery-1.11.1\images\ui-bg_flat_65_ffffff_40x100.png" />
+    <Content Include="TikleAdmin\common\js\jquery-1.11.1\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="TikleAdmin\common\js\jquery-1.11.1\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="TikleAdmin\common\js\jquery-1.11.1\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="TikleAdmin\common\js\jquery-1.11.1\images\ui-bg_glass_55_fbf8ee_1x400.png" />
+    <Content Include="TikleAdmin\common\js\jquery-1.11.1\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="TikleAdmin\common\js\jquery-1.11.1\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="TikleAdmin\common\js\jquery-1.11.1\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="TikleAdmin\common\js\jquery-1.11.1\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="TikleAdmin\common\js\jquery-1.11.1\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="TikleAdmin\common\js\jquery-1.11.1\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="TikleAdmin\common\js\jquery-1.11.1\images\ui-bg_highlight-hard_100_eeeeee_1x100.png" />
+    <Content Include="TikleAdmin\common\js\jquery-1.11.1\images\ui-bg_highlight-hard_100_f6f6f6_1x100.png" />
+    <Content Include="TikleAdmin\common\js\jquery-1.11.1\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="TikleAdmin\common\js\jquery-1.11.1\images\ui-bg_highlight-soft_15_cc0000_1x100.png" />
+    <Content Include="TikleAdmin\common\js\jquery-1.11.1\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="TikleAdmin\common\js\jquery-1.11.1\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="TikleAdmin\common\js\jquery-1.11.1\images\ui-icons_004276_256x240.png" />
+    <Content Include="TikleAdmin\common\js\jquery-1.11.1\images\ui-icons_222222_256x240.png" />
+    <Content Include="TikleAdmin\common\js\jquery-1.11.1\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="TikleAdmin\common\js\jquery-1.11.1\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="TikleAdmin\common\js\jquery-1.11.1\images\ui-icons_454545_256x240.png" />
+    <Content Include="TikleAdmin\common\js\jquery-1.11.1\images\ui-icons_888888_256x240.png" />
+    <Content Include="TikleAdmin\common\js\jquery-1.11.1\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="TikleAdmin\common\js\jquery-1.11.1\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="TikleAdmin\common\js\jquery-1.11.1\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="TikleAdmin\common\js\jquery-1.11.1\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="TikleAdmin\common\js\jquery-1.11.1\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="TikleAdmin\common\js\jquery-1.11.1\index.html" />
+    <Content Include="TikleAdmin\common\js\jquery-1.11.1\jquery-1.11.1.min.js" />
+    <Content Include="TikleAdmin\common\js\jquery-1.11.1\jquery-ui.css" />
+    <Content Include="TikleAdmin\common\js\jquery-1.11.1\jquery-ui.js" />
+    <Content Include="TikleAdmin\common\js\jquery-1.11.1\jquery-ui.min.css" />
+    <Content Include="TikleAdmin\common\js\jquery-1.11.1\jquery-ui.min.js" />
+    <Content Include="TikleAdmin\common\js\jquery-1.11.1\jquery-ui.structure.css" />
+    <Content Include="TikleAdmin\common\js\jquery-1.11.1\jquery-ui.structure.min.css" />
+    <Content Include="TikleAdmin\common\js\jquery-1.11.1\jquery-ui.theme.css" />
+    <Content Include="TikleAdmin\common\js\jquery-1.11.1\jquery-ui.theme.min.css" />
+    <Content Include="TikleAdmin\MainMng\SKTizen.aspx" />
+    <Content Include="TikleAdmin\MainMng\tikle.aspx" />
+    <Content Include="TikleAdmin\Stats\tikleDept.aspx" />
+    <Content Include="TikleAdmin\Stats\tikleTotal.aspx" />
+    <Content Include="TikleAdmin\MainMng\Banner.aspx" />
+    <Content Include="TikleAdmin\Stats\tikleWeeklynote.aspx" />
+    <Content Include="TikleMain.aspx" />
+    <Content Include="TikleMobileWebService\ContentFeeds.svc" />
+    <Content Include="TikleMobileWebService\TikleMobile.asmx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\ContentFeeds.cs" />
+    <Compile Include="Common\Controls\AbsenceUserAndDepartmentList.ascx.cs">
+      <DependentUpon>AbsenceUserAndDepartmentList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Controls\AbsenceUserAndDepartmentList.ascx.designer.cs">
+      <DependentUpon>AbsenceUserAndDepartmentList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Controls\FileDownload.aspx.cs">
+      <DependentUpon>FileDownload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Controls\FileDownload.aspx.designer.cs">
+      <DependentUpon>FileDownload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Controls\GatheringInfomation.ascx.cs">
+      <DependentUpon>GatheringInfomation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Controls\GatheringInfomation.ascx.designer.cs">
+      <DependentUpon>GatheringInfomation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Controls\GatheringMenuTab.ascx.cs">
+      <DependentUpon>GatheringMenuTab.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Controls\GatheringMenuTab.ascx.designer.cs">
+      <DependentUpon>GatheringMenuTab.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Controls\GatheringPermission.ascx.cs">
+      <DependentUpon>GatheringPermission.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Controls\GatheringPermission.ascx.designer.cs">
+      <DependentUpon>GatheringPermission.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Controls\MailUserList.ascx.cs">
+      <DependentUpon>MailUserList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Controls\MailUserList.ascx.designer.cs">
+      <DependentUpon>MailUserList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="dbconn.aspx.cs">
+      <DependentUpon>dbconn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dbconn.aspx.designer.cs">
+      <DependentUpon>dbconn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dbconn2.aspx.cs">
+      <DependentUpon>dbconn2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dbconn2.aspx.designer.cs">
+      <DependentUpon>dbconn2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Gathering\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Gathering\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Glossary\DigitalTrans.aspx.cs">
+      <DependentUpon>DigitalTrans.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Glossary\DigitalTrans.aspx.designer.cs">
+      <DependentUpon>DigitalTrans.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Directory\DirectoryManagerIframe.aspx.cs">
+      <DependentUpon>DirectoryManagerIframe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Directory\DirectoryManagerIframe.aspx.designer.cs">
+      <DependentUpon>DirectoryManagerIframe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorReport.aspx.cs">
+      <DependentUpon>ErrorReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ErrorReport.aspx.designer.cs">
+      <DependentUpon>ErrorReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Gathering\GatheringMain.aspx.cs">
+      <DependentUpon>GatheringMain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Gathering\GatheringMain.aspx.designer.cs">
+      <DependentUpon>GatheringMain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Glossary2.aspx.cs">
+      <DependentUpon>Glossary2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Glossary2.aspx.designer.cs">
+      <DependentUpon>Glossary2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GlossaryMyPages\MyProfileIframe_View.aspx.cs">
+      <DependentUpon>MyProfileIframe_View.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GlossaryMyPages\MyProfileIframe_View.aspx.designer.cs">
+      <DependentUpon>MyProfileIframe_View.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Glossary\CommonActiveSquareEditor.cs" />
+    <Compile Include="Glossary\GlossaryIframe_View.aspx.cs">
+      <DependentUpon>GlossaryIframe_View.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Glossary\GlossaryIframe_View.aspx.designer.cs">
+      <DependentUpon>GlossaryIframe_View.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Glossary\GlossaryPrint_View.aspx.cs">
+      <DependentUpon>GlossaryPrint_View.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Glossary\GlossaryPrint_View.aspx.designer.cs">
+      <DependentUpon>GlossaryPrint_View.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Glossary\GlossaryWriteNew.aspx.cs">
+      <DependentUpon>GlossaryWriteNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Glossary\GlossaryWriteNew.aspx.designer.cs">
+      <DependentUpon>GlossaryWriteNew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Glossary\WhitePaper.aspx.cs">
+      <DependentUpon>WhitePaper.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Glossary\WhitePaper.aspx.designer.cs">
+      <DependentUpon>WhitePaper.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\ApprovalActing.asmx.cs">
+      <DependentUpon>ApprovalActing.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Interface\CheckWebServer_Web_DB.aspx.cs">
+      <DependentUpon>CheckWebServer_Web_DB.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interface\CheckWebServer_Web_DB.aspx.designer.cs">
+      <DependentUpon>CheckWebServer_Web_DB.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Controls\AjaxControl.aspx.cs">
+      <DependentUpon>AjaxControl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Controls\AjaxControl.aspx.designer.cs">
+      <DependentUpon>AjaxControl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Controls\AppointmentItem.cs" />
+    <Compile Include="Common\Controls\CommCommentControl.ascx.cs">
+      <DependentUpon>CommCommentControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Controls\CommCommentControl.ascx.designer.cs">
+      <DependentUpon>CommCommentControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Controls\CommonSearch.cs" />
+    <Compile Include="Common\Controls\CommUserAndDepartmentIframe.aspx.cs">
+      <DependentUpon>CommUserAndDepartmentIframe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Controls\CommUserAndDepartmentIframe.aspx.designer.cs">
+      <DependentUpon>CommUserAndDepartmentIframe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Controls\GNBControl.ascx.cs">
+      <DependentUpon>GNBControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Controls\GNBControl.ascx.designer.cs">
+      <DependentUpon>GNBControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Controls\MessageTransfer.aspx.cs">
+      <DependentUpon>MessageTransfer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Controls\MessageTransfer.aspx.designer.cs">
+      <DependentUpon>MessageTransfer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Controls\CommCommentAjax.aspx.cs">
+      <DependentUpon>CommCommentAjax.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Controls\CommCommentAjax.aspx.designer.cs">
+      <DependentUpon>CommCommentAjax.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Controls\UserAndDepartmentList.ascx.cs">
+      <DependentUpon>UserAndDepartmentList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Controls\UserAndDepartmentList.ascx.designer.cs">
+      <DependentUpon>UserAndDepartmentList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Controls\CommNateOnBizControl.ascx.cs">
+      <DependentUpon>CommNateOnBizControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Controls\CommNateOnBizControl.ascx.designer.cs">
+      <DependentUpon>CommNateOnBizControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Directory\DirectoryCommon.cs" />
+    <Compile Include="Directory\DirectoryViewIframe.aspx.cs">
+      <DependentUpon>DirectoryViewIframe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Directory\DirectoryViewIframe.aspx.designer.cs">
+      <DependentUpon>DirectoryViewIframe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Directory\DirectoryFileHistoryList.aspx.cs">
+      <DependentUpon>DirectoryFileHistoryList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Directory\DirectoryFileHistoryList.aspx.designer.cs">
+      <DependentUpon>DirectoryFileHistoryList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Directory\DirectoryListNew.aspx.cs">
+      <DependentUpon>DirectoryListNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Directory\DirectoryListNew.aspx.designer.cs">
+      <DependentUpon>DirectoryListNew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Directory\DirectorySearchResult.aspx.cs">
+      <DependentUpon>DirectorySearchResult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Directory\DirectorySearchResult.aspx.designer.cs">
+      <DependentUpon>DirectorySearchResult.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Directory\DirectoryView.aspx.cs">
+      <DependentUpon>DirectoryView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Directory\DirectoryView.aspx.designer.cs">
+      <DependentUpon>DirectoryView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Directory\DirectoryWrite.aspx.cs">
+      <DependentUpon>DirectoryWrite.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Directory\DirectoryWrite.aspx.designer.cs">
+      <DependentUpon>DirectoryWrite.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Directory\FileOpenTransfer.aspx.cs">
+      <DependentUpon>FileOpenTransfer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Directory\FileOpenTransfer.aspx.designer.cs">
+      <DependentUpon>FileOpenTransfer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Directory\HttpHelper.cs" />
+    <Compile Include="GlossaryHistory\HistoryList.aspx.cs">
+      <DependentUpon>HistoryList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GlossaryHistory\HistoryList.aspx.designer.cs">
+      <DependentUpon>HistoryList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="GlossaryHistory\HistoryView.aspx.cs">
+      <DependentUpon>HistoryView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GlossaryHistory\HistoryView.aspx.designer.cs">
+      <DependentUpon>HistoryView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GlossaryMyPages\MyDocumentsList.aspx.cs">
+      <DependentUpon>MyDocumentsList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GlossaryMyPages\MyDocumentsList.aspx.designer.cs">
+      <DependentUpon>MyDocumentsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GlossaryMyPages\MyFollowList.aspx.cs">
+      <DependentUpon>MyFollowList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GlossaryMyPages\MyFollowList.aspx.designer.cs">
+      <DependentUpon>MyFollowList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GlossaryMyPages\MyPeopleScrapList.aspx.cs">
+      <DependentUpon>MyPeopleScrapList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GlossaryMyPages\MyPeopleScrapList.aspx.designer.cs">
+      <DependentUpon>MyPeopleScrapList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GlossaryMyPages\MyProfile.aspx.cs">
+      <DependentUpon>MyProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GlossaryMyPages\MyProfile.aspx.designer.cs">
+      <DependentUpon>MyProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GlossaryMyPages\MyScrapList.aspx.cs">
+      <DependentUpon>MyScrapList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GlossaryMyPages\MyScrapList.aspx.designer.cs">
+      <DependentUpon>MyScrapList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GlossaryMyPages\MyShareList.aspx.cs">
+      <DependentUpon>MyShareList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GlossaryMyPages\MyShareList.aspx.designer.cs">
+      <DependentUpon>MyShareList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GlossaryMyPages\MyTempList.aspx.cs">
+      <DependentUpon>MyTempList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GlossaryMyPages\MyTempList.aspx.designer.cs">
+      <DependentUpon>MyTempList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GlossaryMyPages\MyUseGroup.aspx.cs">
+      <DependentUpon>MyUseGroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GlossaryMyPages\MyUseGroup.aspx.designer.cs">
+      <DependentUpon>MyUseGroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Glossary\Glossary.aspx.cs">
+      <DependentUpon>Glossary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Glossary\Glossary.aspx.designer.cs">
+      <DependentUpon>Glossary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Glossary\GlossaryViewCommentControl.ascx.cs">
+      <DependentUpon>GlossaryViewCommentControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Glossary\GlossaryViewCommentControl.ascx.designer.cs">
+      <DependentUpon>GlossaryViewCommentControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Glossary\GlossaryList.aspx.cs">
+      <DependentUpon>GlossaryList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Glossary\GlossaryList.aspx.designer.cs">
+      <DependentUpon>GlossaryList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Glossary\GlossaryView.aspx.cs">
+      <DependentUpon>GlossaryView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Glossary\GlossaryView.aspx.designer.cs">
+      <DependentUpon>GlossaryView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Glossary\GlossaryNewsList.aspx.cs">
+      <DependentUpon>GlossaryNewsList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Glossary\GlossaryNewsList.aspx.designer.cs">
+      <DependentUpon>GlossaryNewsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Glossary\GlossaryEvent.aspx.cs">
+      <DependentUpon>GlossaryEvent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Glossary\GlossaryEvent.aspx.designer.cs">
+      <DependentUpon>GlossaryEvent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\LearningWorld.aspx.cs">
+      <DependentUpon>LearningWorld.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interface\LearningWorld.aspx.designer.cs">
+      <DependentUpon>LearningWorld.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\TnetWebService.asmx.cs">
+      <DependentUpon>TnetWebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MasterPages\GlossaryAdmin.Master.cs">
+      <DependentUpon>GlossaryAdmin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\GlossaryAdmin.Master.designer.cs">
+      <DependentUpon>GlossaryAdmin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPages\GlossaryMain.Master.cs">
+      <DependentUpon>GlossaryMain.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\GlossaryMain.Master.designer.cs">
+      <DependentUpon>GlossaryMain.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPages\GlossarySearch.Master.cs">
+      <DependentUpon>GlossarySearch.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\GlossarySearch.Master.designer.cs">
+      <DependentUpon>GlossarySearch.Master</DependentUpon>
+    </Compile>
+    <Compile Include="TikleAdmin\DigitalTrans\ArraRegist.aspx.cs">
+      <DependentUpon>ArraRegist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TikleAdmin\DigitalTrans\ArraRegist.aspx.designer.cs">
+      <DependentUpon>ArraRegist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TikleAdmin\MainMng\mainbackimg.aspx.cs">
+      <DependentUpon>mainbackimg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TikleAdmin\MainMng\mainbackimg.aspx.designer.cs">
+      <DependentUpon>mainbackimg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TikleAdmin\MainMng\SKTizen.aspx.cs">
+      <DependentUpon>SKTizen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TikleAdmin\MainMng\SKTizen.aspx.designer.cs">
+      <DependentUpon>SKTizen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TikleAdmin\MainMng\tikle.aspx.cs">
+      <DependentUpon>tikle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TikleAdmin\MainMng\tikle.aspx.designer.cs">
+      <DependentUpon>tikle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TikleAdmin\MainMng\tikleAuth.aspx.cs">
+      <DependentUpon>tikleAuth.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TikleAdmin\MainMng\tikleAuth.aspx.designer.cs">
+      <DependentUpon>tikleAuth.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TikleAdmin\Platform\PlatGlossaryList.aspx.cs">
+      <DependentUpon>PlatGlossaryList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TikleAdmin\Platform\PlatGlossaryList.aspx.designer.cs">
+      <DependentUpon>PlatGlossaryList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TikleAdmin\Platform\PlatQnaList.aspx.cs">
+      <DependentUpon>PlatQnaList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TikleAdmin\Platform\PlatQnaList.aspx.designer.cs">
+      <DependentUpon>PlatQnaList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TikleAdmin\Platform\PlatStat.aspx.cs">
+      <DependentUpon>PlatStat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TikleAdmin\Platform\PlatStat.aspx.designer.cs">
+      <DependentUpon>PlatStat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TikleAdmin\Stats\TikleAccess.aspx.cs">
+      <DependentUpon>TikleAccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TikleAdmin\Stats\TikleAccess.aspx.designer.cs">
+      <DependentUpon>TikleAccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TikleAdmin\Stats\tikleDept.aspx.cs">
+      <DependentUpon>tikleDept.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TikleAdmin\Stats\tikleDept.aspx.designer.cs">
+      <DependentUpon>tikleDept.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TikleAdmin\Stats\tikleDTBlog.aspx.cs">
+      <DependentUpon>tikleDTBlog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TikleAdmin\Stats\tikleDTBlog.aspx.designer.cs">
+      <DependentUpon>tikleDTBlog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TikleAdmin\Stats\tikleMenu.aspx.cs">
+      <DependentUpon>tikleMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TikleAdmin\Stats\tikleMenu.aspx.designer.cs">
+      <DependentUpon>tikleMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TikleAdmin\Stats\tikleTotal.aspx.cs">
+      <DependentUpon>tikleTotal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TikleAdmin\MainMng\Banner.aspx.cs">
+      <DependentUpon>Banner.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TikleAdmin\MainMng\Banner.aspx.designer.cs">
+      <DependentUpon>Banner.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TikleAdmin\Stats\tikleTotal.aspx.designer.cs">
+      <DependentUpon>tikleTotal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TikleAdmin\Stats\tikleWeeklynote.aspx.cs">
+      <DependentUpon>tikleWeeklynote.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TikleAdmin\Stats\tikleWeeklynote.aspx.designer.cs">
+      <DependentUpon>tikleWeeklynote.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TikleMain.aspx.cs">
+      <DependentUpon>TikleMain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TikleMain.aspx.designer.cs">
+      <DependentUpon>TikleMain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TikleMobileWebService\ContentFeeds.svc.cs">
+      <DependentUpon>ContentFeeds.svc</DependentUpon>
+    </Compile>
+    <Compile Include="TikleMobileWebService\IContentFeeds.cs" />
+    <Compile Include="TikleMobileWebService\TikleMobile.asmx.cs">
+      <DependentUpon>TikleMobile.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\eHR\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Common\Js\TagCloud\AwesomeCloud\" />
+    <Folder Include="TikleAdmin\common\images\mail\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\30_Component\SKT.Glossary.Biz\SKT.Glossary.Biz.csproj">
+      <Project>{8cec2860-1625-4dea-a490-60c0fe4be561}</Project>
+      <Name>SKT.Glossary.Biz</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\30_Component\SKT.Glossary.Dac\SKT.Glossary.Dac.csproj">
+      <Project>{f2c939a0-a187-4e5c-b0a1-7cd3eec1c06e}</Project>
+      <Name>SKT.Glossary.Dac</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\30_Component\SKT.Glossary.Type\SKT.Glossary.Type.csproj">
+      <Project>{6bba7ca8-11c5-4c0a-aff6-5cffee01185d}</Project>
+      <Name>SKT.Glossary.Type</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\30_Component\Zio.Type\Zio.Type.csproj">
+      <Project>{D40EE8D1-32F8-40C2-B1F5-AC3D9F595D50}</Project>
+      <Name>Zio.Type</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\40_Common\SKT.Common\SKT.Common.csproj">
+      <Project>{7cb245e4-c7fe-47d4-89be-af2f8e2ec961}</Project>
+      <Name>SKT.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\40_Common\SKT.Tnet.Framework\SKT.Tnet.Framework.csproj">
+      <Project>{b7e9e7d6-c10f-4dce-9019-b2c5a90bab48}</Project>
+      <Name>SKT.Tnet.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\40_Common\SKT.Tnet\SKT.Tnet.csproj">
+      <Project>{d66fd7eb-5619-4640-9ef5-748819a3a86b}</Project>
+      <Name>SKT.Tnet</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\40_Common\zio.Common\Zio.Common.csproj">
+      <Project>{6F3F146C-2FF1-4CE5-ABAB-CBD706FB4455}</Project>
+      <Name>Zio.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Common\eot\NanumGothic-Bold.eot" />
+    <Content Include="Common\eot\NanumGothic-Bold.ttf" />
+    <Content Include="Common\eot\NanumGothic-Bold.woff2" />
+    <Content Include="Common\eot\NanumGothic-ExtraBold.eot" />
+    <Content Include="Common\eot\NanumGothic-ExtraBold.ttf" />
+    <Content Include="Common\eot\NanumGothic-ExtraBold.woff2" />
+    <Content Include="Common\eot\NanumGothic-Regular.eot" />
+    <Content Include="Common\eot\NanumGothic-Regular.ttf" />
+    <Content Include="Common\eot\NanumGothic-Regular.woff2" />
+    <Content Include="Common\download\Namo ActiveX uninstall or install.zip" />
+    <None Include="Common\eot\NanumGothic-Bold.woff" />
+    <None Include="Common\eot\NanumGothic-ExtraBold.woff" />
+    <None Include="Common\eot\NanumGothic-Regular.woff" />
+    <None Include="Common\eot\vssver2.scc" />
+    <Content Include="MasterPages\GlossaryAdmin.Master" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="MasterPages\GlossaryMain.Master" />
+    <Content Include="MasterPages\GlossarySearch.Master" />
+    <None Include="Properties\PublishProfiles\EricRG05-tikle-webapp01 - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\EricRG05-tikle-webapp01 - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\ericTikle02 - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\ericTikle02 - ReadOnly - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\ericTikle02 - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\erictikle03 - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\erictikle03 - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\kshTikleRelease.pubxml" />
+    <None Include="Properties\PublishProfiles\SKT.Glossary.Publish.pubxml" />
+    <None Include="Properties\PublishProfiles\ssyTikleDebug.pubxml" />
+    <None Include="Properties\PublishProfiles\ssyTikleRelease.pubxml" />
+    <None Include="Properties\PublishProfiles\tikle01eric - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\tikle01eric - FTP1.pubxml" />
+    <None Include="Properties\PublishProfiles\tikle01eric - FTP2.pubxml" />
+    <None Include="Properties\PublishProfiles\tikle01eric - FTP3.pubxml" />
+    <None Include="Properties\PublishProfiles\tikle01eric - FTP4.pubxml" />
+    <None Include="Properties\PublishProfiles\tikle01eric - FTP5.pubxml" />
+    <None Include="Properties\PublishProfiles\tikle01eric - FTP6.pubxml" />
+    <None Include="Properties\PublishProfiles\tikle01eric - FTP7.pubxml" />
+    <None Include="Properties\PublishProfiles\tikle01eric - ReadOnly - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\tikle01eric - ReadOnly - FTP1.pubxml" />
+    <None Include="Properties\PublishProfiles\tikle01eric - ReadOnly - FTP2.pubxml" />
+    <None Include="Properties\PublishProfiles\tikle01eric - ReadOnly - FTP3.pubxml" />
+    <None Include="Properties\PublishProfiles\tikle01eric - ReadOnly - FTP4.pubxml" />
+    <None Include="Properties\PublishProfiles\tikle01eric - ReadOnly - FTP5.pubxml" />
+    <None Include="Properties\PublishProfiles\tikle01eric - ReadOnly - FTP6.pubxml" />
+    <None Include="Properties\PublishProfiles\tikle01eric - ReadOnly - FTP7.pubxml" />
+    <None Include="Properties\PublishProfiles\tikle01eric - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\tikle01eric - Web Deploy1.pubxml" />
+    <None Include="Properties\PublishProfiles\tikle01eric - Web Deploy2.pubxml" />
+    <None Include="Properties\PublishProfiles\tikle01eric - Web Deploy3.pubxml" />
+    <None Include="Properties\PublishProfiles\tikle01eric - Web Deploy4.pubxml" />
+    <None Include="Properties\PublishProfiles\tikle01eric - Web Deploy5.pubxml" />
+    <None Include="Properties\PublishProfiles\tikle01eric - Web Deploy6.pubxml" />
+    <None Include="Properties\PublishProfiles\tikle01eric - Web Deploy7.pubxml" />
+    <None Include="Properties\PublishProfiles\tiklewebaperic01 - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\tiklewebaperic01 - ReadOnly - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\tiklewebaperic01 - Web Deploy.pubxml" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web References\eHR\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <Content Include="Web References\eHR\ZehrDispCarrerResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\eHR\zehr_disp_carrer_1.wsdl" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://erp-ap2.sktelecom.com:8000/sap/bc/srt/wsdl/flv_10002A111AD1/bndg_url/sap/bc/srt/rfc/sap/zehr_disp_carrer_1/501/zehr_disp_carrer_1/zehr_disp_carrer_1%3fsap-client=501">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\eHR\</RelPath>
+      <UpdateFromURL>http://erp-ap2.sktelecom.com:8000/sap/bc/srt/wsdl/flv_10002A111AD1/bndg_url/sap/bc/srt/rfc/sap/zehr_disp_carrer_1/501/zehr_disp_carrer_1/zehr_disp_carrer_1%3fsap-client=501</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>SKT_Glossary_Web_eHR_ZEHR_DISP_CARRER_1</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <!--<VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>-->
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildProgramFiles32)\MSBuild\Microsoft\VisualStudio\v14.0</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>61918</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:61918/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+          <servers defaultServer="SelfHostServer">
+            <server name="SelfHostServer" exePath="" cmdArgs="" url="http://localhost:61918/" workingDir="" />
+          </servers>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

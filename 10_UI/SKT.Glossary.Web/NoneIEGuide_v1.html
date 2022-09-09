@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script type="text/javascript">
+
+
+        function setCookie_ieGuide(name, expiredays) {
+            var todayDate = new Date();
+
+            var dd = todayDate.getDate();    //날짜
+            if (dd < 10) {
+                dd = "0" + dd;
+            }
+
+            var mm = (todayDate.getMonth() + 1);
+            if (mm < 10) {
+                mm = "0" + mm;
+            }
+            var yy = todayDate.getFullYear();
+
+            //alert(todayDate.getDate());
+
+            todayDate.setDate(todayDate.getDate() + 1);
+            document.cookie = name + "=" + yy + "-" + mm + "-" + dd + "; path=/; expires=" + todayDate.toGMTString() + ";"
+
+             //alert(document.cookie);
+        }
+
+
+        function closeWin() {
+         
+            if (document.all.chk_window.checked)  // 폼네임 myform 은 동일해야 합니다.
+            {
+                setCookie_ieGuide("noneie9pop",1);         // 부모창에서 지정한 쿠키네임과 일치 해야 합니다.
+            }
+            
+            parent.fn_ClosePopup();
+        }
+
+       
+
+    </script>
+
+
+</head>
+<body style=" font-family: 'Malgun Gothic';">
+    <div style="">
+        T.끌은 사내표준인 Internet Explorer 9에 최적화되어 있습니다.<br />
+        Internet Explorer 9 이외의 브라우저에서는 오류가 발생될 수 <br />있습니다.<br /><br />
+        Internet Explorer 9으로 재접속해주세요.<br />
+        감사합니다.
+        <br /><br />
+        <div align="right"><input type="checkbox" name="chk_window" value="" onclick="closeWin()" /> 오늘 하루 이 창을 열지 않음</div>
+        <!--<a href="javascript: top.fn_ClosePopup();">닫기</a>-->
+    </div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="categoryNavigator.ascx.cs" Inherits="categoryNavigator" %>
+<div class="unit_tab">
+	<ul>
+		<li <%=makeReturnValue(srchParam.getCategory(), "TOTAL" ,   "class='on'") %> ><a href="javascript:goCategory('TOTAL');"><img src="./images/tab_srch_all_off.gif" alt="전체" /></a></li>
+		<li <%=makeReturnValue(srchParam.getCategory(), "idea" ,    "class='on'") %> ><a href="javascript:goCategory('idea');"><img src="./images/tab_srch_idea_off.gif" alt="Idea" /></a></li>
+		<li <%=makeReturnValue(srchParam.getCategory(), "question" ,"class='on'") %> ><a href="javascript:goCategory('question');"><img src="./images/tab_srch_question_off.gif" alt="question" /></a></li>
+		<li <%=makeReturnValue(srchParam.getCategory(), "answer" ,  "class='on'") %> ><a href="javascript:goCategory('answer');"><img src="./images/tab_srch_answer_off.gif" alt="answer" /></a></li>
+		<li <%=makeReturnValue(srchParam.getCategory(), "board" ,   "class='on'") %> ><a href="javascript:goCategory('board');"><img src="./images/tab_srch_board_off.gif" alt="게시판" /></a></li>
+        <li <%=makeReturnValue(srchParam.getCategory(), "profile" , "class='on'") %> ><a href="javascript:goCategory('profile');"><img src="./images/tab_srch_profile_off.gif" alt="profile" /></a></li>
+	</ul>        
+</div>

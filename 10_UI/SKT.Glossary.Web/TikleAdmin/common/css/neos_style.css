@@ -1,0 +1,751 @@
+/* webfont */
+@font-face {
+ font-family: "easyNanumGothic";
+ src: url('/TikleAdmin/common/css/font/NanumGothic.eot');
+ src: local('?'), url('/TikleAdmin/common/css/font/NanumGothic.woff') format('woff'), url('/TikleAdmin/common/css/font/NanumGothic.ttf') format('truetype'), url('NanumGothic.otf') format('opentype');
+ font-weight: normal;
+ font-style: normal;
+}
+
+@font-face {
+ font-family: "easyNanumGothicBold";
+ src: url('/TikleAdmin/common/css/font/NanumGothicBold.eot');
+ src: local('?'), url('/TikleAdmin/common/css/font/NanumGothicBold.woff') format('woff'), url('/TikleAdmin/common/css/font/NanumGothicBold.ttf') format('truetype'), url('NanumGothicBold.otf') format('opentype');
+ font-weight: normal;
+ font-style: normal;
+}
+
+@font-face{font-family:'easyNanumGothic02'; src: url('/TikleAdmin/common/css/font/NanumGothic.eot');}
+@font-face{font-family:'easyNanumGothicBold02'; src: url('/TikleAdmin/common/css/font/NanumGothicBold.eot');}
+
+*{margin:0; padding:0}
+html{width:100%; height:100%;}
+body{height:100%; font-size:12px; font-family:"µ¸¿ò",dotum,arial,sans-serif,tahoma; color:#666}
+body,div,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,p,form,fieldset,input,table,tr,th,td{margin:0; padding:0}
+ul,ol,li{list-style:none}
+img, fieldset{border:none; vertical-align:top}
+legend, caption{display:none;}
+textarea, button{vertical-align:middle;}
+input{padding:3px; height:14px; vertical-align:top; background:none; border:1px solid #dbdbdb; color:#666; font-family:"µ¸¿ò",dotum,arial,sans-serif;}
+.input{background:#fff;}
+select{color:#333; vertical-align:top; background:#fff; border:1px solid #dbdbdb;  padding:2px; height:22px}
+textarea{padding:3px; vertical-align:middle; background:#fff; border:1px solid #dbdbdb; color:#666; font-family:"µ¸¿ò",dotum,arial,sans-serif; font-size:12px;}
+.checkbox{padding:0; border:0 !important;}
+.disNone{display:none;}
+a{text-decoration:none; color:#666;}
+a:hover, a:focus, a:active{text-decoration:none; color:#666;}
+table{border-collapse:collapse}
+
+/* °£°Ý, ÆùÆ® */
+.mt5{margin-top:5px}
+.mt10{margin-top:10px}
+.mt15{margin-top:15px}
+.mt20{margin-top:20px}
+.mt25{margin-top:25px}
+.mt30{margin-top:30px !important;}
+.mt35{margin-top:35px}
+.mt40{margin-top:40px}
+.mt45{margin-top:45px}
+.mt50{margin-top:50px}
+.mt55{margin-top:55px}
+.mt60{margin-top:60px}
+
+.font_a{color:#aaa}
+.font_8{color:#888}
+.font_s9{font-size:11px; color:#999}
+
+/* Á¤·Ä */
+.taC{text-align:center !important;}
+.taR{text-align:right}
+.taL{text-align:left;}
+
+/*·¹ÀÌ¾Æ¿ô*/
+#wrapper{width:100%; min-width:960px; min-height:700px; background:url('/TikleAdmin/common/images/icon/bg_sub.gif') repeat-x;}
+#header{position:relative; width:960px; margin:0 auto; height:110px; z-index:10;}
+#header:after{clear:both; display:block; content:'';}
+#header h1{float:left; padding-top:45px;}
+
+.TitleBox td.WSn{white-space: normal; word-break:break-all; word-wrap: break-word;}
+.TitleBox tbody td.ellipsis {overflow:hidden; text-overflow:ellipsis;}
+.TitleBox td.WSn span{padding-right:15px; display:block;}
+
+/*main*/
+#mainWrap{position:relative;  width:1000px; margin:0 auto;}
+#mainContainer{position:relative;  margin-top:-20px; padding-bottom:25px;}
+#mainContainer .mainCntBox{width:960px; height:435px; background:url('/TikleAdmin/common/images/icon/bg_mainCon.png') left top no-repeat; padding:20px;}
+#mainContainer .mainCntBox .leftDiv{float:left; width:490px; height:417px; padding:18px 30px 0 29px;}
+.mainCntBox .leftDiv .userInfo{color:#666; height:119px;}
+.mainCntBox .leftDiv .userInfo .tit{overflow:hidden; border-bottom:1px dotted #b2b2b2; padding:2px 0 10px;}
+.mainCntBox .leftDiv .userInfo .tit .userName{float:left; background:url('/TikleAdmin/common/images/icon/ico_name.gif') left top no-repeat; padding-left:26px; font-size:14px;}
+.mainCntBox .leftDiv .userInfo .tit .connection{float:right; padding-top:2px;}
+.mainCntBox .leftDiv .userInfo .tit .connection span{font-weight:bold; padding-right:5px;}
+.mainCntBox .leftDiv .userInfo .p_info{width:490px; overflow:hidden; padding-top:15px;}
+.mainCntBox .leftDiv .userInfo .p_info dt{float:left; background:url('/TikleAdmin/common/images/icon/bl_list01.gif') no-repeat left 5px; padding-left:6px;}
+.mainCntBox .leftDiv .userInfo .p_info dd{float:left; margin-bottom:5px;}
+.mainCntBox .leftDiv .userInfo .p_info dd em{color:#e51937; font-style:normal; font-weight:bold;}
+.mainCntBox .leftDiv .userInfo .p_info dd.infotxt01{width:182px; padding-left:2px}
+.mainCntBox .leftDiv .userInfo .p_info dd.infotxt02{width:123px; padding-left:2px}
+.mainCntBox .leftDiv .learning01{position:relative; margin-top:26px; height:115px;}/*margin-top:36px;*/
+.mainCntBox .leftDiv .learning01 dl{}
+.mainCntBox .leftDiv .learning01 dt{border-bottom:1px solid #b2b2b2; padding-bottom:10px;}
+.mainCntBox .leftDiv .learning01 dd{overflow:hidden; border-bottom:1px dotted #b2b2b2; padding:15px 0 13px; padding:15px 0 10px \9;}
+.mainCntBox .leftDiv .learning01 dd a{font-weight:bold; }
+.mainCntBox .leftDiv .learning01 dd.end{border-bottom:0;}
+.mainCntBox .leftDiv .learning01 dd p.txt{float:left; width:365px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis;}
+.mainCntBox .leftDiv .learning01 dd span.date{color:#999; display:block; float:right;font-size:11px;}
+.mainCntBox .leftDiv .learning01 span.more{display:block; position:absolute; top:3px; right:2px;}
+
+.mainNotice{position:absolute; z-index:200; top:20px; left:20px; width:550px; min-height:435px; background:url('/TikleAdmin/common/images/icon/bg_mainNotice_body.jpg') repeat-y left top;}
+.mainNotice .noticeDiv{position:relative; width:550px; min-height:435px; background:url('/TikleAdmin/common/images/icon/bg_mainNotice_top.jpg') no-repeat left top;}
+.mainNotice .noticeDiv .title{height:17px; padding:15px 20px 12px; font-size:15px; }
+.mainNotice .noticeDiv .noticeContent{padding:24px 40px;}
+.noticeContent .postInfo{overflow:hidden;  color:#777; font-weight:bold; height:30px;}
+.noticeContent .postInfo .notice_tit{float:left; color:#777; font-size:15px;}
+.noticeContent .postInfo .date{float:right; padding-top:5px;}
+.noticeContent .txtContent{min-height:250px; padding:13px 0 0}
+.mainNotice .noticeDiv .btmClose{ width:470px; height:30px; background:url('/TikleAdmin/common/images/icon/bg_mainNotice_btm.jpg') no-repeat left top; padding:10px 40px}
+.mainNotice .noticeDiv .btmClose p{text-align:right; padding-top:3px;}
+.mainNotice .noticeDiv .close{position:absolute; top:15px; right:15px;}
+
+#mainContainer .mainCntBox .rightDiv{float:right; width:411px; height:435px;}
+.rightDiv .mainImg{position:relative; width:411px; height:220px; background:url('/TikleAdmin/common/images/icon/img_main01.jpg') no-repeat left top;}
+.rightDiv .mainImg .mainCopy{position:relative; color:#fff; width:100%; height:100%; font-family: "easyNanumGothic", "easyNanumGothic02"; font-weight:normal; letter-spacing:-1px; text-shadow:2px 2px 2px #000;}
+/*.rightDiv .mainImg .mainCopy .t01{position:absolute; top:45%; left:0;  font-size:17px; width:100%; text-align:center; }
+.rightDiv .mainImg .mainCopy .t02{position:absolute; top:76px; left:125px;  font-size:20px;}
+.rightDiv .mainImg .mainCopy span{font-size:45px;}
+
+.rightDiv .mainImg table{width:100%; height:100%;}
+.rightDiv .mainImg table td{height:100%; vertical-align:middle; color:#fff; font-family: "easyNanumGothic", "easyNanumGothic02"; font-weight:normal;  text-shadow:2px 2px 2px #000;}
+.rightDiv .mainImg table td p.t01{ font-size:17px; text-align:center; color:#fff; letter-spacing:-1px;}
+.rightDiv .mainImg table td span.bSize{font-size:45px;}
+
+.rightDiv .mainImg .mainCopy{color:#fff; font-family: "easyNanumGothic", "easyNanumGothic02"; font-weight:normal; letter-spacing:-1px; text-shadow:2px 2px 2px #000;}
+.rightDiv .mainImg .mainCopy .t01{position:absolute; top:60px; left:125px;  font-size:17px;}
+.rightDiv .mainImg .mainCopy .t02{position:absolute; top:76px; left:125px;  font-size:20px;}
+.rightDiv .mainImg .mainCopy .t02 span{font-size:45px;}*/
+
+.mainCntBox .rightDiv .notifyArea{padding:23px 30px 0;}
+.mainCntBox .rightDiv .notify{position:relative; width:350px; height:166px;}
+.mainCntBox .rightDiv .notify ul.notifyTab{position:relative; border-left:1px solid #b2b2b2; border-bottom:1px solid #b2b2b2;}
+.mainCntBox .rightDiv .notify ul.notifyTab:after{clear: both; content: ""; display: block; *zoom:1; }
+*html .notifyTab{height:1%}/*IE5,6*/
+*:first-child+html .notifyTab{min-height:1px}/*IE7*/
+.notifyTab{zoom:1}/*IE6,7*/
+.mainCntBox .rightDiv .notify ul.notifyTab li{float:left; margin-bottom:-1px; width:88px; }
+.mainCntBox .rightDiv .notify ul.notifyTab li.on{background:#fff; margin-bottom:-1px;}
+.mainCntBox .rightDiv .notify ul.notifyTab li.on a{border-left:0; border-bottom:1px solid #fff;}
+.mainCntBox .rightDiv .notify ul.notifyTab li a{display:block; border:1px solid #b2b2b2; border-left:0;}
+.mainCntBox .rightDiv .notify ul.notifyTab li span{display:block; padding:9px 22px 8px; text-align:center; *height:11px;}
+.mainCntBox .rightDiv .notify ul.notifyTab li.on span{padding:9px 22px 8px;}
+.mainCntBox .rightDiv .notify ul.notifyTab li ul.tabContent{position:absolute; top:36px; left:0; width:348px; height:116px;}
+.mainCntBox .rightDiv .notify ul.notifyTab li ul.tabContent li{float:none; overflow:hidden; border-bottom:1px dotted #b2b2b2; padding:10px 0 9px; padding:10px 0 6px \9; width:350px}
+.mainCntBox .rightDiv .notify ul.notifyTab li ul.tabContent li.end{border-bottom:0;}
+.mainCntBox .rightDiv .notify ul.notifyTab li ul.tabContent li p.txt{float:left; background:url('/TikleAdmin/common/images/icon/bl_list01.gif') no-repeat left 5px; padding-left:7px; width:268px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis;}
+.mainCntBox .rightDiv .notify ul.notifyTab li ul.tabContent li p.txt a{border:0; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis;}
+.mainCntBox .rightDiv .notify ul.notifyTab li ul.tabContent li span.date{color:#999; font-size:11px; float:right; padding:0;}
+.mainCntBox .rightDiv .notify span.more{display:block; position:absolute; top:5px; right:0;}
+
+#mainContainer .mainCntDiv{width:960px; margin:22px auto 0; overflow:hidden;}
+#mainContainer .mainCntDiv .content01{position:relative; float:left; width:300px; overflow:hidden;}
+.mainCntDiv .content01 h3{border-bottom:1px solid #888; padding-bottom:10px;}
+.mainCntDiv .content01 dl{margin-top:9px;}
+.mainCntDiv .content01 dl dt{font-weight:bold; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis;}
+.mainCntDiv .content01 dl dt a{color:#555; display:block; overflow:hidden; width:298px; text-overflow:ellipsis;-o-text-overflow:ellipsis}
+.mainCntDiv .content01 dl dd{color:#777; font-size:11px; margin-top:1px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis;}
+.mainCntDiv .content01 dl dd.date{margin-top:3px;}
+.mainCntDiv .content01 span.more{display:block; position:absolute; top:0; right:2px;}
+
+#mainContainer .mainCntDiv .content02{position:relative; float:left; width:384px; padding:0 24px; overflow:hidden;}
+.mainCntDiv .content02 h3{border-bottom:1px solid #888; padding-bottom:10px;}
+.mainCntDiv .content02 ul{margin-top:19px; width:384px;}
+.mainCntDiv .content02 ul li{width:384px; border-top:1px dotted #888; padding:10px 0 5px 0;}
+.mainCntDiv .content02 ul li.fir{border-top:0; padding:0 0 5px 0;}
+.mainCntDiv .content02 ul li dl{}
+.mainCntDiv .content02 ul li dl dt{color:#555; font-weight:bold; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis;}
+.mainCntDiv .content02 ul li dl dd.txt{color:#777; font-size:11px; line-height:16px; padding:6px 0 9px; height:33px; overflow:hidden; }
+.mainCntDiv .content02 ul li dl dd.postInfo{color:#888; font-size:11px;}
+.mainCntDiv .content02 span.more{display:block; position:absolute; top:0; right:27px;}
+
+#mainContainer .mainCntDiv .content03{float:right; width:227px;}
+.mainCntDiv .content03 ul{padding-top:20px;}
+.mainCntDiv .content03 ul li{margin-top:4px;}
+
+/*sub*/
+#wrap{position:relative;  width:960px; margin:0 auto; padding:0 20px;}
+#header .gnbArea{float:right; }
+#container{width:960px; margin-top:53px; background:url('/TikleAdmin/common/images/icon/bg_btm.png') 169px bottom no-repeat; }
+#container:after{clear:both; display:block; content:''; *zoom:1; height:80px; }
+
+#footer{width:100%;  background:#666; margin-top:15px;}
+.footerDiv{width:960px; margin:0 auto; overflow:hidden; padding:20px 0;}
+.footerTxt{float:left;}
+.footerTxt address{display:block; width:451px; background:url('/TikleAdmin/common/images/txt/txt_address.png') repeat-x; text-indent:-9999px;}
+.footerTxt .copy{margin-top:10px;}
+.footerLogo{float:right;}
+
+/*gnb*/
+#header .gnbArea{}
+#header .gnbArea .util{position:absolute; top:20px; right:-1px; padding-top:4px;}
+#header .gnbArea .util li{float:left; background:url('/TikleAdmin/common/images/icon/bl_util.gif') no-repeat right 2px; padding:1px 9px 0;}
+#header .gnbArea .util li a{color:#666; font-weight:bold; }
+#header .gnbArea .util li.log{background:none; margin:-3px 3px 0 0; padding:0 0 0 10px;}
+#header .gnbArea .util li.log a{font-weight:normal;}
+#header .gnbArea .util li.allMenu{background:none; padding:1px 0 0 8px;}
+#header .gnbArea .gnb{padding-top:76px; float:right;}
+#header .gnbArea .gnb .gnbList{width:760px; overflow:hidden;}
+#header .gnbArea .gnb .gnbList li{float:left; padding-left:36px;}
+#header .gnbArea .gnb .gnbList li a{display:block;}
+#header .gnbArea .gnb .gnbList li.fir{padding-left:30px;}
+#header .gnbArea .gnb .gnbList li.on a{height:33px; background:url('/TikleAdmin/common/images/icon/ico_gnbArrow.png') no-repeat center bottom;}
+
+.subGnb01{position:absolute; top:109px; left:13px; z-index:20; height:51px; background:url('/TikleAdmin/common/images/icon/bg_gnbLeft.png') no-repeat left top; padding:0 0 0 15px}
+.subGnb01 ul{height:51px; background:url('/TikleAdmin/common/images/icon/bg_gnbRight.png') no-repeat right top; padding-right:15px}
+.subGnb01 ul li{float:left; height:15px; padding:13px 7px 23px; background:url('/TikleAdmin/common/images/icon/bg_gnbList.png') repeat-x}
+.subGnb02{position:absolute; top:109px; left:234px; z-index:20; height:51px; background:url('/TikleAdmin/common/images/icon/bg_gnbLeft.png') no-repeat left top; padding:0 0 0 15px}
+.subGnb02 ul{height:51px; background:url('/TikleAdmin/common/images/icon/bg_gnbRight.png') no-repeat right top; padding-right:15px}
+.subGnb02 ul li{float:left; height:15px; padding:13px 10px 23px; background:url('/TikleAdmin/common/images/icon/bg_gnbList.png') repeat-x}
+.subGnb03{position:absolute; top:109px; left:367px; z-index:20; height:51px; background:url('/TikleAdmin/common/images/icon/bg_gnbLeft.png') no-repeat left top; padding:0 0 0 15px}
+.subGnb03 ul{height:51px; background:url('/TikleAdmin/common/images/icon/bg_gnbRight.png') no-repeat right top; padding-right:15px}
+.subGnb03 ul li{float:left; height:15px; padding:13px 10px 23px; background:url('/TikleAdmin/common/images/icon/bg_gnbList.png') repeat-x}
+.subGnb04{position:absolute; top:109px; left:481px; z-index:20; height:51px; background:url('/TikleAdmin/common/images/icon/bg_gnbLeft.png') no-repeat left top; padding:0 0 0 15px}
+.subGnb04 ul{height:51px; background:url('/TikleAdmin/common/images/icon/bg_gnbRight.png') no-repeat right top; padding-right:15px}
+.subGnb04 ul li{float:left; height:15px; padding:13px 10px 23px; background:url('/TikleAdmin/common/images/icon/bg_gnbList.png') repeat-x}
+.subGnb05{position:absolute; top:109px; left:435px; z-index:20; height:51px; background:url('/TikleAdmin/common/images/icon/bg_gnbLeft.png') no-repeat left top; padding:0 0 0 15px}
+.subGnb05 ul{height:51px; background:url('/TikleAdmin/common/images/icon/bg_gnbRight.png') no-repeat right top; padding-right:15px}
+.subGnb05 ul li{float:left; height:15px; padding:13px 10px 23px; background:url('/TikleAdmin/common/images/icon/bg_gnbList.png') repeat-x}
+.subGnb06{position:absolute; top:109px; left:710px; z-index:20; height:51px; background:url('/TikleAdmin/common/images/icon/bg_gnbLeft.png') no-repeat left top; padding:0 0 0 15px}
+.subGnb06 ul{height:51px; background:url('/TikleAdmin/common/images/icon/bg_gnbRight.png') no-repeat right top; padding-right:15px}
+.subGnb06 ul li{float:left; height:15px; padding:13px 10px 23px; background:url('/TikleAdmin/common/images/icon/bg_gnbList.png') repeat-x}
+
+/*·Î±×ÀÎ*/
+#loginWrapper{width:100%; min-width:960px; min-height:100%; height:500px; background:url('/TikleAdmin/common/images/icon/bg_sub.gif') repeat-x; margin:0 auto -70px;}
+#loginFooter{width:100%;  background:#666;}
+.loginWrap{width:511px; height:150px; margin:0 auto; padding-top:200px;}
+*html #loginWrapper{ height: 100%; }
+.loginWrap .loginArea{overflow:hidden; margin-top:20px;}
+.loginWrap .loginArea h2{float:left;}
+.loginWrap .loginArea .loginInput{position:relative; float:left; width:281px; padding-left:30px;border-left:1px solid #bbb; margin-left:30px;}
+.loginWrap .loginArea .loginInput input.input{background:#fff; border:1px solid #bbb;}
+.loginWrap .loginArea .loginInput span{display:block;}
+.loginWrap .loginArea .loginInput span.pw{margin-top:6px;}
+.loginWrap .loginArea .loginInput span label{display:none;}
+.loginWrap .loginArea .loginInput .btn_login{position:absolute; top:0; right:0; width:90px; height:60px; padding:0; border:0; }
+.loginWrap .loginArea .loginGuide{margin-top:16px; white-space:nowrap;}
+.loginWrap .loginArea .loginGuide label.saveID{color:#888; padding-right:27px; *padding-right:23px;}
+.loginWrap .loginArea .loginGuide a{color:#636466;}
+.loginWrap .loginArea .loginGuide span.findID,
+.loginWrap .loginArea .loginGuide span.findPW{display:inline;}
+.loginWrap .loginArea .loginGuide span.findID a{background:url('/TikleAdmin/common/images/icon/bl_login.gif') no-repeat right 1px; padding:0 10px 0 0 }
+.loginWrap .loginArea .loginGuide span.findPW a{padding:0 0 0 6px }
+
+/*sub page*/
+.lnbArea{float:left; width:150px;}
+.lnbArea .lnb{margin-top:25px;}
+.lnbArea .lnb li{}
+.lnbArea .lnb li a{display:block;}
+.lnbArea .lnb .threeDep{padding:3px 0 0}
+.lnbArea .lnb .threeDep li{}
+.lnbArea .lnb .threeDep li a{display:block; padding:6px 0 7px}
+
+.contents{float:left; width:790px; min-height:600px; padding:0 0 0 19px; background:url('/TikleAdmin/common/images/icon/bg_middle.png') 19px top repeat-y;}
+.subContent{padding-left:30px; width:760px;}
+.subTop{position:relative; background:url('/TikleAdmin/common/images/icon/bg_top.png') no-repeat left top; padding-left:30px;}
+.subTop .location{position:absolute; top:0; left:30px; .left:0px;}
+.subTop .location span{color:#666; background:url('/TikleAdmin/common/images/icon/ico_arrow.gif') no-repeat left 1px; padding:0 2px 0 11px}
+.subTop .location .home{background:url('/TikleAdmin/common/images/icon/ico_home.png') no-repeat 1px 1px; padding:0 5px 0 14px}
+.subTop .location .current{font-weight:bold;}
+
+.subTitle01{height:67px; background:url('/TikleAdmin/common/images/icon/sub_visual01.jpg') no-repeat right top; padding-top:50px;}
+.subTitle02{height:67px; background:url('/TikleAdmin/common/images/icon/sub_visual02.jpg') no-repeat right top; padding-top:50px;}
+.subTitle03{height:67px; background:url('/TikleAdmin/common/images/icon/sub_visual03.jpg') no-repeat right top; padding-top:50px;}
+.subTitle04{height:67px; background:url('/TikleAdmin/common/images/icon/sub_visual04.jpg') no-repeat right top; padding-top:50px;}
+.subTitle05{height:67px; background:url('/TikleAdmin/common/images/icon/sub_visual05.jpg') no-repeat right top; padding-top:50px;}
+.subTitle06{height:67px; background:url('/TikleAdmin/common/images/icon/sub_visual06.jpg') no-repeat right top; padding-top:50px;}
+
+/*Learning Plan*/
+.subContent .txtBox{color:#555; border:1px solid #bbb; padding:14px 15px; background:#fff; line-height:18px;}
+.subContent .txtBox p{}
+.subContent .planStep{position:relative; width:760px; height:160px;}
+.subContent .planStep p{position:absolute; top:0; left:0; z-index:10}
+.subContent .planStep ol{}
+.subContent .planList{margin-top:12px}
+.subContent .planList li{margin-bottom:8px; background:url('/TikleAdmin/common/images/icon/bl_list01.gif') no-repeat left 5px; padding-left:7px;}
+.subContent .checkTxt{font-size:12px; color:#555; background:url('/TikleAdmin/common/images/icon/ico_check.gif') no-repeat left 1px; padding-left:16px;}
+.subContent .checkTxt.lh{line-height:20px;}
+.subContent .checkTxt .reason{}
+
+.srchBox{border:1px solid #bbb; padding:18px 0; width:758px; background:#fff;}
+.srchBox .srchDiv{width:698px; margin:0 auto; overflow:hidden;}
+.srchBox .srchDiv label.srchtxt{display:block; float:left; padding-top:3px; margin-right:30px;}
+.srchBox .srchDiv label.srchtxt2{display:block; float:left; padding-top:3px; margin-right:10px;}
+.srchBox .srchDiv p{float:left;}
+.srchBox .srchDiv p select{margin-right:6px;}
+.srchBox .srchDiv p .input{margin-right:6px;}
+input.topSrch{color:#fff; font-family:dotum,"µ¸¿ò"; background:#e31837; border:0; width:81px; height:22px; cursor:pointer; padding:4px 3px 0\9;}
+input.topSrch2{color:#fff; font-family:dotum,"µ¸¿ò"; background:#e31837; border:0; width:110px; height:22px; cursor:pointer; padding:4px 3px 0\9; letter-spacing:-1px;}
+input.topSrch3{color:#fff; font-family:dotum,"µ¸¿ò"; background:#e31837; border:0; width:81px; height:22px; cursor:pointer; padding:4px 3px 0\9;}
+input.allSrch{color:#fff; font-family:dotum,"µ¸¿ò"; background:#555; border:0; width:81px; height:22px; cursor:pointer; padding:4px 3px 0\9; letter-spacing:-1px;}
+
+
+.eduSrchBox{position:relative; border:1px solid #bbb; padding:3px 0 18px; width:758px; margin-top:10px; background:#fff;}
+.eduSrchBox ul.srchDiv{width:718px; margin:0 auto; overflow:hidden;}
+.eduSrchBox ul.srchDiv li{color:#555; float:left; padding-right:25px; margin-top:15px;}
+.eduSrchBox ul.srchDiv li.end{padding-right:0px;}
+.eduSrchBox ul.srchDiv li label{float:left; height:13px; padding-top:4px; margin-right:10px;}
+/*.eduSrchBox ul.srchDiv li label{display:inline-block; *display:inline; *zoom:1; height:13px; padding-top:4px \9; margin-right:10px;}*/
+.eduSrchBox ul.srchDiv li label.srchtxt2{float:left; height:13px; padding:4px 0 0 37px; margin-right:10px;}
+.eduSrchBox ul.srchDiv li input.topSrch{margin-left:10px;}
+.eduSrchBox ul.srchDiv li select.clselect{margin-right:12px;}
+.eduSrchBox span.btn{position:absolute; top:15px; right:15px;}
+.eduSrchBox input.inquiry{color:#fff; font-family:dotum,"µ¸¿ò"; background:#e31837; border:0; width:109px; height:22px; cursor:pointer; padding:4px 3px 0\9;}
+
+.eduSrchBox ul.srchDiv02{width:680px; margin:0 auto; overflow:hidden;}
+.eduSrchBox ul.srchDiv02 li{color:#555; float:left; padding-right:25px; margin-top:15px;}
+.eduSrchBox ul.srchDiv02 li.end{padding-right:0}
+.eduSrchBox ul.srchDiv02 li.last{padding-left:60px; padding-right:0}
+.eduSrchBox ul.srchDiv02 li label{float:left; height:13px; padding-top:4px; margin-right:10px;}
+.eduSrchBox ul.srchDiv02 li label.srchtxt2{float:left; height:13px; padding:4px 0 0 37px; margin-right:10px;}
+.eduSrchBox ul.srchDiv02 li input.topSrch{}
+
+.eduSrchBox .srchCon{padding-top:5px; overflow:hidden;}
+.eduSrchBox .srchCon dt{float:left; font-weight:bold; padding-right:3px;}
+.eduSrchBox .srchCon dd{float:left;}
+.eduSrchBox .srchCon dd .checkbox{vertical-align:top;}
+.eduSrchBox .srchCon dd label{float:none !important; margin-right:7px !important;}
+.eduSrchBox .srchGuideTxt{color:#555; padding:10px 20px; line-height:20px; border-bottom:1px solid #bbb;}
+.eduSrchBox .srchGuideTxt .txt{color:#777; background:url('/TikleAdmin/common/images/icon/bl_list01.gif') no-repeat left 7px; padding-left:7px;}
+
+.subContent .pList{}
+.subContent .pList li{background:url('/TikleAdmin/common/images/icon/bl_list01.gif') no-repeat 8px 7px; padding-left:15px; margin-top:10px; line-height:18px;}
+.subContent .pTxt{padding-left:15px; line-height:18px;}
+.subContent .pTxt02{color:#555; padding-left:15px; line-height:18px; font-weight:bold;}
+
+.reasonBox{border-top:1px solid #dbdbdb; border-bottom:1px solid #dbdbdb; overflow:hidden;}
+.reasonBox dt{width:120px; background:#ececec; float:left; padding:60px 0; font-weight:bold; text-align:center;}
+.reasonBox dd{width:630px; float:left; padding:5px 0 5px 10px}
+
+.levelBox{position:relative; border:1px solid #bbb; overflow:hidden; padding:13px 15px 14px;}
+.levelBox p{}
+.levelBox p.levelSelect{margin-top:10px; }
+.levelBox p select{vertical-align:middle;}
+.levelBox p strong.lv{color:#e31837;}
+.levelBox .cDiv{border-top:1px solid #ccc; padding-top:10px; margin-top:10px;}
+.levelBox .cDiv label{padding-left:3px;}
+.levelBox .cDiv input{vertical-align:middle;}
+
+.levelBox .save{position:absolute; top:10px; right:15px;}
+
+/*Learning Life */
+.evalGuide{color:#666; margin-top:18px;}
+.evalGuide p{}
+.evalGuide ul{width:760px; overflow:hidden; margin-top:8px;}
+.evalGuide ul li{float:left; width:345px; border:1px solid #bbb; background:#fff; margin:0 10px 10px 0; padding:12px 14px}
+.evalGuide ul li.time01{}
+.evalGuide ul li.time02{margin:0 0 10px 0;}
+.evalGuide ul li.time03{}
+.evalGuide ul li.time04{margin:0 0 10px 0;}
+
+.evalBox{border-top:2px solid #e31837; border-bottom:1px solid  #bbb; width:100%; overflow:hidden; background:#fff;}
+.evalBox dl dt{color:#555; font-weight:bold; }
+.evalBox dl dd{color:#666;}
+.evalBox .qGuide{overflow:hidden; padding:20px 26px 13px; border-bottom:1px solid #bbb;}
+.evalBox .qGuide dl{overflow:hidden; width:360px; .width:330px;}
+.evalBox .qGuide dt{float:left; color:#555; font-weight:bold; padding-top:5px;}
+.evalBox .qGuide dd{float:left; color:#666; padding:0 0 0 5px; margin-bottom:7px;}
+.evalBox .qGuide dd.item1{width:102px; padding-top:4px;}
+.evalBox .qGuide dd.item2{}
+.evalBox .qGuide dd.item2 input.time1{color:#188be3; text-align:center; font-weight:bold; width:92px; font-size:12px;}
+.evalBox .qGuide dd.item2 input.time2{color:#e31837; text-align:center; font-weight:bold; width:92px; font-size:12px;}
+.evalBox dl.q_dl{padding:20px 26px 10px; border-bottom:1px solid #dbdbdb;}
+.evalBox dl.noLine{border-bottom:0;}
+.evalBox dl.q_dl dt{margin-bottom:17px;}
+.evalBox dl.q_dl dt span.qNum{color:#f47725; font-weight:bold; display:block; float:left; padding-top:2px;}
+.evalBox dl.q_dl dd{padding-left:40px; margin-bottom:11px; white-space:nowrap; line-height:22px; vertical-align:top; overflow:hidden;}
+.evalBox dl.q_dl dd label{ line-height:12px;}
+.evalBox dl.q_dl dd input.checkbox{vertical-align:middle}
+.evalBox dl.q_dl dd .aNum{display:block; float:left;}
+.evalBox dl.q_dl dd textarea{padding:10px 15px; line-height:18px; width:480px; height:185px;}
+.evalBox dl.q_dl dd input.checkbox{margin-right:5px;}
+.evalBox dl dt .question{padding-left:39px; line-height:18px;}
+.evalBox dl dt .question .qImgBox{width:480px; height:230px; background:#dbdbdb; margin-top:15px;}
+
+.graphBox{background:#fff; border:1px solid #bbb; padding:20px;}
+.graphBox dl{overflow:hidden;}
+.graphBox dl dt{float:left; width:60px; font-weight:bold; background:url('/TikleAdmin/common/images/icon/bl_list01.gif') no-repeat left 6px; padding:1px 0 0 7px;}
+.graphBox dl dd{float:left; width:640px; overflow:hidden;}
+.graphBox dl dd span{display:block; float:left; width:35px; text-align:right; padding:1px 22px 0 0;}
+.graphBox dl dd span.value01{color:#e31837; font-weight:bold;}
+.graphBox dl dd span.value02{color:#f47725; font-weight:bold;}
+.graphBox dl dd .bar{float:left; width:582px; height:15px;  background:url('/TikleAdmin/common/images/icon/bg_bar.gif') no-repeat left top;}
+.graphBox dl dd .bar .bar_red{height:15px; background:url('/TikleAdmin/common/images/icon/bg_bar_In01.gif') repeat-x left top;}
+.graphBox dl dd .bar .bar_org{height:15px; background:url('/TikleAdmin/common/images/icon/bg_bar_In02.gif') repeat-x left top;}
+
+/*faq*/
+.faqProBox{border:1px solid #bbb; padding:3px 0 18px; width:758px; background:#fff;}
+.faqProBox ul.srchDiv{width:718px; margin:0 auto; overflow:hidden;}
+.faqProBox ul.srchDiv li{color:#555; float:left; padding-right:25px; margin-top:15px;}
+.faqProBox ul.srchDiv li.end{padding-right:0px;}
+.faqProBox ul.srchDiv li label{float:left; height:13px; padding-top:4px; margin-right:10px;}
+/*.faqProBox ul.srchDiv li label{display:inline-block; *display:inline; *zoom:1; height:13px; padding-top:4px \9; margin-right:10px;}*/
+.faqProBox ul.srchDiv li label.srchtxt2{float:left; height:13px; padding:4px 0 0 37px; margin-right:10px;}
+.faqProBox ul.srchDiv li input.topSrch{margin-left:10px;}
+.faqProBox ul.srchDiv li select.clselect{margin-right:12px;}
+
+/*°Ô½ÃÆÇ*/
+.bbsList01{border-top:2px solid #e31837;border-bottom:1px solid  #bbb; width:100%; overflow:hidden;}
+.bbsList01 table{width:100%;}
+.bbsList01 thead th{background:#ececec; padding:14px 0 10px; color:#666;}
+.bbsList01 td{color:#666; border-top:1px solid #dbdbdb; padding:12px 0 9px; text-align:center; line-height:18px; }
+.bbsList01 td.subject{text-align:left; padding:12px 10px 9px;}
+.bbsList01 td.subject a{color:#666; display:inline-block; *display:inline; *zoom:1; float:left;}/* width:230px;*/
+.bbsList01 td.process{font-weight:bold;}
+.bbsList01 td.date,
+.bbsList01 td.hit{font-family:arial;}
+.bbsList01 td.file{vertical-align:top;}
+.bbsList01 td .reply{display:inline-block; *display:inline; *zoom:1;  float:left; color:#fff; font-size:11px; background:url('/TikleAdmin/common/images/icon/ico_reply.gif') no-repeat; text-align:center; height:11px; padding:0 4px 4px; padding:1px 4px 4px\9; margin:1px 10px 0 0; margin:0 10px 0 0 \9; line-height:16px;}
+.bbsList01 td span.file img{padding:3px 0 0 5px;}
+
+.bbsTop{width:100%; overflow:hidden; color:#666; }
+.bbsTop .txt01{float:left;}
+.bbsTop .txt02{float:right;}
+.bbsTop h4.txt01{padding-top:10px;}
+.bbsTop h4.txt01_s{float:left; padding-top:7px;}
+.bbsTop h4.txt01_s .checkTxt{font-weight:normal;}
+.bbsTop .yearTxt{line-height:24px; display:inline-block; *display:inline; *zoom:1; background:url('/TikleAdmin/common/images/icon/bl_list01.gif') no-repeat left 10px; padding-left:7px; font-weight:bold; margin-left:20px;}
+.bbsTop .yearTxt02{line-height:24px; display:inline-block; *display:inline; *zoom:1; background:url('/TikleAdmin/common/images/icon/bl_list01.gif') no-repeat left 10px; padding-left:7px; font-weight:bold; margin-right:5px;}
+.bbsTop .btnList{float:right; overflow:hidden;}
+.bbsTop .btnList li{float:left; padding-left:5px;}
+
+.bLine{border-top:1px solid #dbdbdb !important; zoom:1; border-top:1px solid #dbdbdb \9; overflow:visible !important;}
+.bLine2{border-top:1px solid #dbdbdb !important; border-bottom:0 !important; zoom:1;}
+
+.bbsView01{border-top:2px solid #e31837;border-bottom:1px solid  #bbb; width:100%; overflow:hidden;}
+.bbsView01 table{width:100%; text-align:left;}
+.bbsView01 table tr.titleLine td,
+.bbsView01 table tr.titleLine th{border-top:0;}
+.bbsView01 table tr.titleLine th,
+.bbsView01 table th.tit{text-align:left;}
+.bbsView01 th{background:#ececec; padding:14px 20px 10px; color:#666;}
+.bbsView01 th,
+.bbsView01 td{color:#666; border-top:1px solid #dbdbdb; padding:12px 20px 9px;  line-height:18px; }
+.bbsView01 td span.file img{padding:2px 0 0 0;}
+.bbsView01 td a{color:#666;}
+.bbsView01 td.viewArea{padding:15px 0; width:730px; overflow:hidden;}
+.bbsView01 td.viewArea .view{padding:15px; width:730px; }
+
+/* 2013-04-15 Ãß°¡*/
+.bbsView01 .WSn{white-space: normal; word-break:break-all; word-wrap: break-word;}
+/* 2013-04-15 Ãß°¡ end*/
+
+.bbsWrite01{border-top:2px solid #e31837;border-bottom:1px solid  #bbb; width:100%; overflow:hidden;}
+.bbsWrite01 table{width:760px; overflow:hidden; text-align:left;}
+.bbsWrite01 table tr.titleLine td,
+.bbsWrite01 table tr.titleLine th{border-top:0;}
+.bbsWrite01 th{background:#ececec; padding:10px 20px 10px; color:#666;}
+.bbsWrite01 th{color:#666; padding:12px 0 9px 20px; border-top:1px solid #dbdbdb;  line-height:18px; text-align:left;}
+.bbsWrite01 td{color:#666; border-top:1px solid #dbdbdb; padding:5px 0 5px 10px;  line-height:24px; text-align:left;}
+.bbsWrite01 td input.input{background:#fff; height:22px;}
+.bbsWrite01 td.writeArea{padding:0; }
+.bbsWrite01 td.writeArea .writeDiv{padding:0; width:760px; overflow:hidden;}
+.bbsWrite01 td.writeArea .edit{background:#f4f4f4; height:30px;}
+.bbsWrite01 td.writeArea textarea{padding:15px; width:727px; height:275px; border-bottom:0;}
+.bbsWrite01 td input.checkbox{vertical-align:middle;}
+.bbsWrite01 td p.fileSec .btn2{margin-left:3px}
+.bbsWrite01 td .sendCheck{padding-left:3px;}
+.bbsWrite01 td .sendSMS{padding:0 13px 0 5px}
+.bbsWrite01 td.popWriteArea{padding:0; }
+.bbsWrite01 td.popWriteArea .writeDiv{padding:0; width:620px; overflow:hidden;}
+.bbsWrite01 td.popWriteArea .edit{background:#f4f4f4; height:30px;}
+.bbsWrite01 td.popWriteArea textarea{padding:15px; width:570px; height:275px; border-bottom:0;}
+.bbsWrite01 td select{height:28px; padding: 3px;}
+
+.bbsWrite02{border-top:2px solid #e31837;border-bottom:1px solid  #bbb; width:100%; overflow:hidden;}
+.bbsWrite02 table{width:100%; overflow:hidden; text-align:left;}
+.bbsWrite02 table tr.first td,
+.bbsWrite02 table tr.first th{border-top:0;}
+.bbsWrite02 th{background:#ececec; padding:10px 10px 10px; color:#666;}
+.bbsWrite02 th.tit{vertical-align:top;}
+.bbsWrite02 th{color:#666; padding:12px 0 9px 10px; border-top:1px solid #dbdbdb;  line-height:18px; text-align:left;}
+.bbsWrite02 td{color:#666; border-top:1px solid #dbdbdb; padding:5px 0 5px 10px;  line-height:24px; text-align:left;}
+.bbsWrite02 td input{vertical-align:middle;}
+.bbsWrite02 td input.input{background:#fff; height:22px;}
+.bbsWrite02 td select{height:26px; padding:3px;}
+.bbsWrite02 td label.reimTxt{padding-right:13px;}
+.bbsWrite02 td p{}
+.bbsWrite02 td em{font-style:normal;}
+.bbsWrite02 td.course{padding:5px 0 0;}
+.bbsWrite02 th span.normal{padding-left:10px;}
+
+.faqList{border-top:2px solid #e31837;border-bottom:1px solid  #bbb; width:100%; overflow:hidden;}
+.faqList table{width:100%;}
+.faqList tr.firstLine td{border-top:0; color:#666;}
+.faqList td{color:#666; border-top:1px solid #dbdbdb; padding:12px 10px 9px 50px; text-align:left; line-height:18px; background:url('/TikleAdmin/common/images/icon/ico_q.gif') no-repeat 19px 13px;}
+.faqList td a{color:#666;}
+.faqList tr.current{font-weight:bold;}
+.faqList tr.answerLine td{background:#fff url('/TikleAdmin/common/images/icon/ico_a.gif') no-repeat 20px 13px; padding:12px 19px 9px 50px;}
+.faqList tr.answerLine td .answerDiv{}
+.faqList tr.answerLine td .answerDiv .btn{margin-top:3px;}
+
+.swDataList{border-top:2px solid #e31837;border-bottom:1px solid  #bbb; width:100%; overflow:hidden;}
+.swDataList table{width:100%;}
+.swDataList td{padding:10px 0 9px; border-top:1px solid #dbdbdb; text-align:center;}
+.swDataList tr.firstLine td{border-top:0; color:#666; }
+.swDataList td.title{color:#666; font-weight:bold; padding:10px 10px 9px 17px; text-align:left; line-height:18px; background:url('/TikleAdmin/common/images/icon/bl_list01.gif') no-repeat 10px 19px;}
+
+/*ÆûÅ×ÀÌºí*/
+.bbsList02{border-top:2px solid #e31837;border-bottom:1px solid  #bbb; width:100%; overflow:hidden;}
+.bbsList02 table{width:100%;}
+.bbsList02 thead th{color:#555; background:#ececec; padding:14px 0 10px; border-top:0 solid #e31837;}
+.bbsList02 thead th.boR{border-right:1px solid #dbdbdb;}
+.bbsList02 td{color:#666; border-top:1px solid #dbdbdb; border-right:1px solid #dbdbdb; padding:12px 0 10px; text-align:center; line-height:18px; vertical-align:middle;}
+.bbsList02 td.end{border-right:0;}
+.bbsList02 td label{padding:0 3px 0 5px; height:21px; line-height:24px;}
+.bbsList02 tr.inputLine td{padding:5px 0;}
+.bbsList02 tr.inputLine td input{height:20px; border:1px solid #dbdbdb;}
+.bbsList02 tr.inputLine td select{height:28px; padding:3px;}
+.bbsList02 td.subject{text-align:left; padding:12px 0 9px;}
+.bbsList02 td.num{border-right:0;}
+.bbsList02 td.pText{padding:5px 0 5px 5px}
+
+.bbsList03{border-top:2px solid #e31837; border-bottom:1px solid #bbb; width:100%; overflow:hidden;}
+.bbsList03 table{width:100%;}
+.bbsList03 thead th{color:#555; background:#ececec; padding:14px 0 10px; border-top:0}
+.bbsList03 th,
+.bbsList03 td{color:#666; border-top:1px solid #dbdbdb; padding:12px 0 9px; text-align:center; line-height:18px; }
+.bbsList03 td.subject{text-align:left; padding:12px 15px 9px;}
+.bbsList03 td.end{border-right:0;}
+.bbsList03 td label{padding:0 0 0 5px; height:21px; line-height:24px;}
+.bbsList03 tfoot{background:#ececec; color:#555; font-weight:bold;}
+.bbsList03 tfoot th,
+.bbsList03 tfoot td{border-top:1px solid #bbb; padding:12px 0 9px;}
+.bbsList03 tfoot.popTotal{background:#fff; color:#555; font-weight:bold;}
+.bbsList03 tfoot.popTotal th{border-top:1px solid #dbdbdb; padding:12px 15px 9px; text-align:left;}
+.bbsList03 tfoot.popTotal td{border-top:1px solid #dbdbdb; padding:12px 0 9px;}
+
+.bbsList04{border-top:2px solid #e31837;width:100%; overflow:hidden;}
+.bbsList04 table{width:100%;}
+.bbsList04 thead th{color:#555; background:#ececec; padding:14px 0 10px; border-top:1px solid #dbdbdb;}
+.bbsList04 thead tr.titleLine th{border-top:0;}
+.bbsList04 tbody th{background:#ececec; border-right:1px solid #dbdbdb;}
+.bbsList04 th,
+.bbsList04 td{color:#666; border-top:1px solid #dbdbdb; border-bottom:0; padding:12px 0 9px; text-align:center; line-height:18px; }
+.bbsList04 th.boR{border-right:1px solid #dbdbdb;}
+.bbsList04 td.end{border-right:0;}
+.bbsList04 tr.resultLine td{padding:0;}
+.bbsList04 div.resultArea{position:relative; top:-1px; left:0; border:1px solid #afafaf; width:758px;}
+.bbsList04 div.resultArea tr.firstLine th,
+.bbsList04 div.resultArea tr.firstLine td{border-top:0;}
+.bbsList04 tfoot{background:#ececec; color:#555; font-weight:bold; border-bottom:1px solid #bbb;}
+.bbsList04 tfoot th,
+.bbsList04 tfoot td{border-top:1px solid #bbb; padding:12px 0 9px;}
+
+.bbsList04 table colgroup col.col1{width:60px;}
+.bbsList04 table colgroup col.col2{width:59px; *width:56px;}
+.bbsList04 table colgroup col.col3{width:86px;}
+.bbsList04 table colgroup col.col4{width:86px;}
+.bbsList04 table colgroup col.col5{width:87px;}
+.bbsList04 table colgroup col.col6{width:86px;}
+.bbsList04 table colgroup col.col7{width:86px;}
+.bbsList04 table colgroup col.col8{width:87px;}
+.bbsList04 table colgroup col.col9{width:118px;}
+
+/*¹öÆ°*/
+.btnArea{margin-top:-30px;}
+.btnArea02{overflow:hidden;}
+.btnArea02 .btnLeft{float:left;}
+.btnArea02 .btnRight{float:right;}
+
+/* ¹öÆ°Å¸ÀÔ1 */
+.button,
+.button * {display:inline-block; *display:inline; *zoom:1; position:relative; overflow:hidden; margin:0; padding:0; text-decoration:none !important; white-space:nowrap; vertical-align:middle; letter-spacing:-1px; font:bold 12px/12px "µ¸¿ò", gulim; color:white; border:0; background:url('/TikleAdmin/common/images/btn/btn_input.gif') no-repeat; cursor:pointer;}
+
+.button {height:30px; padding-left:2px; background-position:0 -30px;}
+.button a {padding:9px 19px 0 18px; height:21px; vertical-align:top; background-position:right -30px;}
+.button.btn2 a {padding:9px 14px 0 13px; height:21px; vertical-align:top; background-position:right -30px;}
+.button button, .button input {overflow:visible; height:30px; padding:0 19px 0 18px; vertical-align:top; font:bold 12px/23px "µ¸¿ò", gulim; background-position:right -30px;}
+.button button, .button input {line-height:24px \9; padding-top:3px \9;}
+* html .button button {height:auto; padding:6px 13px 5px 11px; line-height:12px;}
+* html .button input {height:auto; padding:7px 13px 4px 11px; line-height:12px;}
+.button * {color:#666 !important;}
+
+.button.util_bt{background-position:0 0; height:19px;}
+.button.util_bt a {display:block; padding:4px 7px 5px 5px; padding:6px 7px 3px 5px \9; height:10px; background-position:right top;}
+
+/* ¹öÆ°Å¸ÀÔ2 */
+.button_s,
+.button_s * {display:inline-block; *display:inline; *zoom:1; position:relative; overflow:hidden; margin:0; padding:0; text-decoration:none !important; white-space:nowrap; vertical-align:middle; letter-spacing:-1px; font:normal 11px/11px "µ¸¿ò", gulim; color:white; border:0; background:url('/TikleAdmin/common/images/btn/btns.gif') no-repeat; cursor:pointer;}
+
+.button_s {height:22px; padding-left:2px; background-position:left top;}
+.button_s a{padding:6px 10px 0 9px; padding:8px 10px 0 9px \9; height:16px; vertical-align:top; background-position:right top;}
+.button_s button, .button_s input {overflow:visible; height:22px; padding:0 19px 0 18px; vertical-align:top; font:normal 11px/23px "µ¸¿ò", gulim; background-position:right top;}
+.button_s button, .button_s input {line-height:24px \9; padding-top:1px \9;}
+* html .button_s button {height:auto; padding:6px 13px 5px 11px; line-height:12px;}
+* html .button_s input {height:auto; padding:7px 13px 4px 11px; line-height:12px;}
+.button_s * {color:#fff !important;}
+
+.button_s.red{background-position:0 -30px; height:18px;}
+.button_s.red em{display:block; padding:4px 7px 5px 5px; padding:6px 7px 3px 5px \9; .padding:3px 7px 5px 5px; height:10px; background-position:right -30px; font-style:normal;}
+
+.button_s.org{background-position:0 -90px; height:18px;}
+.button_s.org em{display:block; padding:4px 12px 5px 10px; padding:6px 12px 3px 10px \9; height:10px; background-position:right -90px; font-style:normal;}
+
+.button_s.black{background-position:0 -60px; height:22px;}
+.button_s.black a{display:block; padding:6px 9px 5px 7px; padding:8px 9px 5px 7px \9; height:10px; background-position:right -60px; font-style:normal;}
+.button_s.black button, .button_s.black input {overflow:visible; height:22px; padding:0 9px 0 7px; vertical-align:top; font:normal 11px/23px "µ¸¿ò", gulim; background-position:right -60px;}
+.button_s.black button, .button_s.black input {line-height:24px \9; padding-top:1px \9;}
+
+/* PAGING*/
+.paging{width:100%; text-align:center; font-size:12px; color:#999999; font-family:arial;}
+.paging img{vertical-align:top;}
+.paging strong{display:inline-block; color:#888; width:28px; height:15px; padding:7px 0 6px 0; text-align:center; border:1px solid #dbdbdb; vertical-align:top; margin:0 2px 0 0 }
+.paging a{display:inline-block; color:#888888; width:28px; height:15px; padding:7px 0 6px 0; text-align:center; border:1px solid #dbdbdb; vertical-align:top;  margin:0 2px 0 0 }
+.paging a.first{display:inline-block; color:#888888; padding:0; border:0px solid #dbdbdb; background:#fff; vertical-align:top;  margin:0 2px 0 0 }
+.paging a.prev{display:inline-block; color:#888888; padding:0; border:0px solid #dbdbdb; background:#fff; vertical-align:top;  margin:0 2px 0 0 }
+.paging a.next{display:inline-block; color:#888888; padding:0; border:0px solid #dbdbdb; background:#fff; vertical-align:top;  margin:0 0 0 0 }
+.paging a.end{display:inline-block; color:#888888; padding:0; border:0px solid #dbdbdb; background:#fff; vertical-align:top; margin:0 0 0 2px}
+.paging a:hover, .paging a:focus{text-decoration:none; color:#888;}
+.paging a.bgNone{background:none; padding:3px 2px 0 2px; border:none}
+.paging  span{display:inline-block; font-weight:bold; color:#ffffff; padding:2px 4px 1px 5px; border:1px solid #2f7c9b; background:#4492b2; vertical-align:top}
+.clearB{clear:both; width:100%;}
+.clear{display:block; float:none; clear:both; height:0; width:100%; font-size:0 !important; line-height:0 !important; overflow:hidden; margin:0 !important; padding:0 !important;}
+
+/*popup*/
+.popWrap{width:100%; border-top:5px solid #e31837;}
+.popWrap .popContent{padding:50px 20px; min-width:600px;}
+
+.popWrap02{position:relative; z-index:100; width:100%; min-height: 100%; border-top:5px solid #e31837;  margin: 0 0 -34px;  padding-bottom:-34px;}/*background:url('/TikleAdmin/common/images/popup/bg_top.gif') repeat-x left top;*/
+*html .popWrap02{ height: 100%; } 
+.popWrap02 .popContent{padding:50px 20px 34px; min-width:600px; margin-bottom:20px;}
+
+/*.popClose{position:relative; z-index:100; width:100%; height:34px; overflow:hidden; background:#ddd; }*/
+.popClose{position:fixed; bottom:0px;margin-bottom:0px; z-index:100; width:100%; height:34px; overflow:hidden; background:#ddd; }
+.popClose p{color:#444; padding:10px 20px; text-align:right;}
+.popClose p label{font-size:11px;}
+
+.popContent .popTitle{overflow:hidden;}
+.popContent .popTitle h1{float:left;}
+.popContent .popTitle p{float:right; padding-top:26px;}
+.popContent .txtBox{color:#555; border:1px solid #bbb; padding:14px 15px; background:#fff; line-height:18px;}
+.popContent .checkTxt{color:#555; background:url('/TikleAdmin/common/images/icon/ico_check.gif') no-repeat left 1px; padding-left:16px;}
+.popContent .w1{width:620px; }
+.popContent .checkTxt span.check .checkbox{vertical-align:middle;}
+.popContent .pList{}
+.popContent .pList li{background:url('/TikleAdmin/common/images/icon/bl_list01.gif') no-repeat 8px 7px; padding-left:15px;  line-height:20px;}
+.popContent .popTitle .yearTxt02{line-height:24px; display:inline-block; *display:inline; *zoom:1; background:url('/TikleAdmin/common/images/icon/bl_list01.gif') no-repeat left 10px; padding-left:7px; font-weight:bold; margin-right:5px;}
+
+dl.confirmCheck{overflow:hidden; padding-top:5px; margin:0 0 0 0;}
+dl.confirmCheck dt{float:left; padding-right:5px;}
+dl.confirmCheck dd{float:left;}
+dl.confirmCheck dd label{float:none !important; height:13px; padding-top:0px !importan; margin-right:10px !importan;}
+dl.confirmCheck dd .checkbox{margin-right:0px; vertical-align:top;}
+
+.pop_eduSrchBox{border:1px solid #bbb; padding:3px 0 18px; width:618px; margin-top:20px; background:#fff;}
+.pop_eduSrchBox ul.srchDiv{width:600px; margin:0 auto; overflow:hidden;}
+.pop_eduSrchBox ul.srchDiv li{color:#555; float:left; padding-right:20px; margin-top:0px;}
+.pop_eduSrchBox ul.srchDiv li.end{padding-right:0px;}
+.pop_eduSrchBox ul.srchDiv li label{float:left; height:13px; padding-top:4px; margin-right:10px;}
+/*.eduSrchBox ul.srchDiv li label{display:inline-block; *display:inline; *zoom:1; height:13px; padding-top:4px \9; margin-right:10px;}*/
+.pop_eduSrchBox ul.srchDiv li label.srchtxt2{float:left; height:13px; padding:4px 0 0 37px; margin-right:10px;}
+.pop_eduSrchBox ul.srchDiv li input.topSrch{margin-left:10px;}
+.pop_eduSrchBox ul.srchDiv li select.clselect{margin-right:12px;}
+.pop_eduSrchBox .srchDiv{width:588px; margin:0 auto; padding-top:15px;}
+.pop_eduSrchBox .srchGuideTxt{color:#555; padding:10px 20px; line-height:20px; border-bottom:1px solid #bbb;}
+
+
+
+/*ÀüÃ¼º¸±â*/
+.allMenuBox{position:absolute; top:110px; left:15px; width:970px; height:501px; background:url('/TikleAdmin/common/images/icon/bg_allMenuBox.png') no-repeat left top; z-index: 100;}
+.allMenuBox .allMenuArea{position:relative; padding:39px 54px 0; overflow:hidden;}
+.allMenuBox .allMenuArea .menuTitle{border-bottom:3px solid #fff; padding:0 15px 20px; margin-bottom:30px;}
+.allMenuBox .allMenuArea .menuList{margin-top:30px;}
+.allMenuBox .allMenuArea dl{float:left; width:123px; height:296px; padding-left:20px;}
+.allMenuBox .allMenuArea dl.menu01{padding-left:15px; width:129px; border-right:1px solid #f69251;}
+.allMenuBox .allMenuArea dl.menu02{width:122px; border-right:1px solid #f69251;}
+.allMenuBox .allMenuArea dl.menu03{width:122px; border-right:1px solid #f69251;}
+.allMenuBox .allMenuArea dl.menu04{width:122px; border-right:1px solid #f69251;}
+.allMenuBox .allMenuArea dl.menu05{width:122px; border-right:1px solid #f69251;}
+.allMenuBox .allMenuArea dl.menu06{}
+.allMenuBox .allMenuArea dl dt{margin-bottom:30px;}
+.allMenuBox .allMenuArea dl dd{margin-bottom:11px;}
+.allMenuBox .allMenuArea dl dd ul{padding-top:;}
+.allMenuBox .allMenuArea dl dd ul li{margin-top:11px;}
+.allMenuBox .allMenuArea .close{display:block; position:absolute; top:30px; right:35px;}
+
+
+.popWrap03{border:5px solid #cf142b; padding:34px 45px 20px; min-width:861px;}
+.calenderWrap{position:relative; width:861px; margin:0 auto;}
+.cld_top{width:861px; position:relative;}
+.cld_top .year{text-align:center;}
+.calenderWrap .cal_close{position:absolute; top:27px; right:0;}
+
+.cld_top{position:relative;}
+.cld_top .year{color:#444; font-size:45px; font-family: "easyNanumGothicBold","easyNanumGothicBold02"; letter-spacing:-2px;}
+.cld_top .printBt{display:block; width:42px; height:30px; position:absolute; top:20px; left:0;}
+.cld_top .guide{position:absolute; top:30px; left:72px;}
+.cld_top .guide li{float:left; padding-right:16px;}
+.cld_top .guide li img{padding-top:2px;}
+
+.monthTab{width:861px; position:relative;}/*position:relative; width:980px;*/
+.monthTab{margin:0; position:relative; z-index:50; }/*position:relative; z-index:50;*/
+.monthTab ul{position:relative; width:861px; height:26px; overflow:hidden; background:url("/common/images/btn/ir_cal_tab.gif") no-repeat left top;}
+.monthTab ul li{position:absolute; height:26px; background:url("/common/images/btn/ir_cal_tab.gif") no-repeat left top; _zoom:1;}
+.monthTab ul li a{display:block; height:26px;}
+.monthTab ul li span{position:relative; z-index:-1; *display:none;}
+.monthTab ul li.month01{width:72px; background-position:0px -50px; top:0; left:0;}
+.monthTab ul li.month02{width:72px; background-position:-72px -50px; top:0; left:72px;}
+.monthTab ul li.month03{width:72px; background-position:-144px -50px; top:0; left:144px;}
+.monthTab ul li.month04{width:72px; background-position:-216px -50px; top:0; left:216px;}
+.monthTab ul li.month05{width:72px; background-position:-288px -50px; top:0; left:288px;}
+.monthTab ul li.month06{width:72px; background-position:-360px -50px; top:0; left:360px;}
+.monthTab ul li.month07{width:72px; background-position:-432px -50px; top:0; left:432px;}
+.monthTab ul li.month08{width:72px; background-position:-504px -50px; top:0; left:504px;}
+.monthTab ul li.month09{width:72px; background-position:-576px -50px; top:0; left:576px;}
+.monthTab ul li.month10{width:71px; background-position:-648px -50px; top:0; left:648px;}
+.monthTab ul li.month11{width:71px; background-position:-719px -50px; top:0; left:719px;}
+.monthTab ul li.month12{width:71px; background-position:-791px -50px; top:0; left:791px;}
+
+.monthTab ul li.month01.on{width:72px; background-position:0px -100px; top:0; left:0;}
+.monthTab ul li.month02.on{width:72px; background-position:-72px -100px; top:0; left:72px;}
+.monthTab ul li.month03.on{width:72px; background-position:-144px -100px; top:0; left:144px;}
+.monthTab ul li.month04.on{width:72px; background-position:-216px -100px; top:0; left:216px;}
+.monthTab ul li.month05.on{width:72px; background-position:-288px -100px; top:0; left:288px;}
+.monthTab ul li.month06.on{width:72px; background-position:-360px -100px; top:0; left:360px;}
+.monthTab ul li.month07.on{width:72px; background-position:-432px -100px; top:0; left:432px;}
+.monthTab ul li.month08.on{width:72px; background-position:-504px -100px; top:0; left:504px;}
+.monthTab ul li.month09.on{width:72px; background-position:-576px -100px; top:0; left:576px;}
+.monthTab ul li.month10.on{width:71px; background-position:-648px -100px; top:0; left:648px;}
+.monthTab ul li.month11.on{width:71px; background-position:-719px -100px; top:0; left:719px;}
+.monthTab ul li.month12.on{width:71px; background-position:-791px -100px; top:0; left:791px;}
+
+.calender{position:relative;}
+.calender table{width:861px;}
+.calender table thead{}
+.calender table thead th{padding:15px 0 14px; text-align:center;border-bottom:1px solid #ddd;}
+.calender table td{height:79px; border-right:1px solid #ddd; border-bottom:1px solid #ddd; vertical-align:top;}
+.calender table td.on{display:block; border-right:1px solid #f4904f !important; border-bottom:1px solid #f4904f; background:url("/common/images/icon/bg_date.gif") no-repeat right bottom;}
+.calender table td.on .descWrap{position:relative; border-left:1px solid #f4904f; border-top:1px solid #f4904f; margin-top:-1px; margin-left:-1px; display:block;}
+.calender table td.sun .cntDiv .date{color:#e42c4e}
+.calender table td.sat{border-right:0;}
+.calender table td.check{background:url("/common/images/icon/bg_date.gif") no-repeat right bottom;}
+
+.calender table td .cntDiv{width:100%; height:79px; }
+.calender table td .cntDiv .descWrap{ width:100%; height:100%;}
+.calender table td .cntDiv .date{float:right; z-index:10;  color:#888; font-family:tahoma; padding-top:9px; padding-right:10px;}
+.calender table td .cntDiv .list{padding:11px 15px 3px 10px; }
+.calender table td .cntDiv .list li{margin-bottom:3px; width:85px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis;}
+.calender table td .cntDiv .list li a{}
+.calender table td .cntDiv .list li span.ico img{padding:2px 5px 0 0}
+
+.viewPop{position:absolute; top:25%; left:277px; z-index:40; border:3px solid #f4904f; background:#fff;}
+.viewPop.p1{position:absolute; top:33px; left:-310px;}
+.viewPop .viewBox{width:100%; height:220px; overflow-y:scroll;}
+.viewPop .desc{position:relative; width:300px; background:#fff; }
+.viewPop .desc .titleDiv{background:#f4904f; padding:8px 10px; color:#fff; font-weight:bold; font-size:14px;}
+.viewPop ul{padding:10px 20px 0; }
+.viewPop ul li{margin-bottom:15px; line-height:18px;}
+.viewPop ul li .title{font-weight:bold;}
+.viewPop ul li span.ico{margin: 0 0 0 -10px; }
+.viewPop ul li span.ico img{padding-top:4px;}
+.viewPop .desc .close2{display:block; width:17px; height:17px; position:absolute; top:8px; right:8px; }
+
+/**/

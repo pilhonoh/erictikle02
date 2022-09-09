@@ -1,0 +1,59 @@
+*{margin:0; padding:0}
+html{width:100%; height:100%;}
+body{font-size:12px; font-family:dotum,"돋움",sans-serif; color:#666}
+body,div,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,p,form,fieldset,input,table,tr,th,td{margin:0; padding:0}
+ul,ol,li{list-style:none}
+img, fieldset{border:none; vertical-align:top}
+legend, caption{display:none;}
+textarea, button{vertical-align:middle;}
+input, select{height:16px; vertical-align:middle; background:#fff; border:1px solid #ddd;}
+input{padding:3px;}
+select{padding:2px}
+textarea{padding:3px; vertical-align:middle; background:#fff; border:1px solid #ddd;}
+.checkbox{padding:0; border:0;}
+.disNone{display:none;}
+a{text-decoration:none; color:#666666;}
+a:hover, a:focus, a:active{text-decoration:none; color:#666666;}
+table{border-collapse:collapse}
+
+/* 간격, 폰트 */
+.mt5{margin-top:5px}
+.mt10{margin-top:10px}
+.mt15{margin-top:15px}
+.mt20{margin-top:20px}
+.mt25{margin-top:25px}
+.mt30{margin-top:30px}
+.mt35{margin-top:35px}
+.mt40{margin-top:40px}
+.mt45{margin-top:45px}
+.mt50{margin-top:50px}
+.mt55{margin-top:55px}
+.mt60{margin-top:60px}
+
+/* 정렬 */
+.taC{text-align:center}
+.taR{text-align:right}
+.taL{text-align:left;}
+
+
+/*레이아웃*/
+#wrap{width:100%; min-width:980px; border-top:4px solid #e31837; }
+#header{width:100%; height:25px; padding:34px 0;}
+#header:after{clear:both; display:block;}
+#container{width:100%; min-height:500px;}
+#container:after{clear:both; display:block;}
+#container .lnb{float:left; width:223px; padding:0 50px;}
+#container .contents{padding:0 50px 0 328px;}
+#footer{width:100%; height:50px; background:#666;}
+
+#header h1{float:left; width:221px; padding:0 57px 0 50px}
+#header .util{overflow:hidden; padding-top:8px; width:230px;}
+#header .util li{float:left; padding:0 10px; border-left:1px solid #a3a3a3; line-height:12px;}
+#header .util li a{color:#666; font-weight:bold;}
+#header .util li.fir{border-left:0; padding-left:0;}
+
+#container h2{padding:13px 0 21px; background:url('/TikleAdmin/common/images/icon/bg_lnbTop.gif') left bottom no-repeat;}
+.lnbBox{width:221px; background:#f9f9f9 url('/TikleAdmin/common/images/icon/bg_lnbBtm.gif') left bottom no-repeat; padding-bottom:3px;}
+.lnbBox .lnbList{background:#f9f9f9 url('/TikleAdmin/common/images/icon/bg_lnb.gif') left bottom repeat-y; padding:25px 30px;}
+
+.contents .title{padding:30px 0 8px; color:#333; border-bottom:3px solid #666;}

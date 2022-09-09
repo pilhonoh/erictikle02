@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="DocManagerService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://tikledocs.sktelecom.com/_vti_bin/DocManagerService/DocManagerService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://tikledocs.sktelecom.com/_vti_bin/DocManagerService/DocManagerService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://tikledocs.sktelecom.com/_vti_bin/DocManagerService/DocManagerService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Tnet.Sharepoint.Models" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IDocManagerService_CreateFolder_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateFolder" />
+  </wsdl:message>
+  <wsdl:message name="IDocManagerService_CreateFolder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateFolderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocManagerService_DeleteFolder_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFolder" />
+  </wsdl:message>
+  <wsdl:message name="IDocManagerService_DeleteFolder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFolderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocManagerService_GetFolderItemCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFolderItemCount" />
+  </wsdl:message>
+  <wsdl:message name="IDocManagerService_GetFolderItemCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFolderItemCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocManagerService_HasFileByName_InputMessage">
+    <wsdl:part name="parameters" element="tns:HasFileByName" />
+  </wsdl:message>
+  <wsdl:message name="IDocManagerService_HasFileByName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HasFileByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocManagerService_GetFolderItems_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFolderItems" />
+  </wsdl:message>
+  <wsdl:message name="IDocManagerService_GetFolderItems_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFolderItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocManagerService_UploadFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:UploadFile" />
+  </wsdl:message>
+  <wsdl:message name="IDocManagerService_UploadFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UploadFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocManagerService_DeleteFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFile" />
+  </wsdl:message>
+  <wsdl:message name="IDocManagerService_DeleteFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocManagerService_ModifyFileName_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyFileName" />
+  </wsdl:message>
+  <wsdl:message name="IDocManagerService_ModifyFileName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyFileNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocManagerService_SetFileReadPermission_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetFileReadPermission" />
+  </wsdl:message>
+  <wsdl:message name="IDocManagerService_SetFileReadPermission_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetFileReadPermissionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocManagerService_GetCheckedUserInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCheckedUserInfo" />
+  </wsdl:message>
+  <wsdl:message name="IDocManagerService_GetCheckedUserInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCheckedUserInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocManagerService_DownloadFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:DownloadFile" />
+  </wsdl:message>
+  <wsdl:message name="IDocManagerService_DownloadFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DownloadFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocManagerService_SearchFiles_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchFiles" />
+  </wsdl:message>
+  <wsdl:message name="IDocManagerService_SearchFiles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchFilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocManagerService_GetFileHistory_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFileHistory" />
+  </wsdl:message>
+  <wsdl:message name="IDocManagerService_GetFileHistory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFileHistoryResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IDocManagerService">
+    <wsdl:operation name="CreateFolder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocManagerService/CreateFolder" message="tns:IDocManagerService_CreateFolder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocManagerService/CreateFolderResponse" message="tns:IDocManagerService_CreateFolder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFolder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocManagerService/DeleteFolder" message="tns:IDocManagerService_DeleteFolder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocManagerService/DeleteFolderResponse" message="tns:IDocManagerService_DeleteFolder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFolderItemCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocManagerService/GetFolderItemCount" message="tns:IDocManagerService_GetFolderItemCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocManagerService/GetFolderItemCountResponse" message="tns:IDocManagerService_GetFolderItemCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HasFileByName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocManagerService/HasFileByName" message="tns:IDocManagerService_HasFileByName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocManagerService/HasFileByNameResponse" message="tns:IDocManagerService_HasFileByName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFolderItems">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocManagerService/GetFolderItems" message="tns:IDocManagerService_GetFolderItems_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocManagerService/GetFolderItemsResponse" message="tns:IDocManagerService_GetFolderItems_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocManagerService/UploadFile" message="tns:IDocManagerService_UploadFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocManagerService/UploadFileResponse" message="tns:IDocManagerService_UploadFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocManagerService/DeleteFile" message="tns:IDocManagerService_DeleteFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocManagerService/DeleteFileResponse" message="tns:IDocManagerService_DeleteFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyFileName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocManagerService/ModifyFileName" message="tns:IDocManagerService_ModifyFileName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocManagerService/ModifyFileNameResponse" message="tns:IDocManagerService_ModifyFileName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetFileReadPermission">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocManagerService/SetFileReadPermission" message="tns:IDocManagerService_SetFileReadPermission_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocManagerService/SetFileReadPermissionResponse" message="tns:IDocManagerService_SetFileReadPermission_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCheckedUserInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocManagerService/GetCheckedUserInfo" message="tns:IDocManagerService_GetCheckedUserInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocManagerService/GetCheckedUserInfoResponse" message="tns:IDocManagerService_GetCheckedUserInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocManagerService/DownloadFile" message="tns:IDocManagerService_DownloadFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocManagerService/DownloadFileResponse" message="tns:IDocManagerService_DownloadFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchFiles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocManagerService/SearchFiles" message="tns:IDocManagerService_SearchFiles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocManagerService/SearchFilesResponse" message="tns:IDocManagerService_SearchFiles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFileHistory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocManagerService/GetFileHistory" message="tns:IDocManagerService_GetFileHistory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocManagerService/GetFileHistoryResponse" message="tns:IDocManagerService_GetFileHistory_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IDocManagerService" type="tns:IDocManagerService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreateFolder">
+      <soap:operation soapAction="http://tempuri.org/IDocManagerService/CreateFolder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFolder">
+      <soap:operation soapAction="http://tempuri.org/IDocManagerService/DeleteFolder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFolderItemCount">
+      <soap:operation soapAction="http://tempuri.org/IDocManagerService/GetFolderItemCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HasFileByName">
+      <soap:operation soapAction="http://tempuri.org/IDocManagerService/HasFileByName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFolderItems">
+      <soap:operation soapAction="http://tempuri.org/IDocManagerService/GetFolderItems" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadFile">
+      <soap:operation soapAction="http://tempuri.org/IDocManagerService/UploadFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFile">
+      <soap:operation soapAction="http://tempuri.org/IDocManagerService/DeleteFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyFileName">
+      <soap:operation soapAction="http://tempuri.org/IDocManagerService/ModifyFileName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetFileReadPermission">
+      <soap:operation soapAction="http://tempuri.org/IDocManagerService/SetFileReadPermission" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCheckedUserInfo">
+      <soap:operation soapAction="http://tempuri.org/IDocManagerService/GetCheckedUserInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadFile">
+      <soap:operation soapAction="http://tempuri.org/IDocManagerService/DownloadFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchFiles">
+      <soap:operation soapAction="http://tempuri.org/IDocManagerService/SearchFiles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFileHistory">
+      <soap:operation soapAction="http://tempuri.org/IDocManagerService/GetFileHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DocManagerService">
+    <wsdl:port name="BasicHttpBinding_IDocManagerService" binding="tns:BasicHttpBinding_IDocManagerService">
+      <soap:address location="http://tikledocs.sktelecom.com/_vti_bin/DocManagerService/DocManagerService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

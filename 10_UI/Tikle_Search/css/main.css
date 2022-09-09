@@ -1,0 +1,51 @@
+@charset "utf-8";
+/* SK INPUT SUPEX kim sang-ok(creamhouse) 120620 */
+
+.colgroup_left{float:left; width:360px; margin:4px 0 8px 0; padding-right:8px; border-right:1px solid #d4d4d4;}
+.colgroup_right{float:left; width:360px; padding-left:6px; margin-top:4px;}
+.colgroup_left h1,
+.colgroup_right h1{padding:16px 0 8px 4px; position:relative; border-bottom: 2px solid #d8d8d8}
+.colgroup_left h1 span,
+.colgroup_right h1 span{position: absolute; top:20px; right: 5px; font-family: '돋움', Dotum; font-size: 12px}
+.colgroup_left .unit_cont,
+.colgroup_right .unit_cont{margin:0; width:305px;}
+.colgroup_left .unit_cont h2,
+.colgroup_right .unit_cont h2{margin:13px 0 4px 0; width:230px; color: #8a8a8a;}
+.colgroup_left .unit_cont p,
+.colgroup_right .unit_cont p{margin:0; line-height: 18px; height: 18px}
+.colgroup_left .unit_cont .extra,
+.colgroup_right .unit_cont .extra{margin:12px 0 8px 0; position:relative;}
+.colgroup_left .unit_list_person div,
+.colgroup_right .unit_list_person div{position: absolute; right: 10px; top:13px; *top:28px;}
+.colgroup_left .unit_list_person p,
+.colgroup_right .unit_list_person p{margin-right: 54px; margin-top: 0; *margin-top:13px}
+.colgroup_left .list_last,
+.colgroup_right .list_last{border-bottom:none;}
+
+/* idea 검색시 레이어 팝업 */
+.main_pop{position:absolute; width:421px; height:223px; color:#6c6c6c; background:url("../images/pop_bg1.gif") no-repeat #fff;}
+.main_pop .popcont{background-color: #fff}
+.main_pop h2{padding:12px 0 12px 19px; border-bottom:1px solid #d6d6d6;}
+.main_pop .pop_close{position:absolute; top:19px; right:12px;} 
+.main_pop ul{padding:24px 0 13px 22px;}
+.main_pop ul li{font-weight:bold; padding-bottom:11px;}
+.main_pop ul li input{height:21px; border:1px solid #d2d2d2;}
+.main_pop ul li span.pop_txt{padding:0 13px 0 3px;}
+.main_pop ul li span.pop_txt2{padding-right:13px;}
+.main_pop ul li span.pop_img{margin-left:5px;}
+.main_pop ul li .idea1{width:275px;}
+.main_pop ul li .idea2{width:105px;}
+.main_pop .pop_button{height:28px;margin-top: 15px; padding-top:7px; background-color:#efefef; text-align:center;}
+.main_pop .pop_button .pop_btn1{background: url("../images/btn_cancel.gif") no-repeat; width:46px; height:21px;}
+.main_pop .pop_button .pop_btn2{background: url("../images/btn_search3.gif") no-repeat; width:46px; height:21px; margin-left:14px;}
+
+/* popup_incentive */
+.popup_incentive{margin:10px; padding:5px; border:1px solid #d4d4d4; font-family:'굴림', Gulim, arial;}
+.incentive1{font-weight:bold; font-size:16px; color:#555; padding:20px 0 20px 33px;}
+.incentive2{font-weight:bold; font-size:12px; color:#555;}
+.incentive2 li{padding:0 0 10px 33px;}
+.incentive2 li a{text-decoration:underline;}
+.incentive3{background-color:#f4f4f4; border:1px solid #e4e4e4; text-align:center; margin-top:20px; padding:5px 0;}
+.incentive3 span{color:#454545; font-weight:bold;}
+
+

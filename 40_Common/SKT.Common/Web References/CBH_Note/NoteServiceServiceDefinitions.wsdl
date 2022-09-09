@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s0:definitions xmlns:s1="http://skt/soa/sample/webservice/test" xmlns:s2="http://schemas.xmlsoap.org/wsdl/soap/" xmlns="" name="NoteServiceServiceDefinitions" targetNamespace="http://skt/soa/sample/webservice/test" xmlns:s0="http://schemas.xmlsoap.org/wsdl/">
+  <s0:types>
+    <xs:schema xmlns="" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://skt/soa/sample/webservice/test" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="sendNote">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="P_SENDUSERID" type="xs:string" />
+            <xs:element name="P_SENDUSERNAME" type="xs:string" />
+            <xs:element name="P_TARGETUSER" type="xs:string" />
+            <xs:element name="P_CONTENT" type="xs:string" />
+            <xs:element name="P_URL" type="xs:string" />
+            <xs:element name="P_KIND" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="sendNoteResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </s0:types>
+  <s0:message name="sendNoteResponse">
+    <s0:part name="parameters" element="s1:sendNoteResponse" />
+  </s0:message>
+  <s0:message name="sendNote">
+    <s0:part name="parameters" element="s1:sendNote" />
+  </s0:message>
+  <s0:portType name="NoteService">
+    <s0:operation name="sendNote" parameterOrder="parameters">
+      <s0:input message="s1:sendNote" />
+      <s0:output message="s1:sendNoteResponse" />
+    </s0:operation>
+  </s0:portType>
+  <s0:binding name="NoteServiceServiceSoapBinding" type="s1:NoteService">
+    <s2:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <s0:operation name="sendNote">
+      <s2:operation soapAction="" style="document" />
+      <s0:input>
+        <s2:body use="literal" parts="parameters" />
+      </s0:input>
+      <s0:output>
+        <s2:body use="literal" parts="parameters" />
+      </s0:output>
+    </s0:operation>
+  </s0:binding>
+  <s0:service name="NoteServiceService">
+    <s0:port name="NoteServiceSoapPort" binding="s1:NoteServiceServiceSoapBinding">
+      <s2:address location="http://cspcbh.sktelecom.com:8080/ws/cbh/SKTSOAWeb/NoteService" />
+    </s0:port>
+  </s0:service>
+</s0:definitions>

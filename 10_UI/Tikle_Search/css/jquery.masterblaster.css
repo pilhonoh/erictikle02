@@ -1,0 +1,83 @@
+.mb-container {
+  width:520px;
+  overflow:hidden;
+  float: left;
+}
+.mb-container ul.mb-taglist {
+  width:520px;
+  padding: 0;
+  margin: 0;
+  overflow:hidden;
+  float: left;
+}
+.mb-meta {
+  float: left;
+  overflow: hidden;
+}
+.mb-tag-content {
+  overflow: hidden;
+  white-space: nowrap;
+}
+.mb-help-text {
+  margin-left: 5px;
+  font-family: sans-serif;
+}
+.mb-container.mb-error .mb-input {
+  border: 1px solid red;
+  outline: red;
+}
+
+.mb-add-button {
+  padding: 4px 8px;
+  margin-left: 5px;
+  font-size: 14px;
+  line-height: 20px; 
+  /*border-radius: 4px;*/
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #006dcc;
+  background-repeat: repeat-x;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-image: linear-gradient(to bottom, #0088cc, #0044cc);
+    border-left-color: #0044cc;
+    border-right-color: #0044cc;
+    border-top-color: #0044cc;
+    border-bottom-color: #002a80;
+}
+
+.mb-container li.mb-tag {
+  overflow: hidden;
+  font-family: arial, serif;
+  float: left;
+  list-style-type: none;
+  padding:1px;
+  margin: 2px 0 0 4px;
+  background: #f0f0f0;
+  border: 1px solid #c0c0c0;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  font-size: 1em;
+}
+.mb-container .mb-input-container {
+  float: right;
+}
+.mb-container .mb-input {
+  float: left;
+  border: 1px solid #c0c0c0;
+  /*-webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px; */
+}
+
+.mb-container a.mb-tag-remove {
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 5px;
+  width: 10px;
+  height: 12px;
+  background-repeat: no-repeat;
+  background-position: center 2px;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAALCAQAAADsZ9STAAAAhklEQVR4ATXNMQ5AUBAE0Cn0CtUmDkAjEQrVj0b144wOoXALdCL/MGO/zTabnVfMAJBNLikFAr2XpkwtO9a3QlnfHVvKhv4ZOPycKf/9g3MOydgopHMGC2cnFiBiNb2O0xurqEN/vaNNwimkkJyx7N7l3csONuth9Ta5HmxAZY5K+ukdNeEDEiBrgNsMixYAAAAASUVORK5CYII=);
+}

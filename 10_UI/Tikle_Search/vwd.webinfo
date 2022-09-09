@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+<!-- 
+  Visual Studio global web project settings.
+-->
+<VisualWebDeveloper>
+
+  <comReferences>
+    <reference Name="interop.queryapi530lib" ID="{A425F8A5-53A8-4E86-92FC-8D722D51192D}\1.0\0"/>
+  </comReferences>
+</VisualWebDeveloper>

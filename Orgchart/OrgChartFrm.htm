@@ -1,0 +1,64 @@
+﻿<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=8" />-->
+    <title>SK TELECOM</title>
+    <style type="text/css">
+        html, body
+        {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            border: 0;
+            padding: 0;
+        }
+    </style>
+    <script type="text/javascript">
+        function doIframe() {
+            o = document.getElementsByTagName('iframe');
+            for (i = 0; i < o.length; i++) {
+                if (o[i].src === "about:blank") {
+                    if (window.location.search) {
+                        o[i].src = "orgmap.aspx" + window.location.search;
+                    }
+                    else {
+                        o[i].src = "orgmap.aspx";
+                    }
+                }
+                if (/\bautoHeight\b/.test(o[i].className)) {
+                    setHeight(o[i]);
+                    addEvent(o[i], 'load', doIframe);
+                }
+            }
+        }
+
+        function setHeight(e) {
+            if (e.contentDocument) {
+                e.height = e.contentDocument.body.offsetHeight + 35;
+            } else {
+                e.height = e.contentWindow.document.body.scrollHeight;
+            }
+        }
+
+        function addEvent(obj, evType, fn) {
+            if (obj.addEventListener) {
+                obj.addEventListener(evType, fn, false);
+                return true;
+            } else if (obj.attachEvent) {
+                var r = obj.attachEvent("on" + evType, fn);
+                return r;
+            } else {
+                return false;
+            }
+        }
+
+        if (document.getElementById && document.createTextNode) {
+            addEvent(window, 'load', doIframe);
+        }
+    </script>
+</head>
+<body>
+    <iframe id="iframe1" src="about:blank" frameborder="0" width="100%" height="99%"
+        marginwidth="0" marginheight="0" scrolling="no"></iframe>
+</body>
+</html>

@@ -1,0 +1,372 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7CB245E4-C7FE-47D4-89BE-AF2F8E2EC961}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SKT.Common</RootNamespace>
+    <AssemblyName>SKT.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\..\00_Assemblies\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=0db59e1683c1f498, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\00_Assemblies\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Build.Conversion.v3.5" />
+    <Reference Include="Microsoft.Exchange.WebServices, Version=15.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\00_Assemblies\Microsoft.Exchange.WebServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\00_Assemblies\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\00_Assemblies\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\00_Assemblies\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="NamoMIME">
+      <HintPath>..\..\00_Assemblies\NamoMIME.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ASPnetPagerV2_8.cs" />
+    <Compile Include="AttachmentHelper.cs" />
+    <Compile Include="CBHHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CBHInterface.cs" />
+    <Compile Include="CBHMSMQHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommentHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CookieHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CryptoHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DatabaseMethod.cs" />
+    <Compile Include="DBLogHelper.cs" />
+    <Compile Include="EHRHelper.cs" />
+    <Compile Include="EWSConnectHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HR_TEST.cs" />
+    <Compile Include="InitializeCultureHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Log4NetHelper.cs" />
+    <Compile Include="MultiLangImgHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NamoUtils.cs" />
+    <Compile Include="ParsingHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="SecurityHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Service References\TikleDocManagerService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="StringHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UserInfo.cs" />
+    <Compile Include="Utility.cs" />
+    <Compile Include="ValidationHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Web References\CBH_Mail\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\CBH_Note\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\CBH_SMS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\com.sktelecom.erp_prod\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\NotesEncryptService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WebReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="C:\SendNote.xml">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WebReference\</RelPath>
+      <UpdateFromURL>C:\SendNote.xml</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>MIK_Patterns_FrontEnd_Common_WebReference_NoteServiceService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://apprd.skplanet.com/comn/webservices.nsf/wsEncryptedString%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\NotesEncryptService\</RelPath>
+      <UpdateFromURL>http://apprd.skplanet.com/comn/webservices.nsf/wsEncryptedString%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>SKT_Common_NotesEncryptService_wsEncryptedStringServie</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://cspcbh.sktelecom.com:8080/ws/cbh/MailService%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\CBH_Mail\</RelPath>
+      <UpdateFromURL>http://cspcbh.sktelecom.com:8080/ws/cbh/MailService%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>SKT_Common_CBH_Mail_MailSenderService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://cspcbh.sktelecom.com:8080/ws/cbh/SKTSOAWeb/NoteService%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\CBH_Note\</RelPath>
+      <UpdateFromURL>http://cspcbh.sktelecom.com:8080/ws/cbh/SKTSOAWeb/NoteService%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>SKT_Common_CBH_Note_NoteServiceService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://cspcbh.sktelecom.com:8080/ws/cbh/SMSService%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\CBH_SMS\</RelPath>
+      <UpdateFromURL>http://cspcbh.sktelecom.com:8080/ws/cbh/SMSService%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>SKT_Common_CBH_SMS_SMSSenderService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://erp_prod.sktelecom.com:8000/sap/bc/srt/wsdl/bndg_C9935E5236437D27E100000096020227/wsdl11/allinone/ws_policy/document%3fsap-client=501">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\com.sktelecom.erp_prod\</RelPath>
+      <UpdateFromURL>http://erp_prod.sktelecom.com:8000/sap/bc/srt/wsdl/bndg_C9935E5236437D27E100000096020227/wsdl11/allinone/ws_policy/document%3fsap-client=501</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>SKT_Common_com_sktelecom_erp_prod_ZEHR_PT_LIST_VIEW</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\TikleDocManagerService\DocManagerService.wsdl" />
+    <None Include="Service References\TikleDocManagerService\DocManagerService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TikleDocManagerService\DocManagerService1.wsdl" />
+    <None Include="Service References\TikleDocManagerService\DocManagerService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TikleDocManagerService\DocManagerService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TikleDocManagerService\DocManagerService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TikleDocManagerService\DocManagerService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TikleDocManagerService\DocManagerService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TikleDocManagerService\SKT.Common.TikleDocManagerService.Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TikleDocManagerService\SKT.Common.TikleDocManagerService.T_FileInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TikleDocManagerService\SKT.Common.TikleDocManagerService.T_UserInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Web References\CBH_Mail\MailSenderServiceDefinitions.wsdl" />
+    <None Include="Web References\CBH_Mail\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\CBH_Note\NoteServiceServiceDefinitions.wsdl" />
+    <None Include="Web References\CBH_Note\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\CBH_SMS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\CBH_SMS\SMSSenderServiceDefinitions.wsdl" />
+    <None Include="Web References\com.sktelecom.erp_prod\document.wsdl">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\com.sktelecom.erp_prod\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\com.sktelecom.erp_prod\ZehrPtListViewResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\NotesEncryptService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\NotesEncryptService\wsEncryptedString.wsdl" />
+    <None Include="Web References\WebReference\NoteServiceServiceDefinitions.wsdl" />
+    <None Include="Web References\WebReference\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\TikleDocManagerService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TikleDocManagerService\DocManagerService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TikleDocManagerService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TikleDocManagerService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TikleDocManagerService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TikleDocManagerService\DocManagerService1.disco" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

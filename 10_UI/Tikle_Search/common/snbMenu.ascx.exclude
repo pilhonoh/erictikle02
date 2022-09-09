@@ -1,0 +1,22 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="snbMenu.ascx.cs" Inherits="common_snbMenu" %>
+<div class="snb">
+    <ul class="snb_b">
+	    <li class="snb1" id="lisnb1"><a href="/Supex/Contents/Supex/SupexList.aspx?SupexType=I&SupexMode=L&ListMode=M" id="RightSNB1_snb1"><span class="hidden">My Idea</span></a></li>			
+	    <li class="snb2" id="lisnb2"><a href="/Supex/Contents/Supex/SupexList.aspx?SupexType=I" id="RightSNB1_snb2"><span class="hidden">All Idea</span></a></li>			
+	    <li class="snb3" id="lisnb3"><a id="snb3" href="#" onclick="btnShowIdeaSearchBox_Click(); return false;"><span class="hidden">Idea 검색</span></a></li>			
+	    <li class="snb4" id="lisnb4"><a href="/Supex/Contents/Supex/SupexList.aspx?SupexType=Q&SupexMode=L&ListMode=M" id="RightSNB1_snb4"><span class="hidden">My Question</span></a></li>			
+	    <li class="snb5" id="lisnb5"><a href="/Supex/Contents/Supex/SupexList.aspx?SupexType=Q" id="RightSNB1_snb5"><span class="hidden">All Question</span></a></li>			
+	    <li class="snb6" id="lisnb6"><a id="snb6" href="#" onclick="btnShowQuestionSearchBox_Click(); return false;"><span class="hidden">Question 검색</span></a></li>			
+	    <li class="snb7" id="lisnb7"><a href="/Supex/Contents/Supex/SupexList.aspx?SupexType=F" id="RightSNB1_snb7"><span class="hidden">My Feed</span></a><span class="popno" id="snb_feed"></span></li>
+    <%if("Y".Equals(srchParam.getSupex_code())){ %>
+        <li class="snb8"><button id="RightSNB1_snbManagement" type="reset" class="bgimg btn_manage" onclick="location.href=&#39;/Supex/Management/RoleManager/RoleMain.aspx&#39;"><span>Mangement</span></button></li>	
+    <%} %>
+    </ul>
+
+    <div class="notice_board">
+	    <p class="txt_notice_board"><a href="/Supex/Contents/Supex/SupexList.aspx?SupexType=B"><img src="./images/txt_notice.gif" alt="게시판" /></a><span><a href="/Supex/Contents/Supex/SupexList.aspx?SupexType=B">전체보기</a></span></p>
+	    <ul id = "notice_board_con">
+	    </ul>
+	    <p class="notice_idea"><a href="#" onclick="popNotice();">Idea 제안시 참고사항</a></p>
+    </div>
+</div><!-- //.snb -->

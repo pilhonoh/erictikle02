@@ -1,0 +1,1 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="query_idea.ascx.cs" Inherits="query_idea" %>

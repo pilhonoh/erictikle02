@@ -1,0 +1,69 @@
+@CHARSET "UTF-8";
+
+*{margin:0; padding:0;}
+html{overflow-y:scroll;}
+html,body{width:100%; height:100%;}
+body{font:12px,"Nanum Gothic","Dotum",Gulim,AppleGothic,Sans-serif;}
+ul,ol,li{list-style:none;}
+hr{display:0 none;}
+em{font-style:normal;}
+
+img{border:0 none; font-size:0; line-height:0;}
+fieldset{border:0 none;}
+caption,legend{visibility:hidden; width:0; height:0; font-size:0; line-height:0;}
+input,button,textarea,select{font:12px,"Dotum",Gulim,AppleGothic,Sans-serif; vertical-align:middle;}
+textarea{padding:2px 3px; border:1px solid #c3c3c3;}
+select{padding:2px 2px 2px 0; height:22px; *height:auto; *padding:0;}
+
+a{color:#555;text-decoration:none;}
+
+div, p, table {margin: 0px; padding: 0px; border: 0px currentColor; font-family: 돋움,Gulim,AppleGothic,sans-serif; font-size: 12px;}
+h1, h2, h3, h4 {list-style: none; margin: 0px; padding: 0px; font-family: 굴림,Gulim,AppleGothic,sans-serif; font-weight: lighter;}
+
+/* global class */
+.container{width:797px;margin:0 auto;}
+
+.header{width:100%;height:55px;text-align:center;background-color:#fff}
+.header .container{border-bottom:1px solid #8d92c9;line-height:0}
+.header .container .logo{float:left;width:300px;height:55px;padding:0px;margin:0px;text-align:left;overflow:hidden}
+.header .container .logo a{display:flex}
+.header .container .logo a .logo_bi{cursor:pointer;background-image:url("./images/bi.png");display:inline-block;width:246px;height:55px;text-indent:0px;font-size:0}
+.header .container .menu{float:right;width:400px;height:55px;position:relative;text-align:right;}
+.header .container .menu_area{position:absolute;bottom:0px;right:0px;text-align:right;line-height:0px;padding:0px;margin:0px;line-height:100%;font-size:0}
+.header .container .menu_area ul{background-image:url("./images/menu_bg.png");height:22px;width:400px}
+.header .container .menu_area li{float:left}
+.header .container .menu_area .ma{padding:0px 10px 0px 10px}
+.header .container .menu_area .ml{padding:0px 10px 0px 10px;background-image:url("./images/menu_line.png");background-position:left center;background-repeat:no-repeat}
+.header .container .menu_area img{vertical-align:bottom;display:inline-block;background-image:url("./images/menu_bg.png")}
+
+.content{text-align:center}
+.content .container .document{float:left;width:797px;min-height:500px;text-align:left;padding:0px}
+.content .container .document .title{padding:20px 0px 20px 20px}
+.content .container .document .box{padding:0px 20px 20px 20px}
+
+.tbl{font-size:14px;width:757px}
+.tbl tbody tr th{width:61px;height:35px;background-color:#8d92c9;color:#fff;vertical-align:middle;text-align:center;letter-spacing:2px;}
+.tbl tbody tr td{background-color:#e3e3e3;padding:0px 0px 0px 10px;width:650px;height:35px;vertical-align:middle}
+.tbl tbody tr td select{font-size:12px;margin:0px 1px 0px 1px}
+.tbl tbody tr td .tb{padding:0px;}
+.tbl tbody tr td .area_select{display: inline-block;*display:inline;width:555px;padding:0px;font-size:0;vertical-align:middle}
+.tbl tbody tr td .area_icon{display: inline-block;*display:inline;width:35px;padding:0px;font-size:0;vertical-align:middle}
+
+.editor{width:755px;height:300px;background-color:#f1f1f1;margin-bottom:10px}
+
+.viewValue{width:375px;border:1px solid #8d92c9;margin-top:5px}
+.viewValue .head{background-color:#8d92c9}
+.viewValue .head .subject{float:left;height:29px;line-height:29px;padding:2px}
+.viewValue .head .info{float:left;height:33px;line-height:33px;color:#fff;padding-left:10px;font-size:11px;letter-spacing:-1px;cursor:default}
+.viewValue .body{height:100px;background:#fff}
+.viewValue .body .viewTxt{border:0px;width:100%;height:100%;outline:none}
+.viewValue .foot{background-color:#bfbfbf;height:29px;line-height:29px;padding:2px;text-align:right}
+
+.html_value{float:left}
+.mime_value{float:right}
+
+.footer{text-align:center}
+.footer .container{height:40px;background-color:#f5f5f5}
+.footer .container div{font-size:11px;text-align:right;padding:10px 15px 0px 0px}
+.footer .container div .copyright{display:inline-block;vertical-align:top;padding:2px 0px 0px 0px;color:#4c4c4c}
+.footer .container div .logo_namo{margin-left:15px;display:inline-block;width:68px;height:21px;background-image:url("./images/ci.png")}

@@ -1,0 +1,41 @@
+﻿/*@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);*/
+
+ul {
+    list-style-type: disc;
+}
+
+ol {
+    list-style-type: decimal;
+}
+
+body, td, textarea, input {
+    padding: 0px;
+    /*font-family: Nanum Gothic,Malgun Gothic,dotum,Arial,SimSun,MingLiU,AppleGothic,sans-serif;*/
+    font-family: Malgun Gothic,맑은 고딕,dotum,Arial,SimSun,MingLiU,AppleGothic,sans-serif;
+    font-size: 11pt;
+    line-height: 1.5;
+}
+
+p {
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+ul, ol{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* 수정 내용 - td에 min-height 추가*/
+td {
+    min-height: 24px;
+}
+
+.view_ct ul li {
+    list-style-type: inherit;
+}
+
+.view_ct ol li {
+    list-style-type: inherit;
+}
